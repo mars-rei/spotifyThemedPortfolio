@@ -32,556 +32,568 @@
             <!-- top bar -->
             <section class="row topBar">
                 <div class="col topBarLeft">
-                    <img src="imgs/menu-dots.png" alt="menu dots" class="smallIcons">
-                    <img src="imgs/angle-left.png" alt="left arrow" class="smallIcons">
-                    <img src="imgs/angle-right.png" alt="right arrow" class="smallIcons">
+                    <img src="imgs/menu-dots.png" alt="menu dots" class="noBgIconTopBar">
+                    <img src="imgs/angle-left.png" alt="left arrow" class="noBgIconTopBar">
+                    <img src="imgs/angle-right.png" alt="right arrow" class="noBgIconTopBar">
                 </div>
                 <div class="col topBarMiddle">
                     <div class="homeUserIconsCircle">
-                        <img src="imgs/house-chimney.png" alt="home" class="smallIcons">
+                        <img src="imgs/house-chimney.png" alt="home" class="noBgIconTopBar">
                     </div>
                     <div class="col searchIconOblong">
-                        <img src="imgs/search-heart.png" alt="search" class="smallIcons">
+                        <img src="imgs/search-heart.png" alt="search" class="noBgIconTopBar">
                     </div>
                 </div>
                 <div class="col topBarRight">
-                    <img src="imgs/bell-notification-social-media.png" alt="bell notification" class="smallIcons">
-                    <span class="homeUserIconsCircle">
-                        <img src="imgs/circle-user.png" alt="user" class="smallIcons">
-                    </span>
-                    <img src="imgs/cross-small.png" alt="exit" class="smallIcons">
+                    <img src="imgs/bell-notification-social-media.png" alt="bell notification" class="noBgIconTopBar">
+                    <div class="homeUserIconsCircle">
+                        <img src="imgs/circle-user.png" alt="user" class="noBgIconTopBar">
+                    </div>
+                    <img src="imgs/cross-small.png" alt="exit" class="noBgIconTopBar">
                 </div>
             </section>
+
+            <!-- everything sorted up to here!-->
 
             <div class="row">
 
                 <!-- left bar -->
-                <section class="col-md-1 leftBar">
+                <section class="col-fixed leftBar">
                     <!-- this one needs to be replaced -->
                     <div class="row">
                         <div class="leftBarSquares" id="homeLeftBar">
-                            <img src="imgs/house-chimney.png" alt="home" class="smallIcons">
+                            <img src="imgs/house-chimney.png" alt="home" class="leftBarIcons">
                         </div>
                     </div>
 
                     <div class="row aboutLeftBar">
                         <div class="leftBarSquares" id="aboutLeftBar">
-                            <img src="imgs/info.png" alt="info" class="smallIcons">
+                            <img src="imgs/info.png" alt="info" class="leftBarIcons">
                         </div>
                     </div>
                     <div class="row">
                         <div class="leftBarSquares" id="educationLeftBar">
-                            <img src="imgs/graduation-cap.png" alt="education" class="smallIcons">
+                            <img src="imgs/graduation-cap.png" alt="education" class="leftBarIcons">
                         </div>
                     </div>
                     <div class="row">
                         <div class="leftBarSquares" id="experienceLeftBar">
-                            <img src="imgs/briefcase.png" alt="experience" class="smallIcons">
+                            <img src="imgs/briefcase.png" alt="experience" class="leftBarIcons">
                         </div>
                     </div>
                     <div class="row">
                         <div class="leftBarSquares" id="projectsLeftBar">
-                            <img src="imgs/blueprint.png" alt="projects" class="smallIcons">
+                            <img src="imgs/blueprint.png" alt="projects" class="leftBarIcons">
                         </div>
                     </div>
                     <div class="row">
                         <div class="leftBarSquares" id="qualificationsLeftBar">
-                            <img src="imgs/diploma.png" alt="certifications" class="smallIcons">
+                            <img src="imgs/diploma.png" alt="certifications" class="leftBarIcons">
                         </div>
                     </div>
                     <div class="row">
                         <div class="leftBarSquares" id="interestsLeftBar">
-                            <img src="imgs/game-board-alt.png" alt="interests" class="smallIcons">
+                            <img src="imgs/game-board-alt.png" alt="interests" class="leftBarIcons">
                         </div>
                     </div>
                     <div class="row">
                         <div class="leftBarSquares" id="attributionLeftBar">
-                            <img src="imgs/attribution-pencil.png" alt="attribution" class="smallIcons">
+                            <img src="imgs/attribution-pencil.png" alt="attribution" class="leftBarIcons">
                         </div>
                     </div>
                 </section>
 
                 <!-- middle bar -->
-                <section class="col-md-9 middleBar">
-                    <!-- profile header -->
-                    <div class="row align-items-center profileHeader">
-                        <div class="col-3">
-                            <img src="imgs/headshot.jpeg" class="rounded-circle img-fluid" alt="Photo of Imogen Dicen">
-                        </div>
-                        <div class="col" id="mainHeaderText">
-                            <div class="row">
-                                Profile
+                <section class="col-flex middleBar">
+                    
+                    <div class="row align-items-center">
+                        <!-- profile header -->
+                        <div class="row align-items-center profileHeader">
+                            <div class="col-2 justify-content-left">
+                                <img src="imgs/headshot.jpeg" class="rounded-circle img-fluid" alt="Photo of Imogen Dicen">
                             </div>
-                            <div class="row">
-                                Imogen Dicen
-                            </div>
-                            <div class="row">
-                                <span class="title">
-                                    2nd Year Computer Science Student
-                                    <span class="ongoingProjects">
-                                        • 3 Ongoing Projects
+                            <div class="col-10" id="mainHeaderText">
+                                <div class="row">
+                                    Profile
+                                </div>
+                                <div class="row">
+                                    Imogen Dicen
+                                </div>
+                                <div class="row">
+                                    <span class="title">
+                                        2nd Year Computer Science Student
+                                        <span class="ongoingProjects">
+                                            • 3 Ongoing Projects
+                                        </span>
                                     </span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row align-items-center mainScrollableContent">
-                        <!-- portfolio nav in main-->
-                        <div class="row">
-                            <img src="imgs/menu-dots.png" alt="menu dots" class="mainMenuDots">
-                        </div>
-                        <div class="row">
-                            <h1 class="sectionTitle">
-                                My Portfolio 
-                            </h1>                       
-                        </div>
-                        <div class="row">
-                            <div class="col-10">
-                                <h2 class="sectionSubTitle">
-                                    As of February 2025
-                                </h2>
-                            </div>
-                            <div class="col-2">
-                                <h2 class="showAllText">
-                                    Show All
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col shapeHeading textDark">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle aboutCircle"></div>
                                 </div>
-                                About Me
-                            </div>
-                            <div class="col shapeHeading textDark">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle educationCircle"></div>
-                                </div>
-                                Education
-                            </div>
-                            <div class="col shapeHeading textDark">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle experienceCircle"></div>
-                                </div>
-                                Work Experience
-                            </div>
-                            <div class="col shapeHeading textDark">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle projectsCircle"></div>
-                                </div>
-                                Projects
-                            </div>
-                            <div class="col shapeHeading textDark">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle certificationsCircle"></div>
-                                </div>
-                                Certifications
                             </div>
                         </div>
 
-                        <!-- certifications nav in main-->
-                        <div class="row">
-                            <h1 class="sectionTitle">
-                                Certifications
-                            </h1>                       
-                        </div>
-                        <div class="row">
-                            <div class="col-10">
-                                <h2 class="sectionSubTitle">
-                                    From Latest to Earliest
-                                </h2>
+                        <div class="row align-items-center mainScrollableContent">
+                            <!-- portfolio nav in main-->
+                            <div class="row">
+                                <img src="imgs/menu-dots.png" alt="menu dots" class="mainMenuDots">
                             </div>
-                            <div class="col-2">
-                                <h2 class="showAllText">
-                                    Show All
-                                </h2>
+                            <div class="row">
+                                <h1 class="sectionTitle">
+                                    My Portfolio 
+                                </h1>                       
                             </div>
-                        </div>
-                        <div class="row justify-content-left align-items-center" id="certificationTrack">
-                            <div class="col-2">
-                                <div class="row align-items-center">
-                                    <div class="col-1"></div>
-                                    <div class="col-1 textDark justify-content-center">
-                                        1
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="roundedSquare certification1"></div>
-                                    </div>
+                            <div class="row">
+                                <div class="col-10">
+                                    <h2 class="sectionSubTitle">
+                                        As of February 2025
+                                    </h2>
+                                </div>
+                                <div class="col-2">
+                                    <h2 class="showAllText">
+                                        Show All
+                                    </h2>
                                 </div>
                             </div>
-                            <div class="col-3">
-                                <div class="row textDark">
+                            <div class="row justify-content-between">
+                                <div class="col-2 col-md-2 shapeHeading textDark">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle aboutCircle"></div>
+                                    </div>
+                                    About Me
+                                </div>
+                                <div class="col-2 col-md-2 shapeHeading textDark">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle educationCircle"></div>
+                                    </div>
+                                    Education
+                                </div>
+                                <div class="col-2 col-md-2 shapeHeading textDark">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle experienceCircle"></div>
+                                    </div>
+                                    Work Experience
+                                </div>
+                                <div class="col-2 col-md-2 shapeHeading textDark">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle projectsCircle"></div>
+                                    </div>
+                                    Projects
+                                </div>
+                                <div class="col-2 col-md-2 shapeHeading textDark">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle certificationsCircle"></div>
+                                    </div>
+                                    Certifications
+                                </div>
+                                <div class="col-2 col-md-2 shapeHeading textDark">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle certificationsCircle"></div>
+                                        <!-- gotta change the *Circle class and make a new one with a different colour -->
+                                    </div>
+                                    Interests
+                                </div>
+                            </div>
+
+                            <!-- certifications nav in main-->
+                            <div class="row">
+                                <h1 class="sectionTitle">
+                                    Certifications
+                                </h1>                       
+                            </div>
+                            <div class="row">
+                                <div class="col-10">
+                                    <h2 class="sectionSubTitle">
+                                        From Latest to Earliest
+                                    </h2>
+                                </div>
+                                <div class="col-2">
+                                    <h2 class="showAllText">
+                                        Show All
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="row justify-content-left align-items-center" id="certificationTrack">
+                                <div class="col-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-1"></div>
+                                        <div class="col-1 textDark justify-content-center">
+                                            1
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="roundedSquare certification1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row textDark">
+                                        Active Listening
+                                    </div>
+                                    <div class="row textLight">
+                                        Bodyswaps
+                                    </div>
+                                </div>
+                                <div class="col-5 textLight">
                                     Active Listening
                                 </div>
-                                <div class="row textLight">
-                                    Bodyswaps
+                                <div class="col-2 textLight">
+                                    Oct 24
                                 </div>
                             </div>
-                            <div class="col-5 textLight">
-                                Active Listening
-                            </div>
-                            <div class="col-2 textLight">
-                                Oct 24
-                            </div>
-                        </div>
-                        <div class="row justify-content-left align-items-center" id="certificationTrack">
-                            <div class="col-2">
-                                <div class="row align-items-center">
-                                    <div class="col-1"></div>
-                                    <div class="col-1 textDark justify-content-center">
-                                        2
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="roundedSquare certification2"></div>
+                            <div class="row justify-content-left align-items-center" id="certificationTrack">
+                                <div class="col-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-1"></div>
+                                        <div class="col-1 textDark justify-content-center">
+                                            2
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="roundedSquare certification2"></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="row textDark">
-                                    CCNA: Introduction to Networks
-                                </div>
-                                <div class="row textLight">
-                                    Cisco
-                                </div>
-                            </div>
-                            <div class="col-5 textLight">
-                                Networks
-                            </div>
-                            <div class="col-2 textLight">
-                                Sep 24
-                            </div>
-                        </div>
-                        <div class="row justify-content-left align-items-center" id="certificationTrack">
-                            <div class="col-2">
-                                <div class="row align-items-center">
-                                    <div class="col-1"></div>
-                                    <div class="col-1 textDark justify-content-center">
-                                        3
+                                <div class="col-3">
+                                    <div class="row textDark">
+                                        CCNA: Introduction to Networks
                                     </div>
-                                    <div class="col-6">
-                                        <div class="roundedSquare certification3"></div>
+                                    <div class="row textLight">
+                                        Cisco
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="row textDark">
-                                    Python Essentials 1
+                                <div class="col-5 textLight">
+                                    Networks
                                 </div>
-                                <div class="row textLight">
-                                    Cisco
+                                <div class="col-2 textLight">
+                                    Sep 24
                                 </div>
                             </div>
-                            <div class="col-5 textLight">
-                                Python
-                            </div>
-                            <div class="col-2 textLight">
-                                Jun 24
-                            </div>
-                        </div>
-                        <div class="row justify-content-left align-items-center" id="certificationTrack">
-                            <div class="col-2">
-                                <div class="row align-items-center">
-                                    <div class="col-1"></div>
-                                    <div class="col-1 textDark justify-content-center">
-                                        4
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="roundedSquare certification4"></div>
+                            <div class="row justify-content-left align-items-center" id="certificationTrack">
+                                <div class="col-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-1"></div>
+                                        <div class="col-1 textDark justify-content-center">
+                                            3
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="roundedSquare certification3"></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="row textDark">
-                                    Grade 5 Violin (Pass)
+                                <div class="col-3">
+                                    <div class="row textDark">
+                                        Python Essentials 1
+                                    </div>
+                                    <div class="row textLight">
+                                        Cisco
+                                    </div>
                                 </div>
-                                <div class="row textLight">
-                                    Trinity College London
+                                <div class="col-5 textLight">
+                                    Python
+                                </div>
+                                <div class="col-2 textLight">
+                                    Jun 24
                                 </div>
                             </div>
-                            <div class="col-5 textLight">
-                                Music Performance
+                            <div class="row justify-content-left align-items-center" id="certificationTrack">
+                                <div class="col-2">
+                                    <div class="row align-items-center">
+                                        <div class="col-1"></div>
+                                        <div class="col-1 textDark justify-content-center">
+                                            4
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="roundedSquare certification4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row textDark">
+                                        Grade 5 Violin (Pass)
+                                    </div>
+                                    <div class="row textLight">
+                                        Trinity College London
+                                    </div>
+                                </div>
+                                <div class="col-5 textLight">
+                                    Music Performance
+                                </div>
+                                <div class="col-2 textLight">
+                                    Mar 24
+                                </div>
                             </div>
-                            <div class="col-2 textLight">
-                                Mar 24
-                            </div>
-                        </div>
 
-                        <!-- projects nav in main-->
-                        <div class="row">
-                            <h1 class="sectionTitle">
-                                Projects
-                            </h1>                       
-                        </div>
-                        <div class="row">
-                            <div class="col-10">
-                                <h2 class="sectionSubTitle">
-                                    From Latest to Earliest
-                                </h2>
+                            <!-- projects nav in main-->
+                            <div class="row">
+                                <h1 class="sectionTitle">
+                                    Projects
+                                </h1>                       
                             </div>
-                            <div class="col-2">
-                                <h2 class="showAllText">
-                                    Show All
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="bigRoundedSquare project1"></div>
+                            <div class="row">
+                                <div class="col-10">
+                                    <h2 class="sectionSubTitle">
+                                        From Latest to Earliest
+                                    </h2>
                                 </div>
-                                <div class="row justify-content-center textDark">
-                                    Physical Asset Tracking ...
-                                </div>
-                                <div class="row justify-content-center textLight">
-                                    Imogen Dicen + 5
+                                <div class="col-2">
+                                    <h2 class="showAllText">
+                                        Show All
+                                    </h2>
                                 </div>
                             </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="bigRoundedSquare project2"></div>
+                            <div class="row">
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="bigRoundedSquare project1"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        Physical Asset Tracking ...
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                        Imogen Dicen + 5
+                                    </div>
                                 </div>
-                                <div class="row justify-content-center textDark">
-                                    Portfolio Site
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="bigRoundedSquare project2"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        Portfolio Site
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                        Imogen Dicen
+                                    </div>
                                 </div>
-                                <div class="row justify-content-center textLight">
-                                    Imogen Dicen
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="bigRoundedSquare project3"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        CompClubHub V2
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                        Imogen Dicen
+                                    </div>
+                                </div>
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="bigRoundedSquare project4"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        CompClubHub
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                        Imogen Dicen + 2
+                                    </div>
+                                </div>
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="bigRoundedSquare project5"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        BookBot
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                        Imogen Dicen + 4
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="bigRoundedSquare project3"></div>
-                                </div>
-                                <div class="row justify-content-center textDark">
-                                    CompClubHub V2
-                                </div>
-                                <div class="row justify-content-center textLight">
-                                    Imogen Dicen
-                                </div>
-                            </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="bigRoundedSquare project4"></div>
-                                </div>
-                                <div class="row justify-content-center textDark">
-                                    CompClubHub
-                                </div>
-                                <div class="row justify-content-center textLight">
-                                    Imogen Dicen + 2
-                                </div>
-                            </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="bigRoundedSquare project5"></div>
-                                </div>
-                                <div class="row justify-content-center textDark">
-                                    BookBot
-                                </div>
-                                <div class="row justify-content-center textLight">
-                                    Imogen Dicen + 4
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- education nav in main-->
-                        <div class="row">
-                            <h1 class="sectionTitle">
-                                Education
-                            </h1>                       
-                        </div>
-                        <div class="row">
-                            <div class="col-10">
-                                <h2 class="sectionSubTitle">
-                                    From Latest to Earliest
-                                </h2>
+                            <!-- education nav in main-->
+                            <div class="row">
+                                <h1 class="sectionTitle">
+                                    Education
+                                </h1>                       
                             </div>
-                            <div class="col-2">
-                                <h2 class="showAllText">
-                                    Show All
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle aboutCircle"></div>
+                            <div class="row">
+                                <div class="col-10">
+                                    <h2 class="sectionSubTitle">
+                                        From Latest to Earliest
+                                    </h2>
                                 </div>
-                                <div class="row justify-content-center textDark">
-                                    Birmingham City University
-                                </div>
-                                <div class="row justify-content-center textLight">
-                                    BSc Computer Science
+                                <div class="col-2">
+                                    <h2 class="showAllText">
+                                        Show All
+                                    </h2>
                                 </div>
                             </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle educationCircle"></div>
+                            <div class="row">
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle aboutCircle"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        Birmingham City University
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                        BSc Computer Science
+                                    </div>
                                 </div>
-                                <div class="row justify-content-center textDark">
-                                    DataCamp
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle educationCircle"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        DataCamp
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                        Data Science
+                                    </div>
                                 </div>
-                                <div class="row justify-content-center textLight">
-                                    Data Science
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle experienceCircle"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        Cisco Networking Academy
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                        IT Skills
+                                    </div>
+                                </div>
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle projectsCircle"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        KEVIHS
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                        A-Levels
+                                    </div>
+                                </div>
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle certificationsCircle"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        KEVIHS
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                        GCSEs
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle experienceCircle"></div>
-                                </div>
-                                <div class="row justify-content-center textDark">
-                                    Cisco Networking Academy
-                                </div>
-                                <div class="row justify-content-center textLight">
-                                    IT Skills
-                                </div>
-                            </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle projectsCircle"></div>
-                                </div>
-                                <div class="row justify-content-center textDark">
-                                    KEVIHS
-                                </div>
-                                <div class="row justify-content-center textLight">
-                                    A-Levels
-                                </div>
-                            </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle certificationsCircle"></div>
-                                </div>
-                                <div class="row justify-content-center textDark">
-                                    KEVIHS
-                                </div>
-                                <div class="row justify-content-center textLight">
-                                    GCSEs
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- work experience nav in main-->
-                        <div class="row">
-                            <h1 class="sectionTitle">
-                                Work Experience
-                            </h1>                       
-                        </div>
-                        <div class="row">
-                            <div class="col-10">
-                                <h2 class="sectionSubTitle">
-                                    As of February 2025
-                                </h2>
+                            <!-- work experience nav in main-->
+                            <div class="row">
+                                <h1 class="sectionTitle">
+                                    Work Experience
+                                </h1>                       
                             </div>
-                            <div class="col-2">
-                                <h2 class="showAllText">
-                                    Show All
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle experience1"></div>
+                            <div class="row">
+                                <div class="col-10">
+                                    <h2 class="sectionSubTitle">
+                                        As of February 2025
+                                    </h2>
                                 </div>
-                                <div class="row justify-content-center textDark">
-                                </div>
-                                <div class="row justify-content-center textLight">
+                                <div class="col-2">
+                                    <h2 class="showAllText">
+                                        Show All
+                                    </h2>
                                 </div>
                             </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle experience2"></div>
+                            <div class="row">
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle experience1"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                    </div>
                                 </div>
-                                <div class="row justify-content-center textDark">
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle experience2"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                    </div>
                                 </div>
-                                <div class="row justify-content-center textLight">
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle experience3"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                    </div>
+                                </div>
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle experience4"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                    </div>
+                                </div>
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle experience5"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                    </div>
+                                    <div class="row justify-content-center textLight">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle experience3"></div>
-                                </div>
-                                <div class="row justify-content-center textDark">
-                                </div>
-                                <div class="row justify-content-center textLight">
-                                </div>
-                            </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle experience4"></div>
-                                </div>
-                                <div class="row justify-content-center textDark">
-                                </div>
-                                <div class="row justify-content-center textLight">
-                                </div>
-                            </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle experience5"></div>
-                                </div>
-                                <div class="row justify-content-center textDark">
-                                </div>
-                                <div class="row justify-content-center textLight">
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- interests nav in main-->
-                        <div class="row">
-                            <h1 class="sectionTitle">
-                                Interests
-                            </h1>                       
-                        </div>
-                        <div class="row">
-                            <div class="col-10">
-                                <h2 class="sectionSubTitle">
-                                    As of February 2025
-                                </h2>
+                            <!-- interests nav in main-->
+                            <div class="row">
+                                <h1 class="sectionTitle">
+                                    Interests
+                                </h1>                       
                             </div>
-                            <div class="col-2">
-                                <h2 class="showAllText">
-                                    Show All
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle interest1"></div>
+                            <div class="row">
+                                <div class="col-10">
+                                    <h2 class="sectionSubTitle">
+                                        As of February 2025
+                                    </h2>
                                 </div>
-                                <div class="row justify-content-center textDark">
-                                    Music
+                                <div class="col-2">
+                                    <h2 class="showAllText">
+                                        Show All
+                                    </h2>
                                 </div>
                             </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle interest2"></div>
+                            <div class="row">
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle interest1"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        Music
+                                    </div>
                                 </div>
-                                <div class="row justify-content-center textDark">
-                                    Arts & Crafts
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle interest2"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        Arts & Crafts
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle interest3"></div>
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle interest3"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        Languages
+                                    </div>
                                 </div>
-                                <div class="row justify-content-center textDark">
-                                    Languages
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle interest4"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                        Chess
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle interest4"></div>
-                                </div>
-                                <div class="row justify-content-center textDark">
-                                    Chess
-                                </div>
-                            </div>
-                            <div class="col shapeHeading">
-                                <div class="row justify-content-center">
-                                    <div class="mainCircle interest5"></div>
-                                </div>
-                                <div class="row justify-content-center textDark">
+                                <div class="col shapeHeading">
+                                    <div class="row justify-content-center">
+                                        <div class="mainCircle interest5"></div>
+                                    </div>
+                                    <div class="row justify-content-center textDark">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -590,18 +602,18 @@
                 </section>
 
                 <!-- right bar -->
-                <section class="col-md-2 rightBar">
-                    <img src="imgs/angle-left.png" alt="left" class="smallIcons" id="arrowRightBar">
+                <section class="col-fixed rightBar">
+                    <img src="imgs/angle-left.png" alt="left" id="arrowRightBar">
                 </section>
             </div>
 
             <!-- bottom bar -->
             <section class="row bottomBar">
-                <img src="imgs/shuffle.png" alt="shuffle" class="smallIcons">
-                <img src="imgs/rewind.png" alt="rewind" class="smallIcons">
-                <img src="imgs/pause.png" alt="pause" class="smallIcons">
-                <img src="imgs/forward.png" alt="forward" class="smallIcons">
-                <img src="imgs/arrows-repeat.png" alt="repeat" class="smallIcons">
+                <img src="imgs/shuffle.png" alt="shuffle" class="bottomBarIcons">
+                <img src="imgs/rewind.png" alt="rewind" class="bottomBarIcons">
+                <img src="imgs/pause.png" alt="pause" class="bottomBarIcons">
+                <img src="imgs/forward.png" alt="forward" class="bottomBarIcons">
+                <img src="imgs/arrows-repeat.png" alt="repeat" class="bottomBarIcons">
             </section>
 
         </section>
