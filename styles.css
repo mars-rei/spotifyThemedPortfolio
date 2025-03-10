@@ -279,32 +279,12 @@ html, body { /*done*/
     margin-bottom: 4%;
 }
 
-/*
-@media only screen and (min-width: 500px) and (max-width: 700px) {
-    .mainCircle {
-        width: 7vw; 
-        height: 7vw;
-    }
+.bigRoundedSquare {
+    margin-bottom: 4%;
+    width: 13vw;
+    height: 13vw;
+    border-radius: 10px;
 }
-
-@media only screen and (min-width: 700px) and (max-width: 900px) {
-    .mainCircle {
-        width: 8vw; 
-        height: 8vw;
-    }
-}
-
-@media only screen and (min-width: 900px) and (max-width: 1100) {
-    .mainCircle {
-        width: 10vw; 
-        height: 10vw;
-    }
-
-    .row:nth-child(6n)  .col-2{
-        display: none;
-    }
-}
-*/
 
 .aboutCircle {
     background-color: #6C8F55;
@@ -324,6 +304,10 @@ html, body { /*done*/
 
 .certificationsCircle {
     background-color: #4D663E;
+}
+
+.interestsCircle {
+    background-color: #455b36;
 }
 
 .roundedSquare {
@@ -367,13 +351,6 @@ html, body { /*done*/
     background-color: #D1DECA;
 }
 
-.bigRoundedSquare {
-    margin-bottom: 4%;
-    width: 12vw;
-    height: 12vw;
-    border-radius: 10px;
-}
-
 .project1 {
     background-color: #A2BD92;
 }
@@ -392,6 +369,10 @@ html, body { /*done*/
 
 .project5 {
     background-color: #80A467;
+}
+
+.project6 {
+    background-color: #779e5e;
 }
 
 .experience1 {
@@ -432,4 +413,116 @@ html, body { /*done*/
 
 .interest5 {
     background-color: #0A0F09;
+}
+
+
+
+
+/* adjust at breakpoints */
+
+/* doesn't work on operagx desktop - must use for mobile and chrome? */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: brown;
+    }
+
+    .mainCircle {
+        width: 27vw;
+        height: 27vw;
+    }
+
+    .bigRoundedSquare {
+        width: 27vw;
+        height: 27vw;
+    }
+
+    .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .experienceCircle, .project6, .project5, .project4, .project3) {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    body {
+        background-color: green;
+    }
+
+    .mainCircle {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .bigRoundedSquare {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .experienceCircle, .project6, .project5, .project4, .project3) {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    body {
+        background-color: blue;
+    }
+
+    .mainCircle {
+        width: 23vw;
+        height: 23vw;
+    }
+
+    .bigRoundedSquare {
+        width: 23vw;
+        height: 23vw;
+    }
+    
+    .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .project6, .project5, .project4) {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+    body {
+        background-color: yellow;
+    }
+
+    .mainCircle {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .bigRoundedSquare {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .col:has(.interestsCircle, .certificationsCircle, .project6, .project5) {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    body {
+        background-color: red;
+    }
+
+    .rounded-circle {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .mainCircle {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .bigRoundedSquare {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .col:has(.interestsCircle, .project6) {
+        display: none;
+    }
+
 }
