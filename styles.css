@@ -1,3 +1,5 @@
+/* eventually need to update colours for shapes again */
+
 html, body { /*done*/
     background-color: #4D663E;
     width: 100%;
@@ -195,21 +197,35 @@ html, body { /*done*/
 
 /* index styling */
 
-.rounded-circle {
-    object-fit: contain;
-}
-
 .middleBar::-webkit-scrollbar {
     display: none; 
 }
 
+.rounded-circle {
+    object-fit: contain;
+    width: 17vw;
+    height: 17vw;
+}
+
+.profileHeader .col-2 {
+    width: 22%;
+}
+
+.profileHeader .col-10 {
+    width: 78%;
+}
+
 .profileHeader {
-    padding-top: 6%;
-    padding-bottom: 1%;
-    padding-left: 1%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
     background-image: linear-gradient(#EBF0E9, #DAE5D4);
     display: flex;
     align-items: flex-end;
+}
+
+.profileHeader #mainHeaderText {
+    padding-top: 6%;
 }
 
 #mainHeaderText .row:first-child {
@@ -313,7 +329,7 @@ html, body { /*done*/
 .roundedSquare {
     width: 4vw;
     height: 4vw;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #certificationTrack {
@@ -395,6 +411,10 @@ html, body { /*done*/
     background-color: #324227;
 }
 
+.experience6 {
+    background-color: #2a3821;
+}
+
 .interest1 {
     background-color: #2A3821;
 }
@@ -415,33 +435,112 @@ html, body { /*done*/
     background-color: #0A0F09;
 }
 
-
-
+.interest6 {
+    background-color: #070a06;
+}
 
 /* adjust at breakpoints */
 
-/* doesn't work on operagx desktop - must use for mobile and chrome? */
+/* extra-small breakpoint */
 @media only screen and (max-width: 600px) {
+    .col-5 {
+        display: none;
+    }
+
+    .roundedSquare {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    #certificationTrack {
+        justify-content: space-between;
+    }
+
+    .col-3 .textDark, .col-3 .textLight {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #certificationTrack .col-3 {
+        width: 50%; 
+    }
+
+    .container-fluid {
+        padding: 0;
+    }
+
     body {
-        background-color: brown;
+        background-color: orange;
+    }
+
+    .rounded-circle {
+        width: 100%;
+        height: 100%;
+    }
+
+    .profileHeader .col-2 {
+        width: 40%;
+    }
+
+    .profileHeader .col-10 {
+        width: 60%;
     }
 
     .mainCircle {
-        width: 27vw;
-        height: 27vw;
+        width: 40vw;
+        height: 40vw;
     }
 
     .bigRoundedSquare {
-        width: 27vw;
-        height: 27vw;
+        width: 40vw;
+        height: 40vw;
     }
 
-    .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .experienceCircle, .project6, .project5, .project4, .project3) {
+    .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .experienceCircle, .project6, .project5, .project4, .project3,
+    .experience6, .experience5, .experience4, .experience3, .interest6, .interest5, .interest4, .interest3) {
         display: none;
+    }
+
+    .topBar, .leftBar, .rightBar, .bottomBar {
+        display: none;
+    }
+
+    .middleBar {
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        height: 850px;
     }
 }
 
+/* small breakpoint */
 @media only screen and (min-width: 600px) and (max-width: 800px) {
+    .col-5 {
+        display: none;
+    }
+
+    .roundedSquare {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    #certificationTrack {
+        justify-content: space-between;
+    }
+
+    .col-3 .textDark, .col-3 .textLight {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #certificationTrack .col-3 {
+        width: 50%; 
+    }
+
     body {
         background-color: green;
     }
@@ -456,12 +555,51 @@ html, body { /*done*/
         height: 30vw;
     }
 
-    .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .experienceCircle, .project6, .project5, .project4, .project3) {
+    .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .experienceCircle, .project6, .project5, .project4, .project3,
+    .experience6, .experience5, .experience4, .experience3, .interest6, .interest5, .interest4, .interest3) {
         display: none;
+    }
+
+    .rounded-circle {
+        width: 100%;
+        height: 100%;
+    }
+
+    .profileHeader .col-2 {
+        width: 35%;
+    }
+
+    .profileHeader .col-10 {
+        width: 65%;
     }
 }
 
+/* medium breakpoint */
 @media only screen and (min-width: 800px) and (max-width: 1000px) {
+    .col-5 {
+        width: 20%; 
+    }
+
+    .roundedSquare {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    #certificationTrack {
+        justify-content: space-between;
+    }
+
+    .col-3 .textDark, .col-3 .textLight {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #certificationTrack .col-3 {
+        width: 30%; 
+    }
+
     body {
         background-color: blue;
     }
@@ -476,39 +614,100 @@ html, body { /*done*/
         height: 23vw;
     }
     
-    .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .project6, .project5, .project4) {
+    .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .project6, .project5, .project4, .experience6, .experience5, .experience4, 
+    .interest6, .interest5, .interest4) {
         display: none;
+    }
+
+    .rounded-circle {
+        width: 100%;
+        height: 100%;
+    }
+
+    .profileHeader .col-2 {
+        width: 30%;
+    }
+
+    .profileHeader .col-10 {
+        width: 70%;
     }
 }
 
+/* large breakpoint */
 @media only screen and (min-width: 1000px) and (max-width: 1200px) {
+    .col-5 {
+        width: 30%; 
+    }
+
+    .roundedSquare {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .col-3 .textDark, .col-3 .textLight {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #certificationTrack .col-3 {
+        width: 40%; 
+    }
+
+    #certificationTrack .col-2.textLight {
+        width: 10%;
+    }
+
     body {
         background-color: yellow;
     }
 
+    .rounded-circle {
+        width: 100%;
+        height: 100%;
+    }
+
+    .profileHeader .col-2 {
+        width: 25%;
+    }
+
+    .profileHeader .col-10 {
+        width: 75%;
+    }
+
     .mainCircle {
-        width: 20vw;
-        height: 20vw;
+        width: 19vw;
+        height: 19vw;
     }
 
     .bigRoundedSquare {
-        width: 20vw;
-        height: 20vw;
+        width: 19vw;
+        height: 19vw;
     }
 
-    .col:has(.interestsCircle, .certificationsCircle, .project6, .project5) {
+    .col:has(.interestsCircle, .certificationsCircle, .project6, .project5, .experience6, .experience5, .interest6, .interest5) {
         display: none;
     }
 }
 
+/* extra-large breakpoint */
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
     body {
         background-color: red;
     }
 
     .rounded-circle {
-        width: 12vw;
-        height: 12vw;
+        width: 100%;
+        height: 100%;
+    }
+
+    .profileHeader .col-2 {
+        width: 20%;
+    }
+
+    .profileHeader .col-10 {
+        width: 80%;
     }
 
     .mainCircle {
@@ -521,8 +720,15 @@ html, body { /*done*/
         height: 15vw;
     }
 
-    .col:has(.interestsCircle, .project6) {
+    .col:has(.interestsCircle, .project6, .experience6, .interest6) {
         display: none;
+    }
+
+    .col-3 .textDark, .col-3 .textLight {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
 }
