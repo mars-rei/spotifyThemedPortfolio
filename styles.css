@@ -275,9 +275,7 @@ html, body { /*done*/
 .showAllText {
     white-space: nowrap;
     margin: 0%;
-    margin-right: 2%;
-    color: red;
-    /*color: #455B35;*/
+    color: #455B35;
     font-size: 15px;
     padding-bottom: 2%;
     text-align: right;
