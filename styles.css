@@ -275,7 +275,9 @@ html, body { /*done*/
 .showAllText {
     white-space: nowrap;
     margin: 0%;
-    color: #455B35;
+    margin-right: 2%;
+    color: red;
+    /*color: #455B35;*/
     font-size: 15px;
     padding-bottom: 2%;
     text-align: right;
@@ -510,7 +512,6 @@ html, body { /*done*/
     .middleBar {
         border-radius: 0;
         margin: 0;
-        padding: 0;
         height: 850px;
     }
 }
