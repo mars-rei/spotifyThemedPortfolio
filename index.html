@@ -192,7 +192,7 @@
                             </div>
 
                             <!-- certifications nav in main-->
-                            <div class="row">
+                            <div class="row" id="certifications">
                                 <h1 class="sectionTitle">
                                     Certifications
                                 </h1>                       
@@ -242,7 +242,7 @@
                                             2
                                         </div>
                                         <div class="col-2">
-                                            <div class="roundedSquare certification1"></div>
+                                            <div class="roundedSquare certification2"></div>
                                         </div>
                                         <div class="col-6">
                                             <div class="row textDark">
@@ -268,7 +268,7 @@
                                             3
                                         </div>
                                         <div class="col-2">
-                                            <div class="roundedSquare certification1"></div>
+                                            <div class="roundedSquare certification3"></div>
                                         </div>
                                         <div class="col-6">
                                             <div class="row textDark">
@@ -294,7 +294,7 @@
                                             4
                                         </div>
                                         <div class="col-2">
-                                            <div class="roundedSquare certification1"></div>
+                                            <div class="roundedSquare certification4"></div>
                                         </div>
                                         <div class="col-6">
                                             <div class="row textDark">
@@ -315,7 +315,7 @@
                             </div>
 
                             <!-- projects nav in main-->
-                            <div class="row">
+                            <div class="row" id="projects">
                                 <h1 class="sectionTitle">
                                     Projects
                                 </h1>                       
@@ -402,7 +402,7 @@
                             </div>
 
                             <!-- education nav in main-->
-                            <div class="row">
+                            <div class="row" id="education">
                                 <h1 class="sectionTitle">
                                     Education
                                 </h1>                       
@@ -422,7 +422,7 @@
                             <div class="row">
                                 <div class="col shapeHeading">
                                     <div class="row justify-content-center">
-                                        <div class="mainCircle aboutCircle"></div>
+                                        <div class="mainCircle education1"></div>
                                     </div>
                                     <div class="row justify-content-center textDark">
                                         Birmingham City University
@@ -433,7 +433,7 @@
                                 </div>
                                 <div class="col shapeHeading">
                                     <div class="row justify-content-center">
-                                        <div class="mainCircle educationCircle"></div>
+                                        <div class="mainCircle education2"></div>
                                     </div>
                                     <div class="row justify-content-center textDark">
                                         DataCamp
@@ -444,7 +444,7 @@
                                 </div>
                                 <div class="col shapeHeading">
                                     <div class="row justify-content-center">
-                                        <div class="mainCircle experienceCircle"></div>
+                                        <div class="mainCircle education3"></div>
                                     </div>
                                     <div class="row justify-content-center textDark">
                                         Cisco Networking Academy
@@ -455,7 +455,7 @@
                                 </div>
                                 <div class="col shapeHeading">
                                     <div class="row justify-content-center">
-                                        <div class="mainCircle projectsCircle"></div>
+                                        <div class="mainCircle education4"></div>
                                     </div>
                                     <div class="row justify-content-center textDark">
                                         freeCodeCamp
@@ -466,7 +466,7 @@
                                 </div>
                                 <div class="col shapeHeading">
                                     <div class="row justify-content-center">
-                                        <div class="mainCircle certificationsCircle"></div>
+                                        <div class="mainCircle education5"></div>
                                     </div>
                                     <div class="row justify-content-center textDark">
                                         KEVIHS
@@ -477,7 +477,7 @@
                                 </div>
                                 <div class="col shapeHeading">
                                     <div class="row justify-content-center">
-                                        <div class="mainCircle interestsCircle"></div>
+                                        <div class="mainCircle education6"></div>
                                     </div>
                                     <div class="row justify-content-center textDark">
                                         KEVIHS
@@ -489,7 +489,7 @@
                             </div>
 
                             <!-- work experience nav in main-->
-                            <div class="row">
+                            <div class="row" id="experience">
                                 <h1 class="sectionTitle">
                                     Work Experience
                                 </h1>                       
@@ -564,7 +564,7 @@
                             </div>
 
                             <!-- interests nav in main-->
-                            <div class="row">
+                            <div class="row" id="interests">
                                 <h1 class="sectionTitle">
                                     Interests
                                 </h1>                       
@@ -640,13 +640,47 @@
                 </section>
             </div>
 
-            <!-- bottom bar -->
+            <!-- bottom bar for non-mobile-->
             <section class="row bottomBar">
                 <img src="imgs/shuffle.png" alt="shuffle" class="bottomBarIcons">
                 <img src="imgs/rewind.png" alt="rewind" class="bottomBarIcons">
                 <img src="imgs/pause.png" alt="pause" class="bottomBarIcons">
                 <img src="imgs/forward.png" alt="forward" class="bottomBarIcons">
                 <img src="imgs/arrows-repeat.png" alt="repeat" class="bottomBarIcons">
+            </section>
+
+            <!-- bottom bar for mobile-->
+            <section class="row bottomBarMobile align-items-center">
+                <div class="col-2 justify-content-center">
+                    <a href="">                            
+                        <img src="imgs/info.png" alt="info" class="leftBarIcons">
+                    </a>
+                </div>
+                <div class="col-2 justify-content-center">
+                    <a href="#education">                            
+                        <img src="imgs/graduation-cap.png" alt="education" class="leftBarIcons">
+                    </a>
+                </div>
+                <div class="col-2 justify-content-center">
+                    <a href="#experience">                            
+                        <img src="imgs/briefcase.png" alt="experience" class="leftBarIcons">
+                    </a>
+                </div>
+                <div class="col-2 justify-content-center">
+                    <a href="#projects">                            
+                        <img src="imgs/blueprint.png" alt="projects" class="leftBarIcons">
+                    </a>
+                </div>
+                <div class="col-2 justify-content-center">
+                    <a href="#certifications">                            
+                        <img src="imgs/diploma.png" alt="certifications" class="leftBarIcons">
+                    </a>
+                </div>
+                <div class="col-2 justify-content-center">
+                    <a href="#interests">                            
+                        <img src="imgs/game-board-alt.png" alt="interests" class="leftBarIcons">
+                    </a>
+                </div>
             </section>
 
         </section>

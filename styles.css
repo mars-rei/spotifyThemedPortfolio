@@ -97,7 +97,7 @@ html, body { /*done*/
 
 .mainMenuDots{
     padding-left: 0%;
-    width: 4%;
+    width: 3%;
 }
 
 
@@ -216,9 +216,9 @@ html, body { /*done*/
 }
 
 .profileHeader {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+    margin-top: 3%;
+    padding-bottom: 1%;
+    padding-left: 1%;
     background-image: linear-gradient(#EBF0E9, #DAE5D4);
     display: flex;
     align-items: flex-end;
@@ -229,24 +229,24 @@ html, body { /*done*/
 }
 
 #mainHeaderText .row:first-child {
-    font-size: 15px;
+    font-size: medium;
     color: #6C8F55;
 }
 
 #mainHeaderText .row:nth-child(2) {
-    font-size: 3.5vw;
+    font-size: xx-large;
     font-weight: 800;
     color: #1D2818;
 }
 
 .title {
-    font-size: 15px;
+    font-size: medium;
     color: #6C8F55;
     padding: 0; 
 }
 
 .ongoingProjects {
-    font-size: 15px;
+    font-size: medium;
     color: #455B35;
 }
 
@@ -333,7 +333,7 @@ html, body { /*done*/
 }
 
 #certificationTrack {
-    padding-bottom: 1%;
+    padding-bottom: 2%;
 }
 
 #certificationTracl:last-of-type {
@@ -391,6 +391,30 @@ html, body { /*done*/
     background-color: #779e5e;
 }
 
+.education1 {
+    background-color: #779E5F;
+}
+
+.education2 {
+    background-color: #709457;
+}
+
+.education3 {
+    background-color: #688952;
+}
+
+.education4 {
+    background-color: #617F4D;
+}
+
+.education5 {
+    background-color: #587545;
+}
+
+.education6 {
+    background-color: #506B40;
+}
+
 .experience1 {
     background-color: #506B40;
 }
@@ -439,6 +463,12 @@ html, body { /*done*/
     background-color: #070a06;
 }
 
+.bottomBarMobile {
+    display: none;
+}
+
+
+
 /* adjust at breakpoints */
 
 /* extra-small breakpoint */
@@ -463,6 +493,10 @@ html, body { /*done*/
         height: 100%;
     }
 
+    .profileHeader {
+        margin-top: 10%;
+    }
+
     .profileHeader .col-2 {
         width: 40%;
     }
@@ -482,7 +516,8 @@ html, body { /*done*/
     }
 
     .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .experienceCircle, .project6, .project5, .project4, .project3,
-    .experience6, .experience5, .experience4, .experience3, .interest6, .interest5, .interest4, .interest3) {
+    .education6, .education5, .education4, .education3, .experience6, .experience5, .experience4, .experience3, .interest6, 
+    .interest5, .interest4, .interest3) {
         display: none;
     }
 
@@ -508,9 +543,20 @@ html, body { /*done*/
     }
 
     .middleBar {
-        border-radius: 0;
         margin: 0;
-        height: 850px;
+        padding: 0;
+        border-radius: 0;
+        height: calc(100vh - 75px); 
+    }
+
+    .bottomBarMobile { /* the icons are not spaced properly*/
+        height: 75px; 
+        position: fixed; 
+        bottom: 0; 
+        width: 100%;
+        background-color: #4D663E;
+        display: flex; 
+        align-items: center; 
     }
 }
 
@@ -559,7 +605,8 @@ html, body { /*done*/
     }
 
     .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .experienceCircle, .project6, .project5, .project4, .project3,
-    .experience6, .experience5, .experience4, .experience3, .interest6, .interest5, .interest4, .interest3) {
+    .education6, .education5, .education4, .education3, .experience6, .experience5, .experience4, .experience3, .interest6, 
+    .interest5, .interest4, .interest3) {
         display: none;
     }
 
@@ -621,8 +668,8 @@ html, body { /*done*/
         height: 23vw;
     }
     
-    .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .project6, .project5, .project4, .experience6, .experience5, .experience4, 
-    .interest6, .interest5, .interest4) {
+    .col:has(.interestsCircle, .certificationsCircle, .projectsCircle, .project6, .project5, .project4, .education6, .education5,
+    .education4, .experience6, .experience5, .experience4, .interest6, .interest5, .interest4) {
         display: none;
     }
 
@@ -697,7 +744,7 @@ html, body { /*done*/
         height: 19vw;
     }
 
-    .col:has(.interestsCircle, .certificationsCircle, .project6, .project5, .experience6, .experience5, .interest6, .interest5) {
+    .col:has(.interestsCircle, .certificationsCircle, .project6, .project5, .education6, .education5, .experience6, .experience5, .interest6, .interest5) {
         display: none;
     }
 }
@@ -731,7 +778,7 @@ html, body { /*done*/
         height: 15vw;
     }
 
-    .col:has(.interestsCircle, .project6, .experience6, .interest6) {
+    .col:has(.interestsCircle, .project6, .education6, .experience6, .interest6) {
         display: none;
     }
 
