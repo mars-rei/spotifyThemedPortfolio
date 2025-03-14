@@ -442,29 +442,12 @@ html, body { /*done*/
 /* adjust at breakpoints */
 
 /* extra-small breakpoint */
-@media only screen and (max-width: 600px) {
-    .col-5 {
-        display: none;
-    }
-
-    .roundedSquare {
-        width: 12vw;
-        height: 12vw;
-    }
-
-    #certificationTrack {
-        justify-content: space-between;
-    }
-
-    .col-3 .textDark, .col-3 .textLight {
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    .col-6 .row.textDark, .col-6 .textLight {
         display: block;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-    }
-
-    #certificationTrack .col-3 {
-        width: 50%; 
     }
 
     .container-fluid {
@@ -503,7 +486,24 @@ html, body { /*done*/
         display: none;
     }
 
-    .topBar, .leftBar, .rightBar, .bottomBar {
+    #certificationTrack > .col-6 {
+        width: 100%;
+    }
+
+    #certificationTrack > .col-2 {
+        display: none;
+    }
+
+    #certificationTrack .col-6:has(> .row.textDark) {
+        width: 75%;
+    }
+
+    .roundedSquare {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .topBar, .leftBar, .rightBar, .bottomBar, #certificationTrack .col-4.textLight {
         display: none;
     }
 
@@ -516,28 +516,32 @@ html, body { /*done*/
 
 /* small breakpoint */
 @media only screen and (min-width: 600px) and (max-width: 800px) {
-    .col-5 {
-        display: none;
-    }
-
-    .roundedSquare {
-        width: 10vw;
-        height: 10vw;
-    }
-
-    #certificationTrack {
-        justify-content: space-between;
-    }
-
-    .col-3 .textDark, .col-3 .textLight {
+    .col-6 .row.textDark, .col-6 .textLight {
         display: block;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
     }
 
-    #certificationTrack .col-3 {
-        width: 50%; 
+    #certificationTrack > .col-6 {
+        width: 80%;
+    }
+
+    #certificationTrack > .col-4 {
+        display: none;
+    }
+
+    #certificationTrack .col-6:has(> .row.textDark) {
+        width: 75%;
+    }
+
+    #certificationTrack > .col-2 {
+        width: 20%;
+    }
+
+    .roundedSquare {
+        width: 7vw;
+        height: 7vw;
     }
 
     body {
@@ -575,30 +579,34 @@ html, body { /*done*/
 
 /* medium breakpoint */
 @media only screen and (min-width: 800px) and (max-width: 1000px) {
-    .col-5 {
-        width: 20%; 
-    }
-
-    .roundedSquare {
-        width: 8vw;
-        height: 8vw;
-    }
-
-    #certificationTrack {
-        justify-content: space-between;
-    }
-
-    .col-3 .textDark, .col-3 .textLight {
+    .col-6 .row.textDark, .col-6 .textLight {
         display: block;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
     }
 
-    #certificationTrack .col-3 {
-        width: 30%; 
+    #certificationTrack > .col-6 {
+        width: 80%;
     }
 
+    #certificationTrack > .col-4 {
+        display: none;
+    }
+
+    #certificationTrack .col-6:has(> .row.textDark) {
+        width: 75%;
+    }
+
+    #certificationTrack > .col-2 {
+        width: 20%;
+    }
+
+    .roundedSquare {
+        width: 7vw;
+        height: 7vw;
+    }
+    
     body {
         background-color: blue;
     }
@@ -634,28 +642,32 @@ html, body { /*done*/
 
 /* large breakpoint */
 @media only screen and (min-width: 1000px) and (max-width: 1200px) {
-    .col-5 {
-        width: 30%; 
-    }
-
-    .roundedSquare {
-        width: 5vw;
-        height: 5vw;
-    }
-
-    .col-3 .textDark, .col-3 .textLight {
+    .col-6 .row.textDark, .col-6 .textLight {
         display: block;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
     }
 
-    #certificationTrack .col-3 {
-        width: 40%; 
+    #certificationTrack > .col-6 {
+        width: 60%;
     }
 
-    #certificationTrack .col-2.textLight {
+    #certificationTrack > .col-4 {
+        width: 27%;
+    }
+
+    #certificationTrack .col-6:has(> .row.textDark) {
+        width: 75%;
+    }
+
+    #certificationTrack > .col-2 {
         width: 10%;
+    }
+
+    .roundedSquare {
+        width: 6vw;
+        height: 6vw;
     }
 
     body {
@@ -723,11 +735,21 @@ html, body { /*done*/
         display: none;
     }
 
-    .col-3 .textDark, .col-3 .textLight {
-        display: block;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
+    #certificationTrack > .col-6 {
+        width: 60%;
     }
 
+    #certificationTrack > .col-4 {
+        width: 27%;
+    }
+
+    #certificationTrack > .col-2 {
+        width: 10%;
+    }
+
+    .roundedSquare {
+        width: 5vw;
+        height: 5vw;
+    }
 }
+
