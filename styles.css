@@ -336,7 +336,7 @@ html, body { /*done*/
     padding-bottom: 2%;
 }
 
-#certificationTracl:last-of-type {
+#certificationTrack:last-of-type {
     margin-bottom: 10%;
 }
 
@@ -546,9 +546,11 @@ html, body { /*done*/
         margin: 0;
         padding: 0;
         border-radius: 0;
-        position: relative; 
+        height: 100vh; 
+    }
+
+    .row:has(.shapeHeading):last-of-type {
         padding-bottom: 75px;
-        height: 100vh;
     }
 
     .bottomBarMobile { /* the icons are not spaced properly*/
