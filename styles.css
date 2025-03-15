@@ -546,7 +546,6 @@ html, body { /*done*/
         margin: 0;
         padding: 0;
         border-radius: 0;
-        height: calc(100vh - 75px); 
         position: relative; 
         bottom: 75px;
     }
