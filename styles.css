@@ -546,10 +546,10 @@ html, body { /*done*/
         margin: 0;
         padding: 0;
         border-radius: 0;
-        height: 100vh; 
+        height: calc(100vh - 75px); 
     }
 
-    .row:has(.shapeHeading):last-of-type {
+    .mainScrollableContent {
         padding-bottom: 75px;
     }
 
