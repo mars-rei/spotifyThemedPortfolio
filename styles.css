@@ -546,7 +546,7 @@ html, body { /*done*/
         margin: 0;
         padding: 0;
         border-radius: 0;
-        height: calc(100vh + 75px); 
+        height: calc(100vh - 75px); 
     }
 
     .bottomBarMobile { /* the icons are not spaced properly*/
