@@ -66,9 +66,7 @@
 }
 
 
-/* eventually need to update colours for shapes again */
-
-html, body { /*done*/
+html, body { 
     background-color: var(--main-bg-color); 
     width: 100%;
     height: 100%;
