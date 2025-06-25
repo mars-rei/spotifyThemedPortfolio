@@ -6,60 +6,321 @@
   <link href="./output.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="bg-white">
 
-  <div class="mx-5">
+<body class="bg-white scrollbar-hide">
 
+  <div class="mx-5 pb-24">
     <!-- profile header -->
-    <div class="mt-16">
-      <div class="grid grid-cols-2">
-        <div class="cols-span-1">
-          <img src="/tailwind_ver/imgs/headshot.jpeg" class="w-32 rounded-full">
-        </div>
-        <div class="cols-span-1 flex flex-col -ml-5">
-          <p class="text-2xl font-bold">Imogen Dicen</p>
-          <p class="">2nd Year Computer Science Student • 5 Ongoing Projects</p>
-        </div>
+    <div class="grid grid-cols-2 items-center mt-8">  <!-- Added `items-center` -->
+
+      <div class="col-span-1">
+        <img src="/tailwind_ver/imgs/headshot.jpeg" class="w-32 rounded-full">
+      </div>
+      
+      <div class="col-span-1 flex flex-col -ml-5">
+        <p class="text-2xl font-bold">Imogen Dicen</p>
+        <p class="text-sm">2nd Year Computer Science Student • 5 Ongoing Projects</p>
       </div>
     </div>
 
-    <div class="my-12">
-      <p class="text-2xl font-bold">My Portfolio</p>
+    <div class="my-8">
+      <p class="text-2xl font-bold">About Me</p>
+      <p class="mt-2 mb-4">
+        A second year Computer Science student interested in web development, full-stack development, and data engineering.
+      </p>
+    </div>
+
+    <div class="my-8">
+      <p class="text-2xl font-bold">Completed Projects</p>
       <p class="mt-2 mb-4">As of June 2025</p>
-      <div class="flex flex-row my-2">
-        <div class="w-16 h-16 rounded-full bg-black"></div>
-        <p class="ml-5 font-bold">About Me</p>
-      </div>
-      <div class="flex flex-row my-2">
-        <div class="w-16 h-16 rounded-full bg-black"></div>
-        <p class="ml-5 font-bold">Education</p>
-      </div>
-      <div class="flex flex-row my-2">
-        <div class="w-16 h-16 rounded-full bg-black"></div>
-        <p class="ml-5 font-bold">Projects</p>
-      </div>
-      <div class="flex flex-row my-2">
-        <div class="w-16 h-16 rounded-full bg-black"></div>
-        <p class="ml-5 font-bold">Certifications</p>
-      </div>
-      <div class="flex flex-row my-2">
-        <div class="w-16 h-16 rounded-full bg-black"></div>
-        <p class="ml-5 font-bold">Interests</p>
+      <div class="flex overflow-x-auto scrollbar-hide">
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Mastermind Command-Line Game</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">BMW Group Physical Asset Tracking System</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">CompClub Hub</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Flight Booking System in Java</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">BookBot</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">IM SwissGambit</p>
+        </div>
       </div>
     </div>
 
-    <div class="my-12">
+    <div class="my-8">
+      <p class="text-2xl font-bold">Ongoing Projects</p>
+      <p class="mt-2 mb-4">As of June 2025</p>
+      <div class="flex overflow-x-auto scrollbar-hide">
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Summer of '25 Blog</p>
+        </div>
 
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Spotify Themed Portfolio</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">CompClub Hub 2.0</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Fire on Marz</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Digital Scrapbook</p>
+        </div>
+      </div>
     </div>
 
-    <div class="my-12">
+    <div class="my-8">
+      <p class="text-2xl font-bold pb-4">Skills</p>
+      <div class="grid grid-cols-2 gap-2 items-start">
+        <div class="grid col-span-1 gap-y-2">
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">Python</p>
+          </div>
 
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">CSS</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">PHP</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">Git</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">Frontend Development</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">Project Management</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">Team Leadership</p>
+          </div>
+        </div>
+
+        <div class="grid col-span-1 gap-y-2">
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">HTML</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">SQL</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">JavaScript</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">Figma</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">Full-Stack Development</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">Problem Solving</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">Team Collaboration</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="my-8">
+      <p class="text-2xl font-bold">Certifications</p>
+      <p class="mt-2 mb-4">As of June 2025</p>
+      <div class="flex overflow-x-auto scrollbar-hide">
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Active Listening</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">CCNA: Introduction to Networks</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Python Essentials 1</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Grade 5 Violin</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Enterprise Design Thinking Practitioner</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Computer Hardware Basics</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">CyberFirst Advanced (SCQF Level 6)</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Grade 8 Piano</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-md"></div>
+          <p class="mt-3 text-sm">Grade 5 Music Theory</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-8">
+      <p class="text-2xl font-bold">Education</p>
+      <p class="mt-2 mb-4">As of June 2025</p>
+      <div class="flex overflow-x-auto scrollbar-hide">
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-full"></div>
+          <p class="mt-3 text-sm">Birmingham City University</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-full"></div>
+          <p class="mt-3 text-sm">DataCamp</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-full"></div>
+          <p class="mt-3 text-sm">freeCodeCamp</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-full"></div>
+          <p class="mt-3 text-sm">Cisco Networking Academy</p>
+        </div>
+
+        <div class="flex-shrink-0 w-40 rounded-lg -ml-4 p-4" >
+          <div class="w-full h-32 bg-black rounded-full"></div>
+          <p class="mt-3 text-sm">King Edward VI Handsworth</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-8">
+      <p class="text-2xl font-bold">Contact Me</p>
+      <div class="mt-3 grid grid-cols-2 gap-2 items-start">
+        <div class="grid col-span-1 gap-y-2">
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">Gmail</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">GitHub</p>
+          </div>
+        </div>
+
+        <div class="grid col-span-1 gap-y-2">
+          <div class="flex-shrink-0 w-full py-2 bg-black rounded-md flex items-center gap-3 pl-2 pr-4">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <span class="fa fa-music text-white text-xs"></span>
+            </div>
+            <p class="text-sm text-white">LinkedIn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- footer -->
   <footer id="mobileNavbar">
-    <div class="grid grid-cols-5 w-full fixed bottom-0 py-4 z-20">
+    <div class="grid grid-cols-5 w-full bg-white fixed bottom-0 py-2 z-20">
       <div class="col-span-1 flex flex-col justify-center items-center">
         <span class="fa fa-home fa-2x" aria-hidden="true"></span>
         <span class="text-sm text-black">Home</span>
@@ -74,7 +335,7 @@
       </div>
       <div class="col-span-1 flex flex-col justify-center items-center">
         <span class="fa fa-certificate fa-2x" aria-hidden="true"></span>
-        <span class="text-sm text-black">Credentials</span>
+        <span class="text-sm text-black">Certs</span>
       </div>
       <div class="col-span-1 flex flex-col justify-center items-center">
         <span class="fa fa-address-card fa-2x" aria-hidden="true"></span>
