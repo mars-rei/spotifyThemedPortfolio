@@ -8,3 +8,21 @@
     -ms-overflow-style: none; 
     scrollbar-width: none; 
 }
+
+:root {
+  --dark1: oklch(0.2257 0.0038 106.7);
+  --dark2: oklch(0.294 0.006 134.93);
+  --light1: oklch(0.945 0.0053 106.5);
+  --light2: oklch(0.8523 0.0109 106.63);
+  --green1: oklch(0.4743 0.036 117.76);
+  --green2: oklch(0.6341 0.0357 120.64);
+}
+
+.dark {
+  --dark1: #EDEDE9;
+  --dark2: #CFCFC7;
+  --light1: #1C1C1A;
+  --light2: #2B2D2A;
+  --green1: #878E76;
+  --green2: #5A5F48;
+}
