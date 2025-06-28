@@ -14,7 +14,7 @@
   <div class="mx-5 pb-24" x-data="{
     activeStatus: null,
     projects: [
-      { title: 'Summer of \'25 Blog', status: 'ongoing', author: 'mars.rei', href: 'project-9-summer-of-25.html' },
+      { title: 'Summer of \'25 Blog', status: 'ongoing', img: '../imgs/p1-1.png', author: 'mars.rei', href: 'project-9-summer-of-25.html' },
       { title: 'Mastermind Command-Line Game', status: 'complete', author: 'mars.rei + 1', href: 'project-8-mastermind.html' },
       { title: 'BMW Group Physical Asset Tracking System', status: 'complete', author: 'mars.rei + 5', href: 'project-7-bmw-tracking-system.html' },
       { title: 'Spotify Themed Portfolio', status: 'ongoing', author: 'mars.rei', href: 'project-5-spotify-portfolio.html' },
@@ -74,7 +74,9 @@
       <template x-for="project in filteredProjects()" :key="project.title">
         <a :href="project.href" class="contents" x-bind:title="project.title">
           <div class="min-w-0">
-            <div class="flex-shrink-0 w-full aspect-square py-2 bg-black flex items-center gap-3"></div>
+            <div class="w-full aspect-square bg-black">
+              <img x-bind:src="project.img">
+            </div>
             <p class="text-sm font-bold truncate" x-text="project.title"></p>
             <p class="text-sm" x-text="project.author"></p>
           </div>
