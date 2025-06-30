@@ -8,3 +8,26 @@
     -ms-overflow-style: none; 
     scrollbar-width: none; 
 }
+
+:root {
+  --spotify-green: #1DB954;
+  --black: #121212;
+  --dark-gray: #181818;
+  --medium-gray: #282828;
+  --light-gray: #B3B3B3;
+  --white: #FFFFFF;
+  --progress-bg: #535353;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.border {
+    border-color: var(--light-gray);
+}
+
+.text-faded {
+    color: var(--light-gray);
+}

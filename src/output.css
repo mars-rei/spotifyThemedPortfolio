@@ -259,14 +259,14 @@
   .mt-64 {
     margin-top: calc(var(--spacing) * 64);
   }
-  .mt-72 {
-    margin-top: calc(var(--spacing) * 72);
-  }
   .mt-80 {
     margin-top: calc(var(--spacing) * 80);
   }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
@@ -464,6 +464,9 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-\[\#121212\] {
+    background-color: #121212;
+  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -507,6 +510,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
   }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
@@ -598,6 +604,25 @@
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+:root {
+  --spotify-green: #1DB954;
+  --black: #121212;
+  --dark-gray: #181818;
+  --medium-gray: #282828;
+  --light-gray: #B3B3B3;
+  --white: #FFFFFF;
+  --progress-bg: #535353;
+}
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+.border {
+  border-color: var(--light-gray);
+}
+.text-faded {
+  color: var(--light-gray);
 }
 @property --tw-space-y-reverse {
   syntax: "*";
