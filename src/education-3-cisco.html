@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -122,40 +123,13 @@
         </div>
     </div>
 
-  <!-- footer -->
-  <footer id="mobileNavbar">
-    <div class="grid grid-cols-5 w-full bg-white fixed bottom-0 py-2 z-20">
-      <a href="index.html">
-        <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-home fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Home</span>
-        </div>
-      </a>
-      <a href="about.html">
-        <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-user fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">About</span>
-        </div>
-      </a>
-      <a href="projects.html">
-        <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-folder fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Projects</span>
-        </div>
-      </a>
-      <a href="certifications.html">
-        <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-certificate fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Certs</span>
-        </div>
-      </a>
-      <a href="contact.html">
-        <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-address-card fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Contact</span>
-        </div>
-      </a>
-    </div>
+  <!-- mobile nav -->
+  <div id="mobileNavContainer"></div>
+  <script>
+  $(function(){
+      $("#mobileNavContainer").load("mobileNav.html");
+  });
+  </script>
   
 </body>
 </html>
