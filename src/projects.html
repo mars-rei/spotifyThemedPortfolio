@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-white scrollbar-hide">
+<body class="scrollbar-hide">
 
-  <div class="mx-5 pb-24" x-data="{
+  <div class="mx-5 pb-24 text-white" x-data="{
     activeStatus: null,
     projects: [
       { title: 'Summer of \'25 Blog', status: 'ongoing', author: 'mars.rei', href: 'project-9-summer-of-25.html' },
@@ -36,13 +37,13 @@
     }
   }">
 
-    <div class="mt-8 flex flex-row items-center"> 
+    <div class="mt-6 flex flex-row items-center"> 
       <div>
         <img src="../imgs/headshot.jpeg" class="w-8 rounded-full">
       </div>
       
       <div class="ml-2">
-        <p class="text-2xl font-bold">My Projects</p>
+        <p class="text-xl font-bold">My Projects</p>
       </div>
     </div>
 
@@ -50,23 +51,23 @@
       <button 
         @click="toggleStatus('complete')" 
         :class="{
-          'bg-black text-white': activeStatus === 'complete',
-          'bg-white': activeStatus !== 'complete'
+          'bg-[#1DB954] text-[#121212]': activeStatus === 'complete',
+          'bg-[#282828]': activeStatus !== 'complete'
         }"
-        class="rounded-full inline-block py-2 px-4 outline-1 outline-black"
+        class="rounded-full inline-block py-2 px-4"
       >
-        <p class="text-sm">Complete / Archived</p>
+        <p class="text-xs">Complete / Archived</p>
       </button>
 
       <button 
         @click="toggleStatus('ongoing')" 
         :class="{
-          'bg-black text-white': activeStatus === 'ongoing',
-          'bg-white': activeStatus !== 'ongoing'
+          'bg-[#1DB954] text-[#121212]': activeStatus === 'ongoing',
+          'bg-[#282828]': activeStatus !== 'ongoing'
         }"
-        class="rounded-full inline-block py-2 px-4 outline-1 outline-black"
+        class="rounded-full inline-block py-2 px-4"
       >
-        <p class="text-sm">Ongoing</p>
+        <p class="text-xs">Ongoing</p>
       </button>
     </div>
   
@@ -74,51 +75,24 @@
       <template x-for="project in filteredProjects()" :key="project.title">
         <a :href="project.href" class="contents" x-bind:title="project.title">
           <div class="min-w-0">
-            <div class="w-full aspect-square bg-black">
+            <div class="w-full aspect-square bg-[#535353]">
               <img x-bind:src="project.img">
             </div>
-            <p class="text-sm font-bold truncate" x-text="project.title"></p>
-            <p class="text-sm" x-text="project.author"></p>
+            <p class="text-xs truncate mt-1" x-text="project.title"></p>
+            <p class="text-xs text-faded" x-text="project.author"></p>
           </div>
         </a>
       </template>
     </div>
   </div>
 
-  <!-- footer -->
-  <footer id="mobileNavbar">
-    <div class="grid grid-cols-5 w-full bg-white fixed bottom-0 py-2 z-20">
-      <a href="index.html">
-        <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-home fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Home</span>
-        </div>
-      </a>
-      <a href="about.html">
-        <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-user fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">About</span>
-        </div>
-      </a>
-      <a href="projects.html">
-        <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-folder fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Projects</span>
-        </div>
-      </a>
-      <a href="certifications.html">
-        <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-certificate fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Certs</span>
-        </div>
-      </a>
-      <a href="contact.html">
-        <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-address-card fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Contact</span>
-        </div>
-      </a>
-    </div>
+  <!-- mobile nav -->
+  <div id="mobileNavContainer"></div>
+  <script>
+  $(function(){
+      $("#mobileNavContainer").load("mobileNav.html");
+  });
+  </script>
   
 </body>
 </html>
