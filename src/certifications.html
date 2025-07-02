@@ -1,17 +1,18 @@
 <!doctype html>
 <html>
 <head>
-    <title>Certifications</title>
+  <title>Certifications</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-white scrollbar-hide">
+<body class="scrollbar-hide">
 
-  <div class="mx-5 pb-24" x-data="{
+  <div class="mx-5 pb-24 text-white " x-data="{
     activeType: null,
     certs: [
       {icon: 'fa fa-chart-line', name: 'Hypothesis Testing in Python', from: 'DataCamp', type: 'acknowledgement'},
@@ -79,94 +80,62 @@
   }">
 
     <div class="flex justify-center items-center mt-8"> 
-      <div class="bg-black w-full mx-8 aspect-square flex justify-center items-center">
-        <span class="fa fa-certificate fa-8x text-white"></span>
+      <div class="bg-[#535353] w-56 mx-8 aspect-square flex justify-center items-center">
+        <span class="fa fa-certificate fa-8x text-[#121212]"></span>
       </div>
     </div>
 
     <div class="mt-6">
-      <p class="text-2xl font-bold">My Certifications</p>
+      <p class="text-xl font-bold">My Certifications</p>
     </div>
 
     <div class="mt-4 space-x-1">
       <button 
         @click="toggleType('formal')" 
         :class="{
-          'bg-black text-white': activeType === 'formal',
-          'bg-white': activeType !== 'formal'
+          'bg-[#1DB954] text-[#121212]': activeType === 'formal',
+          'bg-[#282828]': activeType !== 'formal'
         }"
-        class="rounded-full inline-block py-2 px-4 outline-1 outline-black"
+        class="rounded-full inline-block py-2 px-4"
       >
-        <p class="text-sm">Formal</p>
+        <p class="text-xs">Formal</p>
       </button>
 
       <button 
         @click="toggleType('acknowledgement')" 
         :class="{
-          'bg-black text-white': activeType === 'acknowledgement',
-          'bg-white': activeType !== 'acknowledgement'
+          'bg-[#1DB954] text-[#121212]': activeType === 'acknowledgement',
+          'bg-[#282828]': activeType !== 'acknowledgement'
         }"
-        class="rounded-full inline-block py-2 px-4 outline-1 outline-black"
+        class="rounded-full inline-block py-2 px-4"
       >
-        <p class="text-sm">Acknowledgement</p>
+        <p class="text-xs">Acknowledgement</p>
       </button>
     </div>
 
     <div class="text-sm mt-6 space-y-4">
       <template x-for="(cert, index) in filteredCerts()" :key="cert.name">
         <div class="flex flex-row gap-3 items-center" x-bind:title="cert.name">
-          <div class="flex items-center justify-center w-2">
-            <span x-text="index + 1"></span>
-          </div>
-
-          <div class="bg-black aspect-square rounded-lg w-12 flex justify-center items-center">
-            <span x-bind:class="cert.icon + ' fa-2x text-white'"></span>
+          <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center">
+            <span x-bind:class="cert.icon + ' fa-2x text-[#121212]'"></span>
           </div>
 
           <div class="min-w-0 flex-1 mr-2">
-            <p class="font-semibold truncate" x-text="cert.name"></p>
-            <p class="truncate" x-text="cert.from"></p>
+            <p class="font-normal text-md truncate" x-text="cert.name"></p>
+            <p class="text-xs text-faded truncate" x-text="cert.from"></p>
           </div>
         </div>
       </template>
     </div>
   </div>
   
-  <!-- footer -->
-  <footer id="mobileNavbar">
-    <div class="grid grid-cols-5 w-full bg-white fixed bottom-0 py-2 z-20">
-      <a href="index.html">
-          <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-home fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Home</span>
-          </div>
-      </a>
-      <a href="about.html">
-          <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-user fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">About</span>
-          </div>
-      </a>
-      <a href="projects.html">
-          <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-folder fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Projects</span>
-          </div>
-      </a>
-      <a href="certifications.html">
-          <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-certificate fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Certs</span>
-          </div>
-      </a>
-      <a href="contact.html">
-          <div class="col-span-1 flex flex-col justify-center items-center">
-          <span class="fa fa-address-card fa-2x" aria-hidden="true"></span>
-          <span class="text-sm text-black">Contact</span>
-          </div>
-      </a>
-    </div>
-  </footer>
+  <!-- mobile nav -->
+  <div id="mobileNavContainer"></div>
+  <script>
+  $(function(){
+      $("#mobileNavContainer").load("mobileNav.html");
+  });
+  </script>
   
 </body>
 </html>
