@@ -390,6 +390,12 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .scale-\[0\.75\] {
+    scale: 0.75;
+  }
+  .scale-\[0\.98\] {
+    scale: 0.98;
+  }
   .resize {
     resize: both;
   }
