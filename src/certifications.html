@@ -91,6 +91,7 @@
 
     <div class="mt-4 space-x-1">
       <button 
+        x-show="activeType !== 'acknowledgement'"
         @click="toggleType('formal')" 
         :class="{
           'bg-[#1DB954] text-[#121212]': activeType === 'formal',
@@ -102,6 +103,7 @@
       </button>
 
       <button 
+        x-show="activeType !== 'formal'"
         @click="toggleType('acknowledgement')" 
         :class="{
           'bg-[#1DB954] text-[#121212]': activeType === 'acknowledgement',

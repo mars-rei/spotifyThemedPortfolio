@@ -50,6 +50,7 @@
 
     <div class="mt-4 space-x-1">
       <button 
+        x-show="activeStatus !== 'ongoing'"
         @click="toggleStatus('complete')" 
         :class="{
           'bg-[#1DB954] text-[#121212]': activeStatus === 'complete',
@@ -61,6 +62,7 @@
       </button>
 
       <button 
+        x-show="activeStatus !== 'complete'"
         @click="toggleStatus('ongoing')" 
         :class="{
           'bg-[#1DB954] text-[#121212]': activeStatus === 'ongoing',
