@@ -27,25 +27,25 @@
       { title: 'CompClub Hub 2.0', status: 'ongoing', author: 'mars.rei', href: 'project-6-compclub-hub-2.html' },
       { title: 'Fire on Marz', status: 'ongoing', author: 'mars.rei', href: 'project-10-fire-on-marz.html' },
       { title: 'Digital Scrapbook', status: 'ongoing', author: 'mars.rei + ?', href: 'project-11-digital-scrapbook.html' }
-    ],
+      ],
     toggleStatus(status) {
-      this.activeStatus = this.activeStatus === status ? null : status;
+        this.activeStatus = this.activeStatus === status ? null : status;
     },
     filteredProjects() {
-      return this.activeStatus 
+    return this.activeStatus 
         ? this.projects.filter(p => p.status === this.activeStatus)
         : this.projects;
     }
   }">
 
     <div class="mt-6 flex flex-row items-center"> 
-      <div>
+    <div class="sm:hidden">
         <img src="../imgs/headshot.jpeg" class="w-8 rounded-full">
-      </div>
-      
-      <div class="ml-2">
-        <p class="text-xl font-bold">My Projects</p>
-      </div>
+    </div>
+    
+    <div class="ml-2 md:ml-0 md:mt-14">
+        <p class="text-xl md:text-3xl font-bold">My Projects</p>
+    </div>
     </div>
 
     <div class="mt-4 space-x-1">
@@ -53,36 +53,36 @@
         x-show="activeStatus !== 'ongoing'"
         @click="toggleStatus('complete')" 
         :class="{
-          'bg-[#1DB954] text-[#121212]': activeStatus === 'complete',
-          'bg-[#282828]': activeStatus !== 'complete'
+        'bg-[#1DB954] md:bg-white text-[#121212]': activeStatus === 'complete',
+        'bg-[#282828]': activeStatus !== 'complete'
         }"
         class="rounded-full inline-block py-2 px-4"
       >
-        <p class="text-xs">Complete / Archived</p>
+        <p class="text-xs md:text-sm">Complete / Archived</p>
       </button>
 
       <button 
         x-show="activeStatus !== 'complete'"
         @click="toggleStatus('ongoing')" 
         :class="{
-          'bg-[#1DB954] text-[#121212]': activeStatus === 'ongoing',
-          'bg-[#282828]': activeStatus !== 'ongoing'
+        'bg-[#1DB954] md:bg-white text-[#121212]': activeStatus === 'ongoing',
+        'bg-[#282828]': activeStatus !== 'ongoing'
         }"
         class="rounded-full inline-block py-2 px-4"
       >
-        <p class="text-xs">Ongoing</p>
+        <p class="text-xs md:text-sm">Ongoing</p>
       </button>
     </div>
   
-    <div class="grid grid-cols-3 gap-4 mt-5">
+    <div class="grid grid-cols-3 md:grid-cols-8 gap-4 md:gap-6 mt-5">
       <template x-for="project in filteredProjects()" :key="project.title">
         <a :href="project.href" class="contents" x-bind:title="project.title">
           <div class="min-w-0">
-            <div class="w-full aspect-square bg-[#535353]">
-              <img x-bind:src="project.img">
+            <div class="w-full aspect-square bg-[#535353] md:rounded-md">
+              <img x-bind:src="project.img" class="md:rounded-md">
             </div>
-            <p class="text-xs truncate mt-1" x-text="project.title"></p>
-            <p class="text-xs text-faded" x-text="project.author"></p>
+            <p class="text-xs md:text-sm md:font-semibold truncate mt-1" x-text="project.title"></p>
+            <p class="text-xs md:text-sm text-faded" x-text="project.author"></p>
           </div>
         </a>
       </template>
