@@ -20,13 +20,13 @@
 
 body {
   background-color: var(--black);
-  color: var(--white);
+  color: white;
 }
 
 .border {
-    border-color: var(--light-gray);
+  border-color: var(--light-gray);
 }
 
 .text-faded {
-    color: var(--light-gray);
+  color: var(--light-gray);
 }
