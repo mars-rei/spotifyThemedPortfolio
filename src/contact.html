@@ -1,20 +1,237 @@
 <!doctype html>
 <html>
-
-<!-- this page is to mimic the premium tab on spotify's app -->
-
 <head>
   <title>Contact Me</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="scrollbar-hide">
+<body class="scrollbar-hide sm:overflow-hidden">
 
-  <div class="my-8 mx-5 pb-24 text-white">
+    <div class="hidden sm:flex flex-col min-h-screen flex-1 overflow-hidden bg-black">
+  
+        <!-- top -->
+        <div class="flex-shrink-0 flex items-center p-2">
+            <div class="flex w-1/4 items-center justify-start ml-5 space-x-4">
+            <span class="fa fa-briefcase text-3xl text-white"></span>
+            </div>
+            
+            <div class="flex items-center justify-center w-2/4 space-x-2">
+            <a href="index.html">
+                <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
+                    <span class="fa fa-home text-xl text-faded"></span>
+                </div>
+            </a>
+            
+            <div class="rounded-full bg-[#282828] px-4 h-12 flex items-center text-faded justify-start space-x-4 w-3/5">
+                <span class="fa fa-handshake text-xl text-faded"></span>
+                <p class="font-normal">Welcome to my portfolio!</p>
+            </div>
+            </div>
+            
+            <div class="flex items-center justify-end w-1/4 mr-2">
+            <a href="contact.html">
+                <div class="rounded-full bg-white px-4 h-8 flex items-center text-faded mr-4">
+                    <p class="font-bold text-[#121212]">Contact me</p>
+                </div>
+            </a>
+        
+            <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
+                <img src="../imgs/headshot.jpeg" class="rounded-full h-8 w-8" alt="Profile">
+            </div>
+            </div>
+        </div>
+        
+        <!-- middle -->
+        <div class="flex flex-1 overflow-hidden mx-2 space-x-2">
+            <!-- nav bar -->
+            <div class="bg-[#121212] w-18 rounded-lg p-2 flex flex-col space-y-4 items-center">
+            <span class="fa fa-bookmark text-xl text-faded pt-5"></span>
+
+            <a href="about.html">
+                <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center mt-4">
+                    <span class="fa fa-user text-xl text-faded"></span>
+                </div>
+            </a>
+            
+            <a href="projects.html">
+                <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center">
+                    <span class="fa fa-folder text-xl text-faded"></span>
+                </div>
+            </a>
+
+            <a href="certifications.html">
+                <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center">
+                    <span class="fa fa-certificate text-xl text-faded"></span>
+                </div>
+            </a>
+            </div>
+            
+            <!-- main scrollable content -->
+            <div class="flex-1 bg-[#121212] rounded-lg overflow-y-auto h-[calc(100vh-9.5rem)] scollbar-custom" id="mainContent">
+
+                <div class="mx-5 text-white flex items-center flex-col">
+                    <p class="text-3xl font-bold mt-10">Want to connect or view more of my work?</p>
+
+                    <p class="text-3xl font-bold mt-10">Contact me</p>
+
+                    <div class="flex space-x-8">
+
+                        <a href="mailto:imidcen@gmail.com?subject=Inquiry">
+                        <div class="rounded-lg bg-[#282828] w-96 px-5 py-4 mt-5 pt-14 space-y-3">
+                            <div class="flex space-x-2 items-center">
+                            <i class="fa fa-address-book text-2xl"></i>
+                            <p class="font-bold text-md">Contact</p>
+                            </div>
+                            <p class="text-3xl font-bold text-red-300">Gmail</p>
+                            <ul class="text-md font-normal list-disc ml-6">
+                            <li>
+                                <p>Fast responses (usually within 24 hours)</p>
+                            </li>
+                            <li>
+                                <p>Best for formal inquiries or collaborations</p>
+                            </li>
+                            </ul>
+                            <p class="text-xs text-faded flex justify-center">Your message goes straight to my inbox.</p> 
+                        </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/imogen-dicen/">
+                        <div class="rounded-lg bg-[#282828] w-96 px-5 py-4 mt-5 pt-14 space-y-3">
+                            <div class="flex space-x-2 items-center">
+                            <i class="fa fa-address-book text-2xl"></i>
+                            <p class="font-bold text-md">Contact</p>
+                            </div>
+                            <p class="text-3xl font-bold text-blue-300">LinkedIn</p>
+                            <ul class="text-md font-normal list-disc ml-6">
+                            <li>
+                                <p>1 post, 300+ connections</p>
+                            </li>
+                            <li>
+                                <p>Connect to expand our networks</p>
+                            </li>
+                            </ul>
+                            <p class="text-xs text-faded flex justify-center">Profile stalking encouraged.</p> 
+                        </div>
+                        </a>
+                    </div>
+
+                    <p class="text-3xl font-bold mt-12">Links to my work</p>
+
+                    <div class="flex space-x-8">
+
+                        <a href="https://github.com/mars-rei">
+                        <div class="rounded-lg bg-[#282828] w-96 px-5 py-4 mt-5 pt-14 space-y-3">
+                            <div class="flex space-x-2 items-center">
+                            <i class="fa fa-briefcase text-2xl"></i>
+                            <p class="font-bold text-md">Portfolio</p>
+                            </div>
+                            <p class="text-3xl font-bold text-purple-200">Github</p>
+                            <ul class="text-md font-normal list-disc ml-6">
+                            <li>
+                                <p>Personal and academic work</p>
+                            </li>
+                            <li>
+                                <p>Committed!</p>
+                            </li>
+                            </ul>
+                            <p class="text-xs text-faded flex justify-center">GitHub green > Anilist green. (This is a lie.)</p> 
+                        </div>
+                        </a>
+
+                        <a href="https://reminiscent-flannel-fe7.notion.site/my-projects-0cd061a938b0467d98cb56019a970f6d?source=copy_link">
+                        <div class="rounded-lg bg-[#282828] w-96 px-5 py-4 mt-5 pt-14 space-y-3">
+                            <div class="flex space-x-2 items-center">
+                            <i class="fa fa-briefcase text-2xl"></i>
+                            <p class="font-bold text-md">Portfolio</p>
+                            </div>
+                            <p class="text-3xl font-bold text-orange-300">Notion Project Portfolio</p>
+                            <ul class="text-md font-normal list-disc ml-6">
+                            <li>
+                                <p>All projects, notes, and media</p>
+                            </li>
+                            <li>
+                                <p>Updated regularly</p>
+                            </li>
+                            </ul>
+                            <p class="text-xs text-faded flex justify-center">A backup portfolio storing only project details.</p> 
+                        </div>
+                        </a>
+
+                        <a href="https://www.datacamp.com/portfolio/marsrei">
+                        <div class="rounded-lg bg-[#282828] w-96 px-5 py-4 mt-5 pt-14 space-y-3">
+                            <div class="flex space-x-2 items-center">
+                            <i class="fa fa-briefcase text-2xl"></i>
+                            <p class="font-bold text-md">Portfolio</p>
+                            </div>
+                            <p class="text-3xl font-bold text-green-300">DataCamp</p>
+                            <ul class="text-md font-normal list-disc ml-6">
+                            <li>
+                                <p>Slowly but surely levelling up</p>
+                            </li>
+                            <li>
+                                <p>"I swear I’ll finish this track soon"</p>
+                            </li>
+                            </ul>
+                            <p class="text-xs text-faded flex justify-center">Learning at the speed of procrastination.</p> 
+                        </div>
+                        </a>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- bottom -->
+        <div class="flex-shrink-0 flex items-center py-4">
+            <div class="flex w-1/3 items-center justify-start space-x-4 pl-4">
+            <span class="rounded-md h-14 w-14 bg-white block"></span>
+            <div>
+                <p class="font-normal text-sm">page</p>
+                <p class="text-xs text-faded">content</p>
+            </div>
+            </div>
+            
+            <!-- controls -->
+            <div class="flex flex-col items-center justify-center w-1/3">
+            <!-- main controls -->
+            <div class="flex items-center justify-center space-x-6">
+                <span class="fa fa-shuffle fa-xl text-[#1DB954]"></span>
+                <span class="fa fa-backward-step fa-xl text-faded"></span>
+                <span class="fa fa-circle-play fa-2x text-white"></span>
+                <span class="fa fa-forward-step fa-xl text-faded"></span>
+                <span class="fa fa-repeat fa-xl text-[#1DB954]"></span>
+            </div>
+
+            <!-- progress bar -->
+            <div class="flex items-center w-full space-x-2 mt-2">
+                <p class="text-xs text-faded w-10 text-right">0:20</p>
+                
+                <div class="flex-1 h-1">
+                    <div class="w-full h-full bg-gray-600 rounded-full overflow-hidden">
+                        <div class="h-full bg-white rounded-full relative w-2/3"></div>
+                    </div>
+                </div>
+                
+                <p class="text-xs text-faded w-10">0:30</p>
+            </div>
+            </div>
+            
+            <!-- more controls -->
+            <div class="flex items-center justify-end w-1/3 mr-4">
+            <!-- not sure on what to put here yet -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- duplicate code so that the mobile version works -->
+    <div class="my-8 mx-5 pb-24 text-white md:hidden">
     <p class="text-2xl font-bold">Want to connect or view more of my work?</p>
 
     <p class="text-2xl font-bold mt-10">Contact me</p>
@@ -117,6 +334,7 @@
       </div>
     </a>
   </div>
+
 
   <!-- mobile nav -->
   <div id="mobileNavContainer"></div>

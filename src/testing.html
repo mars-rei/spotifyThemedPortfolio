@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>testing</title>
+  <title>Contact Me</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
@@ -74,81 +74,114 @@
             <!-- main scrollable content -->
             <div class="flex-1 bg-[#121212] rounded-lg overflow-y-auto h-[calc(100vh-9.5rem)] scollbar-custom" id="mainContent">
 
-                <div class="mx-5 pb-24 text-white" x-data="{
-                    activeStatus: null,
-                    projects: [
-                    { title: 'Random Lyric Generator', status: 'ongoing', author: 'mars.rei', href: 'project-12-random-lyric-generator.html' },
-                    { title: 'Summer of \'25 Blog', status: 'ongoing', author: 'mars.rei', href: 'project-9-summer-of-25.html' },
-                    { title: 'Mastermind Command-Line Game', status: 'complete', img: '../imgs/p8-1.png', author: 'mars.rei + 1', href: 'project-8-mastermind.html' },
-                    { title: 'BMW Group Physical Asset Tracking System', status: 'complete', img: '../imgs/p7-1.png', author: 'mars.rei + 5', href: 'project-7-bmw-tracking-system.html' },
-                    { title: 'Spotify Themed Portfolio', status: 'ongoing', author: 'mars.rei', href: 'project-5-spotify-portfolio.html' },
-                    { title: 'CompClub Hub', status: 'complete', img: '../imgs/p4-1.png', author: 'mars.rei + 2', href: 'project-4-compclub-hub.html' },
-                    { title: 'Flight Booking System in Java', status: 'complete', img: '../imgs/p3-1.png', author: 'mars.rei + 1', href: 'project-3-fbs.html' },
-                    { title: 'BookBot', status: 'complete', img: '../imgs/p2-1.jpg', author: 'mars.rei + 4', href: 'project-2-bookbot.html' },
-                    { title: 'IM SwissGambit', status: 'complete', img: '../imgs/p1-1.png', author: 'mars.rei', href: 'project-1-im-swissgambit.html' },
-                    { title: 'CompClub Hub 2.0', status: 'ongoing', author: 'mars.rei', href: 'project-6-compclub-hub-2.html' },
-                    { title: 'Fire on Marz', status: 'ongoing', author: 'mars.rei', href: 'project-10-fire-on-marz.html' },
-                    { title: 'Digital Scrapbook', status: 'ongoing', author: 'mars.rei + ?', href: 'project-11-digital-scrapbook.html' }
-                    ],
-                    toggleStatus(status) {
-                        this.activeStatus = this.activeStatus === status ? null : status;
-                    },
-                    filteredProjects() {
-                    return this.activeStatus 
-                        ? this.projects.filter(p => p.status === this.activeStatus)
-                        : this.projects;
-                    }
-                }">
+                <div class="mx-5 text-white flex items-center flex-col">
+                    <p class="text-3xl font-bold mt-10">Want to connect or view more of my work?</p>
 
-                    <div class="mt-6 flex flex-row items-center"> 
-                    <div class="sm:hidden">
-                        <img src="../imgs/headshot.jpeg" class="w-8 rounded-full">
-                    </div>
-                    
-                    <div class="ml-2 md:ml-0 md:mt-14">
-                        <p class="text-xl md:text-3xl font-bold">My Projects</p>
-                    </div>
-                    </div>
+                    <p class="text-3xl font-bold mt-10">Contact me</p>
 
-                    <div class="mt-4 space-x-1">
-                    <button 
-                        x-show="activeStatus !== 'ongoing'"
-                        @click="toggleStatus('complete')" 
-                        :class="{
-                        'bg-[#1DB954] md:bg-white text-[#121212]': activeStatus === 'complete',
-                        'bg-[#282828]': activeStatus !== 'complete'
-                        }"
-                        class="rounded-full inline-block py-2 px-4"
-                    >
-                        <p class="text-xs md:text-sm">Complete / Archived</p>
-                    </button>
+                    <div class="flex space-x-8">
 
-                    <button 
-                        x-show="activeStatus !== 'complete'"
-                        @click="toggleStatus('ongoing')" 
-                        :class="{
-                        'bg-[#1DB954] md:bg-white text-[#121212]': activeStatus === 'ongoing',
-                        'bg-[#282828]': activeStatus !== 'ongoing'
-                        }"
-                        class="rounded-full inline-block py-2 px-4"
-                    >
-                        <p class="text-xs md:text-sm">Ongoing</p>
-                    </button>
-                    </div>
-                
-                    <div class="grid grid-cols-3 md:grid-cols-8 gap-4 md:gap-6 mt-5">
-                    <template x-for="project in filteredProjects()" :key="project.title">
-                        <a :href="project.href" class="contents" x-bind:title="project.title">
-                        <div class="min-w-0">
-                            <div class="w-full aspect-square bg-[#535353] md:rounded-md">
-                                <img x-bind:src="project.img" class="md:rounded-md">
+                        <a href="mailto:imidcen@gmail.com?subject=Inquiry">
+                        <div class="rounded-lg bg-[#282828] w-96 px-5 py-4 mt-5 pt-14 space-y-3">
+                            <div class="flex space-x-2 items-center">
+                            <i class="fa fa-address-book text-2xl"></i>
+                            <p class="font-bold text-md">Contact</p>
                             </div>
-                            <p class="text-xs md:text-sm md:font-semibold truncate mt-1" x-text="project.title"></p>
-                            <p class="text-xs md:text-sm text-faded" x-text="project.author"></p>
+                            <p class="text-3xl font-bold text-red-300">Gmail</p>
+                            <ul class="text-md font-normal list-disc ml-6">
+                            <li>
+                                <p>Fast responses (usually within 24 hours)</p>
+                            </li>
+                            <li>
+                                <p>Best for formal inquiries or collaborations</p>
+                            </li>
+                            </ul>
+                            <p class="text-xs text-faded flex justify-center">Your message goes straight to my inbox.</p> 
                         </div>
                         </a>
-                    </template>
+
+                        <a href="https://www.linkedin.com/in/imogen-dicen/">
+                        <div class="rounded-lg bg-[#282828] w-96 px-5 py-4 mt-5 pt-14 space-y-3">
+                            <div class="flex space-x-2 items-center">
+                            <i class="fa fa-address-book text-2xl"></i>
+                            <p class="font-bold text-md">Contact</p>
+                            </div>
+                            <p class="text-3xl font-bold text-blue-300">LinkedIn</p>
+                            <ul class="text-md font-normal list-disc ml-6">
+                            <li>
+                                <p>1 post, 300+ connections</p>
+                            </li>
+                            <li>
+                                <p>Connect to expand our networks</p>
+                            </li>
+                            </ul>
+                            <p class="text-xs text-faded flex justify-center">Profile stalking encouraged.</p> 
+                        </div>
+                        </a>
                     </div>
+
+                    <p class="text-3xl font-bold mt-12">Links to my work</p>
+
+                    <div class="flex space-x-8">
+
+                        <a href="https://github.com/mars-rei">
+                        <div class="rounded-lg bg-[#282828] w-96 px-5 py-4 mt-5 pt-14 space-y-3">
+                            <div class="flex space-x-2 items-center">
+                            <i class="fa fa-briefcase text-2xl"></i>
+                            <p class="font-bold text-md">Portfolio</p>
+                            </div>
+                            <p class="text-3xl font-bold text-purple-200">Github</p>
+                            <ul class="text-md font-normal list-disc ml-6">
+                            <li>
+                                <p>Personal and academic work</p>
+                            </li>
+                            <li>
+                                <p>Committed!</p>
+                            </li>
+                            </ul>
+                            <p class="text-xs text-faded flex justify-center">GitHub green > Anilist green. (This is a lie.)</p> 
+                        </div>
+                        </a>
+
+                        <a href="https://reminiscent-flannel-fe7.notion.site/my-projects-0cd061a938b0467d98cb56019a970f6d?source=copy_link">
+                        <div class="rounded-lg bg-[#282828] w-96 px-5 py-4 mt-5 pt-14 space-y-3">
+                            <div class="flex space-x-2 items-center">
+                            <i class="fa fa-briefcase text-2xl"></i>
+                            <p class="font-bold text-md">Portfolio</p>
+                            </div>
+                            <p class="text-3xl font-bold text-orange-300">Notion Project Portfolio</p>
+                            <ul class="text-md font-normal list-disc ml-6">
+                            <li>
+                                <p>All projects, notes, and media</p>
+                            </li>
+                            <li>
+                                <p>Updated regularly</p>
+                            </li>
+                            </ul>
+                            <p class="text-xs text-faded flex justify-center">A backup portfolio storing only project details.</p> 
+                        </div>
+                        </a>
+
+                        <a href="https://www.datacamp.com/portfolio/marsrei">
+                        <div class="rounded-lg bg-[#282828] w-96 px-5 py-4 mt-5 pt-14 space-y-3">
+                            <div class="flex space-x-2 items-center">
+                            <i class="fa fa-briefcase text-2xl"></i>
+                            <p class="font-bold text-md">Portfolio</p>
+                            </div>
+                            <p class="text-3xl font-bold text-green-300">DataCamp</p>
+                            <ul class="text-md font-normal list-disc ml-6">
+                            <li>
+                                <p>Slowly but surely levelling up</p>
+                            </li>
+                            <li>
+                                <p>"I swear I’ll finish this track soon"</p>
+                            </li>
+                            </ul>
+                            <p class="text-xs text-faded flex justify-center">Learning at the speed of procrastination.</p> 
+                        </div>
+                        </a>
+                    </div>
+                    
                 </div>
 
             </div>
@@ -198,81 +231,108 @@
 
 
     <!-- duplicate code so that the mobile version works -->
-    <div class="mx-5 pb-24 text-white" x-data="{
-    activeStatus: null,
-    projects: [
-      { title: 'Random Lyric Generator', status: 'ongoing', author: 'mars.rei', href: 'project-12-random-lyric-generator.html' },
-      { title: 'Summer of \'25 Blog', status: 'ongoing', author: 'mars.rei', href: 'project-9-summer-of-25.html' },
-      { title: 'Mastermind Command-Line Game', status: 'complete', img: '../imgs/p8-1.png', author: 'mars.rei + 1', href: 'project-8-mastermind.html' },
-      { title: 'BMW Group Physical Asset Tracking System', status: 'complete', img: '../imgs/p7-1.png', author: 'mars.rei + 5', href: 'project-7-bmw-tracking-system.html' },
-      { title: 'Spotify Themed Portfolio', status: 'ongoing', author: 'mars.rei', href: 'project-5-spotify-portfolio.html' },
-      { title: 'CompClub Hub', status: 'complete', img: '../imgs/p4-1.png', author: 'mars.rei + 2', href: 'project-4-compclub-hub.html' },
-      { title: 'Flight Booking System in Java', status: 'complete', img: '../imgs/p3-1.png', author: 'mars.rei + 1', href: 'project-3-fbs.html' },
-      { title: 'BookBot', status: 'complete', img: '../imgs/p2-1.jpg', author: 'mars.rei + 4', href: 'project-2-bookbot.html' },
-      { title: 'IM SwissGambit', status: 'complete', img: '../imgs/p1-1.png', author: 'mars.rei', href: 'project-1-im-swissgambit.html' },
-      { title: 'CompClub Hub 2.0', status: 'ongoing', author: 'mars.rei', href: 'project-6-compclub-hub-2.html' },
-      { title: 'Fire on Marz', status: 'ongoing', author: 'mars.rei', href: 'project-10-fire-on-marz.html' },
-      { title: 'Digital Scrapbook', status: 'ongoing', author: 'mars.rei + ?', href: 'project-11-digital-scrapbook.html' }
-      ],
-    toggleStatus(status) {
-        this.activeStatus = this.activeStatus === status ? null : status;
-    },
-    filteredProjects() {
-    return this.activeStatus 
-        ? this.projects.filter(p => p.status === this.activeStatus)
-        : this.projects;
-    }
-  }">
+    <div class="my-8 mx-5 pb-24 text-white md:hidden">
+    <p class="text-2xl font-bold">Want to connect or view more of my work?</p>
 
-    <div class="mt-6 flex flex-row items-center"> 
-    <div class="sm:hidden">
-        <img src="../imgs/headshot.jpeg" class="w-8 rounded-full">
-    </div>
-    
-    <div class="ml-2 md:ml-0 md:mt-14">
-        <p class="text-xl md:text-3xl font-bold">My Projects</p>
-    </div>
-    </div>
+    <p class="text-2xl font-bold mt-10">Contact me</p>
 
-    <div class="mt-4 space-x-1">
-      <button 
-        x-show="activeStatus !== 'ongoing'"
-        @click="toggleStatus('complete')" 
-        :class="{
-        'bg-[#1DB954] md:bg-white text-[#121212]': activeStatus === 'complete',
-        'bg-[#282828]': activeStatus !== 'complete'
-        }"
-        class="rounded-full inline-block py-2 px-4"
-      >
-        <p class="text-xs md:text-sm">Complete / Archived</p>
-      </button>
+    <a href="mailto:imidcen@gmail.com?subject=Inquiry">
+      <div class="rounded-lg bg-[#282828] w-full px-3 py-4 mt-5 space-y-3">
+        <div class="flex space-x-2 items-center">
+          <i class="fa fa-address-book text-xl"></i>
+          <p class="font-bold text-xs">Contact</p>
+        </div>
+        <p class="text-lg font-bold text-red-300">Gmail</p>
+        <ul class="list-disc ml-6">
+          <li>
+            <p class="text-sm">Fast responses (usually within 24 hours)</p>
+          </li>
+          <li>
+            <p class="text-sm">Best for formal inquiries or collaborations</p>
+          </li>
+        </ul>
+        <p class="text-xs text-faded flex justify-center">Your message goes straight to my inbox.</p> 
+      </div>
+    </a>
 
-      <button 
-        x-show="activeStatus !== 'complete'"
-        @click="toggleStatus('ongoing')" 
-        :class="{
-        'bg-[#1DB954] md:bg-white text-[#121212]': activeStatus === 'ongoing',
-        'bg-[#282828]': activeStatus !== 'ongoing'
-        }"
-        class="rounded-full inline-block py-2 px-4"
-      >
-        <p class="text-xs md:text-sm">Ongoing</p>
-      </button>
-    </div>
-  
-    <div class="grid grid-cols-3 md:grid-cols-8 gap-4 md:gap-6 mt-5">
-      <template x-for="project in filteredProjects()" :key="project.title">
-        <a :href="project.href" class="contents" x-bind:title="project.title">
-          <div class="min-w-0">
-            <div class="w-full aspect-square bg-[#535353] md:rounded-md">
-              <img x-bind:src="project.img" class="md:rounded-md">
-            </div>
-            <p class="text-xs md:text-sm md:font-semibold truncate mt-1" x-text="project.title"></p>
-            <p class="text-xs md:text-sm text-faded" x-text="project.author"></p>
-          </div>
-        </a>
-      </template>
-    </div>
+    <a href="https://www.linkedin.com/in/imogen-dicen/">
+      <div class="rounded-lg bg-[#282828] w-full px-3 py-4 mt-5 space-y-3">
+        <div class="flex space-x-2 items-center">
+          <i class="fa fa-address-book text-xl"></i>
+          <p class="font-bold text-xs">Contact</p>
+        </div>
+        <p class="text-lg font-bold text-blue-300">LinkedIn</p>
+        <ul class="list-disc ml-6">
+          <li>
+            <p class="text-sm">1 post, 300+ connections</p>
+          </li>
+          <li>
+            <p class="text-sm">Connect to expand our networks</p>
+          </li>
+        </ul>
+        <p class="text-xs text-faded flex justify-center">Profile stalking encouraged.</p> 
+      </div>
+    </a>
+
+
+    <p class="text-2xl font-bold mt-6">Links to my work</p>
+
+    <a href="https://github.com/mars-rei">
+      <div class="rounded-lg bg-[#282828] w-full px-3 py-4 mt-5 space-y-3">
+        <div class="flex space-x-2 items-center">
+          <i class="fa fa-briefcase text-xl"></i>
+          <p class="font-bold text-xs">Portfolio</p>
+        </div>
+        <p class="text-lg font-bold text-purple-200">Github</p>
+        <ul class="list-disc ml-6">
+          <li>
+            <p class="text-sm">Personal and academic work</p>
+          </li>
+          <li>
+            <p class="text-sm">Committed!</p>
+          </li>
+        </ul>
+        <p class="text-xs text-faded flex justify-center">GitHub green > Anilist green. (This is a lie.)</p> 
+      </div>
+    </a>
+
+    <a href="https://reminiscent-flannel-fe7.notion.site/my-projects-0cd061a938b0467d98cb56019a970f6d?source=copy_link">
+      <div class="rounded-lg bg-[#282828] w-full px-3 py-4 mt-5 space-y-3">
+        <div class="flex space-x-2 items-center">
+          <i class="fa fa-briefcase text-xl"></i>
+          <p class="font-bold text-xs">Portfolio</p>
+        </div>
+        <p class="text-lg font-bold text-orange-300">Notion Project Portfolio</p>
+        <ul class="list-disc ml-6">
+          <li>
+            <p class="text-sm">All projects, notes, and media</p>
+          </li>
+          <li>
+            <p class="text-sm">Updated regularly</p>
+          </li>
+        </ul>
+        <p class="text-xs text-faded flex justify-center">A backup portfolio storing only project details.</p> 
+      </div>
+    </a>
+
+    <a href="https://www.datacamp.com/portfolio/marsrei">
+      <div class="rounded-lg bg-[#282828] w-full px-3 py-4 mt-5 space-y-3">
+        <div class="flex space-x-2 items-center">
+          <i class="fa fa-briefcase text-xl"></i>
+          <p class="font-bold text-xs">Portfolio</p>
+        </div>
+        <p class="text-lg font-bold text-green-300">DataCamp</p>
+        <ul class="list-disc ml-6">
+          <li>
+            <p class="text-sm">Slowly but surely levelling up</p>
+          </li>
+          <li>
+            <p class="text-sm">"I swear I’ll finish this track soon"</p>
+          </li>
+        </ul>
+        <p class="text-xs text-faded flex justify-center">Learning at the speed of procrastination.</p> 
+      </div>
+    </a>
   </div>
 
 
