@@ -185,12 +185,6 @@
   }
 }
 @layer utilities {
-  .invisible {
-    visibility: hidden;
-  }
-  .visible {
-    visibility: visible;
-  }
   .absolute {
     position: absolute;
   }
@@ -248,6 +242,12 @@
   .mx-8 {
     margin-inline: calc(var(--spacing) * 8);
   }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
+  }
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
   }
@@ -277,6 +277,18 @@
   }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
+  }
+  .mt-14 {
+    margin-top: calc(var(--spacing) * 14);
+  }
+  .mt-16 {
+    margin-top: calc(var(--spacing) * 16);
+  }
+  .mt-17 {
+    margin-top: calc(var(--spacing) * 17);
+  }
+  .mt-18 {
+    margin-top: calc(var(--spacing) * 18);
   }
   .mt-64 {
     margin-top: calc(var(--spacing) * 64);
@@ -365,6 +377,24 @@
   .h-32 {
     height: calc(var(--spacing) * 32);
   }
+  .h-50 {
+    height: calc(var(--spacing) * 50);
+  }
+  .h-70 {
+    height: calc(var(--spacing) * 70);
+  }
+  .h-75 {
+    height: calc(var(--spacing) * 75);
+  }
+  .h-80 {
+    height: calc(var(--spacing) * 80);
+  }
+  .h-90 {
+    height: calc(var(--spacing) * 90);
+  }
+  .h-100 {
+    height: calc(var(--spacing) * 100);
+  }
   .h-\[calc\(100vh-9\.5rem\)\] {
     height: calc(100vh - 9.5rem);
   }
@@ -427,9 +457,6 @@
   }
   .w-56 {
     width: calc(var(--spacing) * 56);
-  }
-  .w-72 {
-    width: calc(var(--spacing) * 72);
   }
   .w-80 {
     width: calc(var(--spacing) * 80);
@@ -561,13 +588,6 @@
       margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
-  .space-x-5 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 5) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-x-reverse)));
-    }
-  }
   .space-x-6 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -612,6 +632,18 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-\[\#282828\] {
+    border-color: #282828;
+  }
+  .border-\[\#535353\] {
+    border-color: #535353;
+  }
+  .border-\[\#B3B3B3\] {
+    border-color: #B3B3B3;
+  }
+  .border-\[text-faded\] {
+    border-color: text-faded;
+  }
   .bg-\[\#1DB954\] {
     background-color: #1DB954;
   }
@@ -627,8 +659,23 @@
   .bg-black {
     background-color: var(--color-black);
   }
+  .bg-blue-300 {
+    background-color: var(--color-blue-300);
+  }
   .bg-gray-600 {
     background-color: var(--color-gray-600);
+  }
+  .bg-green-300 {
+    background-color: var(--color-green-300);
+  }
+  .bg-orange-300 {
+    background-color: var(--color-orange-300);
+  }
+  .bg-purple-200 {
+    background-color: var(--color-purple-200);
+  }
+  .bg-red-300 {
+    background-color: var(--color-red-300);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -700,12 +747,6 @@
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
-  }
-  .pt-10 {
-    padding-top: calc(var(--spacing) * 10);
-  }
-  .pt-12 {
-    padding-top: calc(var(--spacing) * 12);
   }
   .pt-14 {
     padding-top: calc(var(--spacing) * 14);
@@ -792,6 +833,9 @@
   .text-\[\#121212\] {
     color: #121212;
   }
+  .text-\[\#181818\] {
+    color: #181818;
+  }
   .text-\[\#B3B3B3\] {
     color: #B3B3B3;
   }
@@ -826,11 +870,6 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
-  .sm\:visible {
-    @media (width >= 40rem) {
-      visibility: visible;
-    }
-  }
   .sm\:flex {
     @media (width >= 40rem) {
       display: flex;
@@ -846,16 +885,6 @@
       overflow: hidden;
     }
   }
-  .md\:mt-8 {
-    @media (width >= 48rem) {
-      margin-top: calc(var(--spacing) * 8);
-    }
-  }
-  .md\:mt-12 {
-    @media (width >= 48rem) {
-      margin-top: calc(var(--spacing) * 12);
-    }
-  }
   .md\:mt-14 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 14);
@@ -869,11 +898,6 @@
   .md\:block {
     @media (width >= 48rem) {
       display: block;
-    }
-  }
-  .md\:flex {
-    @media (width >= 48rem) {
-      display: flex;
     }
   }
   .md\:hidden {
