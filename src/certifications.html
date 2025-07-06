@@ -5,14 +5,251 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="scrollbar-hide">
+<body class="scrollbar-hide sm:overflow-hidden">
 
-  <div class="mx-5 pb-24 text-white " x-data="{
+  <div class="hidden sm:flex flex-col min-h-screen flex-1 overflow-hidden bg-black">
+
+    <!-- top -->
+    <div class="flex-shrink-0 flex items-center p-2">
+        <div class="flex w-1/4 items-center justify-start ml-5 space-x-4">
+        <span class="fa fa-briefcase text-3xl text-white"></span>
+        </div>
+        
+        <div class="flex items-center justify-center w-2/4 space-x-2">
+        <a href="index.html">
+            <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
+                <span class="fa fa-home text-xl text-faded"></span>
+            </div>
+        </a>
+        
+        <div class="rounded-full bg-[#282828] px-4 h-12 flex items-center text-faded justify-start space-x-4 w-3/5">
+            <span class="fa fa-handshake text-xl text-faded"></span>
+            <p class="font-normal">Welcome to my portfolio!</p>
+        </div>
+        </div>
+        
+        <div class="flex items-center justify-end w-1/4 mr-2">
+        <a href="contact.html">
+            <div class="rounded-full bg-white px-4 h-8 flex items-center text-faded mr-4">
+                <p class="font-bold text-[#121212]">Contact me</p>
+            </div>
+        </a>
+    
+        <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
+            <img src="../imgs/headshot.jpeg" class="rounded-full h-8 w-8" alt="Profile">
+        </div>
+        </div>
+    </div>
+      
+    <!-- middle -->
+    <div class="flex flex-1 overflow-hidden mx-2 space-x-2">
+        <!-- nav bar -->
+        <div class="bg-[#121212] w-18 rounded-lg p-2 flex flex-col space-y-4 items-center">
+        <span class="fa fa-bookmark text-xl text-faded pt-5"></span>
+
+        <a href="about.html">
+            <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center mt-4">
+                <span class="fa fa-user text-xl text-faded"></span>
+            </div>
+        </a>
+        
+        <a href="projects.html">
+            <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center">
+                <span class="fa fa-folder text-xl text-faded"></span>
+            </div>
+        </a>
+
+        <a href="certifications.html">
+            <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center">
+                <span class="fa fa-certificate text-xl text-faded"></span>
+            </div>
+        </a>
+        </div>
+        
+        <!-- main scrollable content -->
+        <div class="flex-1 bg-[#121212] rounded-lg overflow-y-auto h-[calc(100vh-9.5rem)] scollbar-custom" id="mainContent">
+
+          <div class="mx-5 pb-24 text-white" x-data="{
+            activeType: null,
+            certs: [
+              {icon: 'fa fa-chart-line', name: 'Hypothesis Testing in Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Sampling in Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Introduction to Regression with statsmodels in Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-code', name: 'Writing Functions in Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Working with Dates and Times in Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Cleaning Data in Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Introduction to Importing Data in Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Working with Categorical Data in Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-ear-listen', name: 'Active Listening', from: 'Bodyswaps', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Exploratory Data Analysis in Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-code', name: 'Python Toolbox', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-code', name: 'Introduction to Functions in Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Introduction to Data Visualization with Seaborn', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Introduction to Data Visualization with Matplotlib', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Introduction to Statistics in Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Joining Data with pandas', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Data Manipulation with pandas', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-code', name: 'Intermediate Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-code', name: 'Introduction to Python', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Associate Data Engineer in SQL', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Introduction to Snowflake', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Data Warehousing Concepts', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Database Design', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Introduction to Relational Databases in SQL', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Data Literacy Professional', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Data Literacy Case Study: Remote Working Analysis', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Data Storytelling Concepts', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Forming Analytical Questions', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Introduction to Data Culture', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Introduction to Data Literacy', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Communicating Data Insights', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Introduction to Data', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Understanding Data Engineering', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Associate Data Analyst in SQL', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Data Communication Concepts', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Understanding Data Visualization', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Data-Driven Decision Making in SQL', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Exploratory Data Analysis in SQL', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-chart-line', name: 'Introduction to Statistics', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Functions for Manipulating Data in PostgreSQL', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'PostgreSQL Summary Stats and Window Functions', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Data Manipulation in SQL', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Joining Data in SQL', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Intermediate SQL', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-database', name: 'Introduction to SQL', from: 'DataCamp', type: 'acknowledgement'},
+              {icon: 'fa fa-network-wired', name: 'CCNA: Introduction to Networks', from: 'Cisco', type: 'formal'},
+              {icon: 'fa fa-code', name: 'Python Essentials 1', from: 'Cisco Networking Academy', type: 'acknowledgement'},
+              {icon: 'fa fa-music', name: 'Grade 5 Violin', from: 'Trinity College London', type: 'formal'},
+              {icon: 'fa fa-map', name: 'Enterprise Design Thinking Practitioner', from: 'IBM', type: 'acknowledgement'},
+              {icon: 'fa fa-computer', name: 'Computer Hardware Basics', from: 'Cisco Networking Academy', type: 'acknowledgement'},
+              {icon: 'fa fa-shield-halved', name: 'CyberFirst Advanced (SCQF Level 6)', from: 'National Cyber Security Centre', type: 'formal'},
+              {icon: 'fa fa-music', name: 'Grade 8 Piano', from: 'ABRSM', type: 'formal'},
+              {icon: 'fa fa-music', name: 'Grade 5 Music Theory', from: 'ABRSM', type: 'formal'}
+            ],
+            toggleType(type) {
+              this.activeType = this.activeType === type ? null : type;
+            },
+            filteredCerts() {
+              return this.activeType
+                ? this.certs.filter(p => p.type === this.activeType)
+                : this.certs;
+            }
+          }">
+
+            <div class="flex justify-start items-end mt-16"> 
+              <div class="bg-[#535353] w-56 aspect-square flex justify-center items-center rounded-md">
+                <span class="fa fa-certificate fa-8x text-[#121212]"></span>
+              </div>
+              <div class="ml-8">
+                <div>
+                  <p class="text-6xl font-bold">My Certifications</p>
+                </div>
+                <div class="mt-4">
+                  <p class="text-xs text-faded">All formal certifications and badges and certificates of acknowledgement as of June 2025.</p>
+                </div>
+                <div class="mt-2 flex flex-row items-center space-x-2">
+                  <img src="../imgs/headshot.jpeg" class="w-6 rounded-full">
+                  <p class="text-xs text-white">Imogen Dicen • <span class="text-xs text-faded">5 formal, 48 acknowledged.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 space-x-1">
+              <button 
+                x-show="activeType !== 'acknowledgement'"
+                @click="toggleType('formal')" 
+                :class="{
+                  'bg-[#1DB954] md:bg-white text-[#121212]': activeType === 'formal',
+                  'bg-[#282828]': activeType !== 'formal'
+                }"
+                class="rounded-full inline-block py-2 px-4"
+              >
+                <p class="text-xs">Formal</p>
+              </button>
+
+              <button 
+                x-show="activeType !== 'formal'"
+                @click="toggleType('acknowledgement')" 
+                :class="{
+                  'bg-[#1DB954] md:bg-white text-[#121212]': activeType === 'acknowledgement',
+                  'bg-[#282828]': activeType !== 'acknowledgement'
+                }"
+                class="rounded-full inline-block py-2 px-4"
+              >
+                <p class="text-xs">Acknowledgement</p>
+              </button>
+            </div>
+
+            <div class="text-sm mt-6 space-y-4">
+              <template x-for="(cert, index) in filteredCerts()" :key="cert.name">
+                <div class="flex flex-row gap-3 items-center" x-bind:title="cert.name">
+                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center">
+                    <span x-bind:class="cert.icon + ' fa-2x text-[#121212]'"></span>
+                  </div>
+
+                  <div class="min-w-0 flex-1 mr-2">
+                    <p class="font-normal text-md truncate" x-text="cert.name"></p>
+                    <p class="text-xs text-faded truncate" x-text="cert.from"></p>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <!-- bottom -->
+    <div class="flex-shrink-0 flex items-center py-4">
+        <div class="flex w-1/3 items-center justify-start space-x-4 pl-4">
+        <div class="rounded-md h-14 w-14 bg-[#535353] text-[#181818] flex justify-center items-center">
+          <i class="fa fa-certificate fa-xl"></i>
+        </div>
+        <div>
+            <p class="font-normal text-sm">Formal & Acknowledged</p>
+            <p class="text-xs text-faded">Certifications</p>
+        </div>
+        </div>
+        
+        <!-- controls -->
+        <div class="flex flex-col items-center justify-center w-1/3">
+        <!-- main controls -->
+        <div class="flex items-center justify-center space-x-6">
+            <span class="fa fa-shuffle fa-xl text-[#1DB954]"></span>
+            <span class="fa fa-backward-step fa-xl text-faded"></span>
+            <span class="fa fa-circle-play fa-2x text-white"></span>
+            <span class="fa fa-forward-step fa-xl text-faded"></span>
+            <span class="fa fa-repeat fa-xl text-[#1DB954]"></span>
+        </div>
+
+        <!-- progress bar -->
+        <div class="flex items-center w-full space-x-2 mt-2">
+            <p class="text-xs text-faded w-10 text-right">0:20</p>
+            
+            <div class="flex-1 h-1">
+                <div class="w-full h-full bg-gray-600 rounded-full overflow-hidden">
+                    <div class="h-full bg-white rounded-full relative w-2/3"></div>
+                </div>
+            </div>
+            
+            <p class="text-xs text-faded w-10">0:30</p>
+        </div>
+        </div>
+        
+        <!-- more controls -->
+        <div class="flex items-center justify-end w-1/3 mr-4">
+        <!-- not sure on what to put here yet -->
+        </div>
+    </div>
+  </div>
+
+
+  <!-- duplicate code so that the mobile version works -->
+  <div class="mx-5 pb-24 text-white md:hidden"x-data="{
     activeType: null,
     certs: [
       {icon: 'fa fa-chart-line', name: 'Hypothesis Testing in Python', from: 'DataCamp', type: 'acknowledgement'},
@@ -129,8 +366,10 @@
         </div>
       </template>
     </div>
+    
   </div>
-  
+
+
   <!-- mobile nav -->
   <div id="mobileNavContainer"></div>
   <script>
