@@ -75,7 +75,7 @@
             <div class="flex-1 bg-[#121212] rounded-lg overflow-y-auto h-[calc(100vh-9.5rem)] scollbar-custom" id="mainContent">
 
                 <div class="mx-5 pb-24 text-white" x-data="{
-                    activeStatus: null,
+                    activeStatus: new URLSearchParams(window.location.search).get('filter') || null,
                     projects: [
                     { title: 'Random Lyric Generator', status: 'ongoing', author: 'mars.rei', href: 'project-12-random-lyric-generator.html' },
                     { title: 'Summer of \'25 Blog', status: 'ongoing', author: 'mars.rei', href: 'project-9-summer-of-25.html' },

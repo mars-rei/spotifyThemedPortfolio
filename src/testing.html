@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>Certifications</title>
+  <title>?</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
@@ -74,144 +74,21 @@
         <!-- main scrollable content -->
         <div class="flex-1 bg-[#121212] rounded-lg overflow-y-auto h-[calc(100vh-9.5rem)] scollbar-custom" id="mainContent">
 
-          <div class="mx-5 pb-24 text-white" x-data="{
-            activeType: null,
-            certs: [
-              {icon: 'fa fa-chart-line', name: 'Hypothesis Testing in Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Sampling in Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Introduction to Regression with statsmodels in Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-code', name: 'Writing Functions in Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Working with Dates and Times in Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Cleaning Data in Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Introduction to Importing Data in Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Working with Categorical Data in Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-ear-listen', name: 'Active Listening', from: 'Bodyswaps', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Exploratory Data Analysis in Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-code', name: 'Python Toolbox', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-code', name: 'Introduction to Functions in Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Introduction to Data Visualization with Seaborn', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Introduction to Data Visualization with Matplotlib', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Introduction to Statistics in Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Joining Data with pandas', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Data Manipulation with pandas', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-code', name: 'Intermediate Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-code', name: 'Introduction to Python', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Associate Data Engineer in SQL', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Introduction to Snowflake', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Data Warehousing Concepts', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Database Design', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Introduction to Relational Databases in SQL', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Data Literacy Professional', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Data Literacy Case Study: Remote Working Analysis', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Data Storytelling Concepts', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Forming Analytical Questions', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Introduction to Data Culture', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Introduction to Data Literacy', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Communicating Data Insights', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Introduction to Data', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Understanding Data Engineering', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Associate Data Analyst in SQL', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Data Communication Concepts', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Understanding Data Visualization', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Data-Driven Decision Making in SQL', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Exploratory Data Analysis in SQL', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-chart-line', name: 'Introduction to Statistics', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Functions for Manipulating Data in PostgreSQL', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'PostgreSQL Summary Stats and Window Functions', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Data Manipulation in SQL', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Joining Data in SQL', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Intermediate SQL', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-database', name: 'Introduction to SQL', from: 'DataCamp', type: 'acknowledgement'},
-              {icon: 'fa fa-network-wired', name: 'CCNA: Introduction to Networks', from: 'Cisco', type: 'formal'},
-              {icon: 'fa fa-code', name: 'Python Essentials 1', from: 'Cisco Networking Academy', type: 'acknowledgement'},
-              {icon: 'fa fa-music', name: 'Grade 5 Violin', from: 'Trinity College London', type: 'formal'},
-              {icon: 'fa fa-map', name: 'Enterprise Design Thinking Practitioner', from: 'IBM', type: 'acknowledgement'},
-              {icon: 'fa fa-computer', name: 'Computer Hardware Basics', from: 'Cisco Networking Academy', type: 'acknowledgement'},
-              {icon: 'fa fa-shield-halved', name: 'CyberFirst Advanced (SCQF Level 6)', from: 'National Cyber Security Centre', type: 'formal'},
-              {icon: 'fa fa-music', name: 'Grade 8 Piano', from: 'ABRSM', type: 'formal'},
-              {icon: 'fa fa-music', name: 'Grade 5 Music Theory', from: 'ABRSM', type: 'formal'}
-            ],
-            toggleType(type) {
-              this.activeType = this.activeType === type ? null : type;
-            },
-            filteredCerts() {
-              return this.activeType
-                ? this.certs.filter(p => p.type === this.activeType)
-                : this.certs;
-            }
-          }">
-
-            <div class="flex justify-start items-end mt-16"> 
-              <div class="bg-[#535353] w-56 aspect-square flex justify-center items-center rounded-md">
-                <span class="fa fa-certificate fa-8x text-[#121212]"></span>
-              </div>
-              <div class="ml-8">
-                <div>
-                  <p class="text-6xl font-bold">My Certifications</p>
-                </div>
-                <div class="mt-4">
-                  <p class="text-xs text-faded">All formal certifications and badges and certificates of acknowledgement as of June 2025.</p>
-                </div>
-                <div class="mt-2 flex flex-row items-center space-x-2">
-                  <img src="../imgs/headshot.jpeg" class="w-6 rounded-full">
-                  <p class="text-xs text-white">Imogen Dicen • <span class="text-xs text-faded">5 formal, 48 acknowledged.</span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-6 space-x-1">
-              <button 
-                x-show="activeType !== 'acknowledgement'"
-                @click="toggleType('formal')" 
-                :class="{
-                  'bg-[#1DB954] md:bg-white text-[#121212]': activeType === 'formal',
-                  'bg-[#282828]': activeType !== 'formal'
-                }"
-                class="rounded-full inline-block py-2 px-4"
-              >
-                <p class="text-xs">Formal</p>
-              </button>
-
-              <button 
-                x-show="activeType !== 'formal'"
-                @click="toggleType('acknowledgement')" 
-                :class="{
-                  'bg-[#1DB954] md:bg-white text-[#121212]': activeType === 'acknowledgement',
-                  'bg-[#282828]': activeType !== 'acknowledgement'
-                }"
-                class="rounded-full inline-block py-2 px-4"
-              >
-                <p class="text-xs">Acknowledgement</p>
-              </button>
-            </div>
-
-            <div class="text-sm mt-6 space-y-4">
-              <template x-for="(cert, index) in filteredCerts()" :key="cert.name">
-                <div class="flex flex-row gap-3 items-center" x-bind:title="cert.name">
-                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center">
-                    <span x-bind:class="cert.icon + ' fa-2x text-[#121212]'"></span>
-                  </div>
-
-                  <div class="min-w-0 flex-1 mr-2">
-                    <p class="font-normal text-md truncate" x-text="cert.name"></p>
-                    <p class="text-xs text-faded truncate" x-text="cert.from"></p>
-                  </div>
-                </div>
-              </template>
-            </div>
-          </div>
+ 
         </div>
+
+          
     </div>
       
     <!-- bottom -->
     <div class="flex-shrink-0 flex items-center py-4">
         <div class="flex w-1/3 items-center justify-start space-x-4 pl-4">
         <div class="rounded-md h-14 w-14 bg-[#535353] text-[#181818] flex justify-center items-center">
-          <i class="fa fa-certificate fa-xl"></i>
+          <i class="fa fa-home fa-xl"></i>
         </div>
         <div>
-            <p class="font-normal text-sm">Formal & Acknowledged</p>
-            <p class="text-xs text-faded">Certifications</p>
+            <p class="font-normal text-sm">こんにちは! Bonjour! Hallo! Hi!</p>
+            <p class="text-xs text-faded">Home</p>
         </div>
         </div>
         
@@ -249,124 +126,8 @@
 
 
   <!-- duplicate code so that the mobile version works -->
-  <div class="mx-5 pb-24 text-white md:hidden"x-data="{
-    activeType: null,
-    certs: [
-      {icon: 'fa fa-chart-line', name: 'Hypothesis Testing in Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Sampling in Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Introduction to Regression with statsmodels in Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-code', name: 'Writing Functions in Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Working with Dates and Times in Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Cleaning Data in Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Introduction to Importing Data in Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Working with Categorical Data in Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-ear-listen', name: 'Active Listening', from: 'Bodyswaps', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Exploratory Data Analysis in Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-code', name: 'Python Toolbox', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-code', name: 'Introduction to Functions in Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Introduction to Data Visualization with Seaborn', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Introduction to Data Visualization with Matplotlib', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Introduction to Statistics in Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Joining Data with pandas', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Data Manipulation with pandas', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-code', name: 'Intermediate Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-code', name: 'Introduction to Python', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Associate Data Engineer in SQL', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Introduction to Snowflake', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Data Warehousing Concepts', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Database Design', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Introduction to Relational Databases in SQL', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Data Literacy Professional', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Data Literacy Case Study: Remote Working Analysis', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Data Storytelling Concepts', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Forming Analytical Questions', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Introduction to Data Culture', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Introduction to Data Literacy', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Communicating Data Insights', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Introduction to Data', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Understanding Data Engineering', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Associate Data Analyst in SQL', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Data Communication Concepts', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Understanding Data Visualization', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Data-Driven Decision Making in SQL', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Exploratory Data Analysis in SQL', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-chart-line', name: 'Introduction to Statistics', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Functions for Manipulating Data in PostgreSQL', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'PostgreSQL Summary Stats and Window Functions', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Data Manipulation in SQL', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Joining Data in SQL', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Intermediate SQL', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-database', name: 'Introduction to SQL', from: 'DataCamp', type: 'acknowledgement'},
-      {icon: 'fa fa-network-wired', name: 'CCNA: Introduction to Networks', from: 'Cisco', type: 'formal'},
-      {icon: 'fa fa-code', name: 'Python Essentials 1', from: 'Cisco Networking Academy', type: 'acknowledgement'},
-      {icon: 'fa fa-music', name: 'Grade 5 Violin', from: 'Trinity College London', type: 'formal'},
-      {icon: 'fa fa-map', name: 'Enterprise Design Thinking Practitioner', from: 'IBM', type: 'acknowledgement'},
-      {icon: 'fa fa-computer', name: 'Computer Hardware Basics', from: 'Cisco Networking Academy', type: 'acknowledgement'},
-      {icon: 'fa fa-shield-halved', name: 'CyberFirst Advanced (SCQF Level 6)', from: 'National Cyber Security Centre', type: 'formal'},
-      {icon: 'fa fa-music', name: 'Grade 8 Piano', from: 'ABRSM', type: 'formal'},
-      {icon: 'fa fa-music', name: 'Grade 5 Music Theory', from: 'ABRSM', type: 'formal'}
-    ],
-    toggleType(type) {
-      this.activeType = this.activeType === type ? null : type;
-    },
-    filteredCerts() {
-      return this.activeType
-        ? this.certs.filter(p => p.type === this.activeType)
-        : this.certs;
-    }
-  }">
+  <div class="text-white md:hidden">
 
-    <div class="flex justify-center items-center mt-8"> 
-      <div class="bg-[#535353] w-56 mx-8 aspect-square flex justify-center items-center">
-        <span class="fa fa-certificate fa-8x text-[#121212]"></span>
-      </div>
-    </div>
-
-    <div class="mt-6">
-      <p class="text-xl font-bold">My Certifications</p>
-    </div>
-
-    <div class="mt-4 space-x-1">
-      <button 
-        x-show="activeType !== 'acknowledgement'"
-        @click="toggleType('formal')" 
-        :class="{
-          'bg-[#1DB954] text-[#121212]': activeType === 'formal',
-          'bg-[#282828]': activeType !== 'formal'
-        }"
-        class="rounded-full inline-block py-2 px-4"
-      >
-        <p class="text-xs">Formal</p>
-      </button>
-
-      <button 
-        x-show="activeType !== 'formal'"
-        @click="toggleType('acknowledgement')" 
-        :class="{
-          'bg-[#1DB954] text-[#121212]': activeType === 'acknowledgement',
-          'bg-[#282828]': activeType !== 'acknowledgement'
-        }"
-        class="rounded-full inline-block py-2 px-4"
-      >
-        <p class="text-xs">Acknowledgement</p>
-      </button>
-    </div>
-
-    <div class="text-sm mt-6 space-y-4">
-      <template x-for="(cert, index) in filteredCerts()" :key="cert.name">
-        <div class="flex flex-row gap-3 items-center" x-bind:title="cert.name">
-          <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center">
-            <span x-bind:class="cert.icon + ' fa-2x text-[#121212]'"></span>
-          </div>
-
-          <div class="min-w-0 flex-1 mr-2">
-            <p class="font-normal text-md truncate" x-text="cert.name"></p>
-            <p class="text-xs text-faded truncate" x-text="cert.from"></p>
-          </div>
-        </div>
-      </template>
-    </div>
-    
   </div>
 
 
