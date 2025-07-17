@@ -353,6 +353,32 @@
 
               <div>
                 <div 
+                  @click="openTrack === 'code' ? openTrack = null : openTrack = 'code'"
+                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
+                >
+                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
+                  <div class="min-w-0 flex-1 pr-2">
+                    <p class="font-semibold text-md truncate">Code</p>
+                  </div>
+                  <div class="min-w-0 flex-1 pr-2">
+                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
+                  </div>
+                </div>
+
+                <div 
+                  x-show="openTrack === 'code'" 
+                  x-collapse 
+                  class="bg-[#282828] rounded-md p-4"
+                >
+                  <p class="text-md font-bold mb-4">Code</p>
+                  <p class="text-sm text-faded">
+                    Please refer to the GitHub link in the ‘Project Details’ section (on the right) for the code that could be retrieved for this project.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div 
                   @click="openTrack === 'report' ? openTrack = null : openTrack = 'report'"
                   class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
                 >
@@ -602,7 +628,7 @@
         <div class="relative z-10 mx-2 my-4"> 
           <p class="text-xl font-bold">Project 2</p>
           <p class="text-2xl font-bold mt-48">BookBot</p>
-          <p class="text-lg font-semibold text-faded -mt-1">Imogen Dicen</p>
+          <p class="text-lg font-semibold text-faded -mt-1">Imogen Dicen + 4</p>
         </div>
 
         <div class="relative z-10"> 

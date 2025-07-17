@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>BookBot</title>
+  <title>Flight Booking System in Java</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
@@ -79,47 +79,20 @@
           <!-- Photo & Project Aim -->
           <div class="flex justify-start items-end mt-16"> 
             <div class="w-56 aspect-square flex justify-center items-center rounded-md">
-              <img src="../imgs/p2-1.jpg" class="rounded-md">
+              <img src="../imgs/p3-1.png" class="rounded-md">
             </div>
             <div class="ml-8">
               <div>
-                <p class="text-6xl font-bold">BookBot</p>
+                <p class="text-6xl font-bold">Flight Booking System in Java</p>
               </div>
               <div class="mt-4">
-                <p class="text-sm text-faded">To create a project using both hardware and software, to meet multiple UN sustainability goals.</p>
+                <p class="text-sm text-faded">To extend and complete the skeleton code of a flight booking system in Java using the object oriented programming paradigm.</p>
               </div>
               <div class="mt-2 flex flex-row items-center space-x-2">
                 <img src="../imgs/headshot.jpeg" class="w-6 rounded-full">
-                <p class="text-sm text-white">Imogen Dicen + 4 Others</p>
+                <p class="text-sm text-white">Imogen Dicen + 1 Other</p>
               </div>
             </div>
-          </div>
-
-          <!-- More Info About Project -->
-          <div class="mt-4 space-y-1 text-sm text-faded">
-            <p>
-              BookBot is an AI aided wheeled robot that helps librarians and users of libraries
-              to increase their efficiencies and make the experience in libraries flawless. 
-            </p>
-
-            <p>
-              Our product’s focus is to transport returned books to their designated areas. 
-              This reduces the time librarians and library staff spend on physical tasks 
-              that would preferably be used on promoting a love of learning in such an 
-              enriched environment for students and visitors. 
-            </p>
-
-            <p>
-              Based off our own Curzon 
-              library, some libraries have unstaffed hours where library users self-serve 
-              themselves. BookBot will be most helpful during unstaffed hours, ensuring 
-              library resources are back in place for when librarians return to work.
-            </p>
-
-            <p>
-              Our project was made to promote the UN goals of: good health and well-being; 
-              quality education; affordable and clean energy.
-            </p>
           </div>
 
           <!-- Project Content -->
@@ -150,55 +123,66 @@
                   <p class="text-md font-bold mb-4">Features</p>
 
                   <div class="space-y-3 text-sm text-faded">
+                    <p>
+                      Our project includes the following features off the project assessment checklist:
+                    </p>
+
                     <ul class="list-disc ml-6">
                       <li>
-                        Line-tracking
+                        Adds new customers (passengers to the system)
                       </li>
                       <li>
-                        Obstacle avoidance
+                        List all customers stored in the system
                       </li>
                       <li>
-                        Noise regulation
+                        Issue bookings for customers
                       </li>
                       <li>
-                        Object recognition (shape recognition)
+                        Cancel bookings
                       </li>
                       <li>
-                        Electromagnetic arms
+                        Saves status of the system to backend storage (i.e. text file storage)
                       </li>
                       <li>
-                        Communication between 2 Arduino Unos and a Raspberry Pi
+                        Has a number of seats (capacity) property and a price property in the flight object
                       </li>
                       <li>
-                        A website allowing the users to:
-                        <ul class="list-disc ml-6">
-                          <li>
-                            Import a map for BookBot to follow paths within
-                          </li>
-                          <li>
-                            Connect with their specific purchase of BookBot
-                          </li>
-                          <li>
-                            View stats retrieved by BookBot
-                          </li>
-                          <li>
-                            Read the BookBot guide
-                          </li>
-                        </ul>
+                        Has an email property in the customer object
                       </li>
-                    </ul>
+                      <li>
+                        Stores data to file storage after execution of commands that change state of the system and informs the user of failure to store the data, rolling back any changes made to the system prior to the error
+                      </li>
+                      <li>
+                        Can remove (hide) existing flights from the system
+                      </li>
+                      <li>
+                        Can remove (hide) existing customers from the system
+                      </li>
+                      <li>
+                        Imposes a limit on the maximum number of passengers that can be added to a flight using the capacity property of the flight object
+                      </li>
+                      <li>
+                        Has Javadoc documentation for newer methods
+                      </li>
+                      <li>
+                        Lists only flights that are in the future and have not departed
+                      </li>
+                      <li>
+                        Extension of the GUI application to issue bookings, update bookings, cancel bookings, and to delete flights and customers
+                      </li>
+                    </ul>    
                   </div>
                 </div>
               </div>
 
               <div>
                 <div 
-                  @click="openTrack === 'conceptVids' ? openTrack = null : openTrack = 'conceptVids'"
+                  @click="openTrack === 'code' ? openTrack = null : openTrack = 'code'"
                   class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
                 >
                   <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                   <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Concept Videos</p>
+                    <p class="font-semibold text-md truncate">Code</p>
                   </div>
                   <div class="min-w-0 flex-1 pr-2">
                     <p class="font-semibold text-sm text-faded">Project Showcase</p>
@@ -206,313 +190,14 @@
                 </div>
 
                 <div 
-                  x-show="openTrack === 'conceptVids'" 
+                  x-show="openTrack === 'code'" 
                   x-collapse 
                   class="bg-[#282828] rounded-md p-4"
                 >
-                  <p class="text-md font-bold mb-4">BookBot Concept Videos</p>
-                  <div class="flex justify-center items-center">
-                    <div class="w-200 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
-                      <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <iframe 
-                              class="w-180 h-90"
-                              src="https://www.youtube.com/embed/bU_gu3VN288?si=wyFNlEkR08cQAOw3" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                              referrerpolicy="strict-origin-when-cross-origin" 
-                              allowfullscreen>
-                            </iframe>
-                            <figcaption class="text-xs text-faded text-center">Initial concept video.</figcaption>
-                            <p class="text-xs text-faded mt-5 text-center">Slide 1/2</p>
-                          </figure>
-                        </div>
-
-                        <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2"> 
-                          <figure class="space-y-1">
-                            <iframe 
-                              class="w-180 h-90"
-                              src="https://www.youtube.com/embed/bgNiuFnM5MU?si=HdYare2SLh_Y1rwl" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                              referrerpolicy="strict-origin-when-cross-origin" 
-                              allowfullscreen>
-                            </iframe>
-                            <figcaption class="text-xs text-faded text-center">Updated concept video.</figcaption>
-                            <p class="text-xs text-faded mt-5 text-center">Slide 2/2</p>
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div 
-                  @click="openTrack === '3dModel' ? openTrack = null : openTrack = '3dModel'"
-                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
-                >
-                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">3D Modelling</p>
-                  </div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
-                  </div>
-                </div>
-
-                <div 
-                  x-show="openTrack === '3dModel'" 
-                  x-collapse 
-                  class="bg-[#282828] rounded-md p-4"
-                >
-                  <p class="text-md font-bold mb-4">3D Model Concept Photos</p>
-                  <div class="flex justify-center items-center">
-                    <div class="w-160 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
-                      <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <img src="../imgs/p2-2.png" class="w-140">
-                            <figcaption class="text-xs text-faded text-center">Back view of BookBot.</figcaption>
-                            <p class="text-xs text-faded mt-5 text-center">Slide 1/4</p>
-                          </figure>
-                        </div>
-
-                        <div class="flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <img src="../imgs/p2-3.png" class="w-140">
-                            <figcaption class="text-xs text-faded text-center">Top view of BookBot.</figcaption>
-                            <p class="text-xs text-faded mt-5 text-center">Slide 1/4</p>
-                          </figure>
-                        </div>
-
-                        <div class="flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <img src="../imgs/p2-4.png" class="w-140">
-                            <figcaption class="text-xs text-faded text-center">Side view of BookBot.</figcaption>
-                            <p class="text-xs text-faded mt-5 text-center">Slide 3/4</p>
-                          </figure>
-                        </div>
-
-                        <div class="flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <img src="../imgs/p2-5.png" class="w-140">
-                            <figcaption class="text-xs text-faded text-center">Front view of BookBot.</figcaption>
-                            <p class="text-xs text-faded mt-5 text-center">Slide 4/4</p>
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div 
-                  @click="openTrack === 'proposal' ? openTrack = null : openTrack = 'proposal'"
-                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
-                >
-                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Project Proposal Presentation</p>
-                  </div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
-                  </div>
-                </div>
-
-                <div 
-                  x-show="openTrack === 'proposal'" 
-                  x-collapse 
-                  class="bg-[#282828] rounded-md p-4"
-                >
-                  <p class="text-md font-bold mb-4">Project Proposal Presentation</p>
-                  <div class="flex justify-center items-center">
-                    <div class="w-200 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
-                      <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <iframe 
-                              src="../files/p2-1.pdf" 
-                              class="w-180 h-120"
-                            >
-                              <p class="text-sm">Your browser does not support PDFs. 
-                                <a href="../files/p2-1.pdf" class="text-sm">Download the PDF.</a>.
-                              </p>
-                            </iframe>
-                            <figcaption class="text-xs text-faded text-center">Our proposal of our project.</figcaption>
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div 
-                  @click="openTrack === 'report' ? openTrack = null : openTrack = 'report'"
-                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
-                >
-                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Opportunistic Plan Report</p>
-                  </div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
-                  </div>
-                </div>
-
-                <div 
-                  x-show="openTrack === 'report'" 
-                  x-collapse 
-                  class="bg-[#282828] rounded-md p-4"
-                >
-                  <p class="text-md font-bold mb-4">Opportunistic Plan Report</p>
-                  <div class="flex justify-center items-center">
-                    <div class="w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
-                      <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-180 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <iframe 
-                              src="../files/p2-2.pdf" 
-                              class="w-full h-160"
-                            >
-                              <p class="text-sm">Your browser does not support PDFs. 
-                                <a href="../files/p2-2.pdf" class="text-sm">Download the PDF.</a>.
-                              </p>
-                            </iframe>
-                            <figcaption class="text-xs text-faded text-center">
-                              A plan detailing what we would do if we were to take our project 
-                              further (if we were to continue it after presenting it at the Innovation Festival 2024).
-                            </figcaption>
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div 
-                  @click="openTrack === 'poster' ? openTrack = null : openTrack = 'poster'"
-                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
-                >
-                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Project Poster</p>
-                  </div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
-                  </div>
-                </div>
-
-                <div 
-                  x-show="openTrack === 'poster'" 
-                  x-collapse 
-                  class="bg-[#282828] rounded-md p-4"
-                >
-                  <p class="text-md font-bold mb-4">Project Poster</p>
-                  <div class="flex justify-center items-center">
-                    <div class="w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
-                      <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-180 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <img src="../imgs/p2-6.png" class="w-100">
-                            <figcaption class="text-xs text-faded text-center">
-                              Our poster that was displayed at our presentation booth at Innovation Fest.
-                            </figcaption>
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div 
-                  @click="openTrack === 'presenting' ? openTrack = null : openTrack = 'presenting'"
-                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
-                >
-                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Presentation Day</p>
-                  </div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
-                  </div>
-                </div>
-
-                <div 
-                  x-show="openTrack === 'presenting'" 
-                  x-collapse 
-                  class="bg-[#282828] rounded-md p-4"
-                >
-                  <p class="text-md font-bold mb-4">Presentation Day</p>
-                  <div class="flex justify-center items-center">
-                    <div class="w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
-                      <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-180 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <img src="../imgs/p2-7.jpg" class="w-140">
-                            <figcaption class="text-xs text-faded text-center">
-                              Preparing the table.
-                            </figcaption>
-                          </figure>
-                        </div>
-
-                        <div class="flex-shrink-0 w-180 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <img src="../imgs/p2-8.jpg" class="w-80">
-                            <figcaption class="text-xs text-faded text-center">
-                              BookBot.
-                            </figcaption>
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div 
-                  @click="openTrack === 'awards' ? openTrack = null : openTrack = 'awards'"
-                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
-                >
-                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Awards Evening</p>
-                  </div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
-                  </div>
-                </div>
-
-                <div 
-                  x-show="openTrack === 'awards'" 
-                  x-collapse 
-                  class="bg-[#282828] rounded-md p-4"
-                >
-                  <p class="text-md font-bold mb-4">Awards Evening</p>
-                  <div class="flex justify-center items-center">
-                    <div class="w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
-                      <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-180 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <img src="../imgs/p2-9.png" class="w-140">
-                            <figcaption class="text-xs text-faded text-center">
-                              Won 3rd place in the Most Innovative category!
-                            </figcaption>
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <p class="text-md font-bold mb-4">Code</p>
+                  <p class="text-sm text-faded">
+                    Please refer to the GitHub link in the ‘Project Details’ section (on the right) for the code of this project.
+                  </p>
                 </div>
               </div>
             </div>
@@ -524,34 +209,6 @@
             <p class="text-sm text-faded">Demonstrated in this project</p>
 
             <div class="text-sm mt-6">
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Project Coordination</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Communication</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Leadership</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Project Planning</p>
-                </div>
-              </div>
-
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
@@ -569,21 +226,7 @@
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Drawing</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Coding</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Microcontrollers</p>
+                  <p class="font-semibold text-md truncate">Object Oriented Programming</p>
                 </div>
               </div>
             </div>
@@ -593,14 +236,14 @@
 
       <div class="bg-[#121212] w-68 rounded-lg p-2 flex flex-col overflow-y-auto scrollbar-hide h-[calc(100vh-9.5rem)] relative">
         <div class="absolute inset-0 overflow-hidden rounded-lg">
-          <img src="../imgs/p2-1.jpg" class="w-full h-full object-cover opacity-20">
+          <img src="../imgs/p3-1.png" class="w-full h-full object-cover opacity-20">
           <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/80 to-transparent"></div>
         </div>
 
         <div class="relative z-10 mx-2 my-4"> 
-          <p class="text-xl font-bold">Project 2</p>
-          <p class="text-2xl font-bold mt-48">BookBot</p>
-          <p class="text-lg font-semibold text-faded -mt-1">Imogen Dicen</p>
+          <p class="text-xl font-bold">Project 3</p>
+          <p class="text-2xl font-bold mt-48">Flight Booking System In Java</p>
+          <p class="text-lg font-semibold text-faded -mt-1">Imogen Dicen + 1</p>
         </div>
 
         <div class="relative z-10"> 
@@ -609,74 +252,21 @@
             <p class="font-bold text-md">Project Details</p>
 
             <p class="text-md font-semibold mt-5">Duration</p>
-            <p class="text-sm text-faded">Jan - May 24</p>
+            <p class="text-sm text-faded">Nov 2024 - Jan 2025</p>
 
             <p class="text-md font-semibold mt-5">Built for</p>
-            <p class="text-sm text-faded">Innovation Project</p>
+            <p class="text-sm text-faded">Object Oriented Programming</p>
 
             <p class="text-md font-semibold mt-5">Collaboration</p>
-            <p class="text-sm text-faded">Group (of 5): TakeFive</p>
-
-            <p class="text-md font-semibold mt-5">Role in Project</p>
-            <p class="text-sm text-faded">Team leader</p>
+            <p class="text-sm text-faded">Group (of 2)</p>
 
             <p class="text-md font-semibold mt-5">Level of Completion</p>
-            <p class="text-sm text-faded">Incomplete</p>
+            <p class="text-sm text-faded">Almost Complete</p>
 
-            <a href="https://github.com/mars-rei/BookBot">
+            <a href="https://github.com/mars-rei/flight-system">
               <p class="text-md font-semibold mt-5">GitHub</p>
-              <p class="text-sm text-faded">Link to BookBot</p>
+              <p class="text-sm text-faded">Link to Flight System</p>
             </a>
-
-            <p class="text-md font-semibold mt-5">Award Given</p>
-            <p class="text-sm text-faded">3rd Place for Most Innovative Project</p>
-          </div>
-
-          <!-- Technologies Used -->
-          <div class="rounded-lg mx-2 bg-[#282828] flex mt-4 p-3 flex-col">
-            <p class="font-bold text-md">Technologies Used</p>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">Python</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">HTML</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">Arduino Uno</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">Python</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">CSS</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">JavaScript</p>
-            </div>
           </div>
 
           <!-- Technologies Learnt -->
@@ -687,28 +277,7 @@
               <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
                 <span class="fa fa-code"></span>
               </div>
-              <p class="text-md font-semibold ml-2">OpenCV</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">C++</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">Raspberry Pi</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">3D Modelling</p>
+              <p class="text-md font-semibold ml-2">Java</p>
             </div>
           </div>
         </div>
@@ -719,10 +288,10 @@
     <div class="flex-shrink-0 flex items-center py-4">
       <div class="flex w-1/3 items-center justify-start space-x-4 pl-4">
         <div class="rounded-md h-14 w-14 bg-[#535353] text-[#181818] flex justify-center items-center">
-          <i class="fa fa-robot fa-xl"></i>
+          <i class="fa fa-plane fa-xl"></i>
         </div>
         <div>
-            <p class="font-normal text-sm">BookBot</p>
+            <p class="font-normal text-sm">Flight System in Java</p>
             <p class="text-xs text-faded">Project</p>
         </div>
       </div>
@@ -766,209 +335,126 @@
 
       <div class="flex justify-center items-center mt-8"> 
         <div class="w-56 mx-8 aspect-square flex justify-center items-center">
-          <img src="../imgs/p2-1.jpg">
+          <img src="../imgs/p3-1.png">
         </div>
       </div>
 
       <div class="mt-6">
-        <p class="text-xl font-bold">BookBot</p>
+        <p class="text-xl font-bold">Flight Booking System in Java</p>
       </div>
 
       <div class="mt-3 space-y-3 text-sm text-faded">
         <p>
-          To create a project using both hardware and software, to meet multiple UN 
-          sustainability goals.
-        </p>
-
-        <p>
-          BookBot is an AI aided wheeled robot that helps librarians and users of libraries
-          to increase their efficiencies and make the experience in libraries flawless. 
-        </p>
-
-        <p>
-          Our product’s focus is to transport returned books to their designated areas. 
-          This reduces the time librarians and library staff spend on physical tasks 
-          that would preferably be used on promoting a love of learning in such an 
-          enriched environment for students and visitors. 
-        </p>
-
-        <p>
-          Based off our own Curzon 
-          library, some libraries have unstaffed hours where library users self-serve 
-          themselves. BookBot will be most helpful during unstaffed hours, ensuring 
-          library resources are back in place for when librarians return to work.
-        </p>
-
-        <p>
-          Our project was made to promote the UN goals of: good health and well-being; 
-          quality education; affordable and clean energy.
+          To extend and complete the skeleton code of a flight booking system in Java using the object oriented programming paradigm.
         </p>
       </div>
 
       <div class="mt-3 space-y-3 text-sm text-faded">
         <p>
-          Features:
+          Our project includes the following features off the project assessment checklist:
         </p>
 
         <ul class="list-disc ml-6">
-            <li>
-              Line-tracking
-            </li>
-            <li>
-              Obstacle avoidance
-            </li>
-            <li>
-              Noise regulation
-            </li>
-            <li>
-              Object recognition (shape recognition)
-            </li>
-            <li>
-              Electromagnetic arms
-            </li>
-            <li>
-              Communication between 2 Arduino Unos and a Raspberry Pi
-            </li>
-            <li>
-              A website allowing the users to:
-              <ul class="list-disc ml-6">
-                <li>
-                  Import a map for BookBot to follow paths within
-                </li>
-                <li>
-                  Connect with their specific purchase of BookBot
-                </li>
-                <li>
-                  View stats retrieved by BookBot
-                </li>
-                <li>
-                  Read the BookBot guide
-                </li>
-              </ul>
-            </li>
-        </ul>
+          <li>
+            Adds new customers (passengers to the system)
+          </li>
+          <li>
+            List all customers stored in the system
+          </li>
+          <li>
+            Issue bookings for customers
+          </li>
+          <li>
+            Cancel bookings
+          </li>
+          <li>
+            Saves status of the system to backend storage (i.e. text file storage)
+          </li>
+          <li>
+            Has a number of seats (capacity) property and a price property in the flight object
+          </li>
+          <li>
+            Has an email property in the customer object
+          </li>
+          <li>
+            Stores data to file storage after execution of commands that change state of the system and informs the user of failure to store the data, rolling back any changes made to the system prior to the error
+          </li>
+          <li>
+            Can remove (hide) existing flights from the system
+          </li>
+          <li>
+            Can remove (hide) existing customers from the system
+          </li>
+          <li>
+            Imposes a limit on the maximum number of passengers that can be added to a flight using the capacity property of the flight object
+          </li>
+          <li>
+            Has Javadoc documentation for newer methods
+          </li>
+          <li>
+            Lists only flights that are in the future and have not departed
+          </li>
+          <li>
+            Extension of the GUI application to issue bookings, update bookings, cancel bookings, and to delete flights and customers
+          </li>
+        </ul>    
       </div>
 
       <div class="mt-6">
         <p class="text-lg font-bold">Project Details</p>
 
         <div class="mt-3 space-y-4">
-          <div class="flex flex-row gap-2 justify-center items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 flex justify-center items-center">
+          <div class="flex flex-row gap-2 items-center">
+            <div class="bg-[#282828] aspect-square rounded-lg w-12 flex justify-center items-center">
               <span class="fa fa-timeline fa-xl"></span>
             </div>
             <div class="min-w-0 flex-1 mr-2">
               <p class="font-normal text-md">Duration</p>
-              <p class="text-xs text-faded">Jan - May 24</p>
+              <p class="text-xs text-faded">Nov 2024 - Jan 2025</p>
             </div>
           </div>
 
-          <div class="flex flex-row gap-2 justify-center items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+          <div class="flex flex-row gap-2 items-center">
+            <div class="bg-[#282828] aspect-square rounded-lg w-12 h-12 flex justify-center items-center">
               <span class="fa fa-user fa-xl"></span>
             </div>
             <div class="min-w-0 flex-1 mr-2">
               <p class="font-normal text-md">Built for</p>
-              <p class="text-xs text-faded">Innovation Project</p>
+              <p class="text-xs text-faded">Object Oriented Programming</p>
             </div>
           </div>
 
-          <div class="flex flex-row gap-2 justify-center items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+          <div class="flex flex-row gap-2 items-center">
+            <div class="bg-[#282828] aspect-square rounded-lg w-12 h-12 flex justify-center items-center">
               <span class="fa fa-user-group fa-xl"></span>
             </div>
             <div class="min-w-0 flex-1 mr-2">
               <p class="font-normal text-md">Type of project collaboration</p>
-              <p class="text-xs text-faded">Group (of 5): TakeFive</p>
+              <p class="text-xs text-faded">Group (of 2)</p>
             </div>
           </div>
 
-          <div class="flex flex-row gap-2 justify-center items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
-              <span class="fa fa-people-arrows fa-xl"></span>
-            </div>
-            <div class="min-w-0 flex-1 mr-2">
-              <p class="font-normal text-md">Role in Project</p>
-              <p class="text-xs text-faded">Team leader</p>
-            </div>
-          </div>
-
-          <div class="flex flex-row gap-2 justify-center items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+          <div class="flex flex-row gap-2 items-center">
+            <div class="bg-[#282828] aspect-square rounded-lg w-12 h-12 flex justify-center items-center">
               <span class="fa fa-list fa-xl"></span>
             </div>
             <div class="min-w-0 flex-1 mr-2">
               <p class="font-normal text-md">Level of Completion</p>
-              <p class="text-xs text-faded">Incomplete</p>
+              <p class="text-xs text-faded">Almost Complete</p>
             </div>
           </div>
 
-          <a href="https://github.com/mars-rei/BookBot">
-            <div class="flex flex-row gap-2 justify-center items-center">
-              <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+          <a href="https://github.com/mars-rei/flight-system">
+            <div class="flex flex-row gap-2 items-center">
+              <div class="bg-[#282828] aspect-square rounded-lg w-12 h-12 flex justify-center items-center">
                 <span class="fa-brands fa-github fa-xl"></span>
               </div>
               <div class="min-w-0 flex-1 mr-2">
                 <p class="font-normal text-md">GitHub</p>
-                <p class="text-xs text-faded">BookBot</p>
+                <p class="text-xs text-faded">Flight System</p>
               </div>
             </div>
           </a>
-
-          <div class="flex flex-row gap-2 mt-3 justify-center items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
-              <span class="fa fa-award fa-xl"></span>
-            </div>
-            <div class="min-w-0 flex-1 mr-2">
-              <p class="font-normal text-md">Award Given</p>
-              <p class="text-xs text-faded">3rd Place for Most Innovative Project</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-6">
-        <p class="text-md font-bold">Technologies used</p>
-
-        <div class="grid grid-cols-2 gap-2 items-start mt-3">
-          <div class="grid col-span-1 gap-y-2">
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-sm font-semibold">Python</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-sm font-semibold">HTML</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-robot"></span>
-              </div>
-              <p class="text-sm font-semibold">Arduino Uno</p>
-            </div>
-          </div>
-
-          <div class="grid col-span-1 gap-y-2">
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-sm font-semibold">CSS</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-sm font-semibold">JavaScript</p>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -979,33 +465,11 @@
           <div class="grid col-span-1 gap-y-2">
             <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
               <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-camera"></span>
-              </div>
-              <p class="text-sm font-semibold">OpenCV</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
                 <span class="fa fa-code"></span>
               </div>
-              <p class="text-sm font-semibold">C++</p>
+              <p class="text-sm font-semibold">Java</p>
             </div>
           </div>
-
-          <div class="grid col-span-1 gap-y-2">
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-robot"></span>
-              </div>
-              <p class="text-sm font-semibold">Raspberry Pi</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-cube"></span>
-              </div>
-              <p class="text-sm font-semibold">3D Modelling</p>
-            </div>
         </div>
       </div>
 
@@ -1015,41 +479,17 @@
         <div class="grid grid-cols-2 gap-2 items-start mt-3">
           <div class="grid col-span-1 gap-y-2">
             <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Project Coordination</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Communication</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Leadership</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Project Planning</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
               <p class="text-sm font-semibold">Teamwork</p>
+            </div>
+
+            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
+              <p class="text-sm font-semibold">Project Management</p>
             </div>
           </div>
 
           <div class="grid col-span-1 gap-y-2">
             <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Project Management</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Drawing</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Coding</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Microcontrollers</p>
+              <p class="text-sm font-semibold">OOP</p>
             </div>
           </div>
         </div>
@@ -1058,104 +498,11 @@
       <div class="mt-6 space-y-3">
         <p class="text-lg font-bold">Project Showcase</p>
 
-        <p class="text-md font-bold">BookBot Concept Videos</p>
-        <figure class="space-y-1">
-          <iframe 
-            class="w-full"
-            src="https://www.youtube.com/embed/bU_gu3VN288?si=wyFNlEkR08cQAOw3" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-          <figcaption class="text-xs text-faded">Initial concept video.</figcaption>
-        </figure>
-
-        <figure class="space-y-1">
-          <iframe 
-            class="w-full"
-            src="https://www.youtube.com/embed/bgNiuFnM5MU?si=HdYare2SLh_Y1rwl" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-          <figcaption class="text-xs text-faded">Updated concept video.</figcaption>
-        </figure>
-
-
-        <p class="text-md font-bold">BookBot 3D Model Concept</p>
-        <img src="../imgs/p2-2.png" class="rounded-md">
-        <img src="../imgs/p2-3.png" class="rounded-md">
-        <img src="../imgs/p2-4.png" class="rounded-md">
-        <img src="../imgs/p2-5.png" class="rounded-md">
-
-        <p class="text-md font-bold">Project Proposal Presentation & Opportunistic Plan</p>
-
-        <div class="block md:hidden mt-3">
-          <a 
-            href="../files/p2-1.pdf" 
-            target="_blank"
-            class="bg-white py-2 px-4 rounded-full text-[#121212] text-sm font-bold inline items-center"
-          >
-            <span class="fa fa-file fa-lg"></span>
-            Proposal Presentation
-          </a>
-        </div>
-
-        <figure class="space-y-1 hidden md:block">
-          <iframe 
-            src="../files/p2-1.pdf" 
-            class="w-full aspect-square"
-          >
-            <p class="text-sm">Your browser does not support PDFs. 
-              <a href="../files/p2-1.pdf" class="text-sm">Download the PDF.</a>.
-            </p>
-          </iframe>
-          <figcaption class="text-xs text-faded">Our proposal of our project.</figcaption>
-        </figure>
-
-        <div class="block md:hidden mt-4">
-          <a 
-            href="../files/p2-2.pdf" 
-            target="_blank"
-            class="bg-white py-2 px-4 rounded-full text-[#121212] text-sm font-bold inline items-center"
-          >
-            <span class="fa fa-file fa-lg"></span>
-            Opportunistic Plan
-          </a>
-        </div>
-
-        <figure class="space-y-1 hidden md:block">
-          <iframe 
-            src="../files/p2-2.pdf" 
-            class="w-full aspect-square"
-          >
-            <p class="text-sm">Your browser does not support PDFs. 
-              <a href="../files/p2-2.pdf" class="text-sm">Download the PDF.</a>.
-            </p>
-          </iframe>
-          <figcaption class="text-xs text-faded">
-            A plan detailing what we would do if we were to take our project 
-            further (if we were to continue it after presenting it at the Innovation Festival 2024).
-          </figcaption>
-        </figure>
-
-        <p class="text-md font-bold">Project Poster</p>
-        <img src="../imgs/p2-6.png" class="rounded-md">
-
-        <p class="text-md font-bold">Presentation Day + Awards Evening</p>
-        <img src="../imgs/p2-7.jpg" class="rounded-md">
-        <img src="../imgs/p2-8.jpg" class="rounded-md">
-        <figure class="space-y-1">
-          <img src="../imgs/p2-9.png" class="rounded-md">
-          <figcaption class="text-xs text-faded">Won 3rd place in the Most Innovative category!</figcaption>
-        </figure>
+        <p class="text-md font-bold">Code</p>
+        <p class="text-sm text-faded">Please see the GitHub link in the Links section above.</p>
       </div>
-
     </div>
   </div>
-
 
   <!-- mobile nav -->
   <div id="mobileNavContainer"></div>
