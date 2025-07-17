@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>BMW Group Physical Asset Tracking System</title>
+  <title>Mastermind Command-Line Game</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
@@ -79,21 +79,21 @@
           <!-- Photo & Project Aim -->
           <div class="flex justify-start items-end mt-16"> 
             <div class="w-56 aspect-square flex justify-center items-center rounded-md">
-              <img src="../imgs/p7-1.png" class="rounded-md">
+              <img src="../imgs/p8-1.png" class="rounded-md">
             </div>
             <div class="ml-8">
               <div>
-                <p class="text-6xl font-bold">BMW Group Physical Asset Tracking System</p>
+                <p class="text-6xl font-bold">Mastermind Command-Line Game</p>
               </div>
               <div class="mt-4">
                 <p class="text-sm text-faded">
-                  To design software utilising existing CCTV camera streams, an API and a Digital Twin 
-                  / Vehicle Management System to track logistics vehicles and distinguish them from each other.
+                  To create a small-scale prototype for the Mastermind game where it will take the 
+                  form of an interactive command line program.
                 </p>
               </div>
               <div class="mt-2 flex flex-row items-center space-x-2">
                 <img src="../imgs/headshot.jpeg" class="w-6 rounded-full">
-                <p class="text-sm text-white">Imogen Dicen + 5 Others</p>
+                <p class="text-sm text-white">Imogen Dicen + 1 Other</p>
               </div>
             </div>
           </div>
@@ -106,12 +106,12 @@
             <div class="mt-2">
               <div>
                 <div 
-                  @click="openTrack === 'proposal' ? openTrack = null : openTrack = 'proposal'"
+                  @click="openTrack === 'code' ? openTrack = null : openTrack = 'code'"
                   class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
                 >
                   <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                   <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Our Solution Proposal</p>
+                    <p class="font-semibold text-md truncate">Code</p>
                   </div>
                   <div class="min-w-0 flex-1 pr-2">
                     <p class="font-semibold text-sm text-faded">Project Showcase</p>
@@ -119,43 +119,25 @@
                 </div>
 
                 <div 
-                  x-show="openTrack === 'proposal'" 
+                  x-show="openTrack === 'code'" 
                   x-collapse 
                   class="bg-[#282828] rounded-md p-4"
                 >
-                  <p class="text-md font-bold mb-4">Our Solution Proposal</p>
-                  <div class="flex justify-center items-center">
-                    <div class="w-200 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
-                      <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <iframe 
-                              src="../files/p7-1.pdf" 
-                              class="w-180 h-160"
-                            >
-                              <p class="text-sm">Your browser does not support PDFs. 
-                                <a href="../files/p7-1.pdf" class="text-sm">Download the PDF.</a>.
-                              </p>
-                            </iframe>
-                            <figcaption class="text-xs text-faded text-center">
-                              The document containing our solution to BMW Group’s problem.
-                            </figcaption>
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <p class="text-md font-bold mb-4">Code</p>
+                  <p class="text-sm text-faded">
+                    Please refer to the GitHub link in the ‘Project Details’ section (on the right) for the code of this project.
+                  </p>
                 </div>
               </div>
 
               <div>
                 <div 
-                  @click="openTrack === 'presentation' ? openTrack = null : openTrack = 'presentation'"
+                  @click="openTrack === 'report' ? openTrack = null : openTrack = 'report'"
                   class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
                 >
                   <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                   <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Project Proposal Presentation</p>
+                    <p class="font-semibold text-md truncate">Log Report</p>
                   </div>
                   <div class="min-w-0 flex-1 pr-2">
                     <p class="font-semibold text-sm text-faded">Project Showcase</p>
@@ -163,25 +145,29 @@
                 </div>
 
                 <div 
-                  x-show="openTrack === 'presentation'" 
+                  x-show="openTrack === 'report'" 
                   x-collapse 
                   class="bg-[#282828] rounded-md p-4"
                 >
-                  <p class="text-md font-bold mb-4">Project Proposal Presentation</p>
+                  <p class="text-md font-bold mb-4">Log Report</p>
                   <div class="flex justify-center items-center">
                     <div class="w-200 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
                       <div class="flex flex-nowrap">
                         <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
                           <figure class="space-y-1">
                             <iframe 
-                              src="../files/p7-2.pdf" 
-                              class="w-180 h-120"
+                              src="../files/p8-1.pdf" 
+                              class="w-180 h-140"
                             >
                               <p class="text-sm">Your browser does not support PDFs. 
-                                <a href="../files/p7-2.pdf" class="text-sm">Download the PDF.</a>.
+                                <a href="../files/p8-1.pdf" class="text-sm">Download the PDF.</a>.
                               </p>
                             </iframe>
-                            <figcaption class="text-xs text-faded text-center">A presentation containing our solution and research.</figcaption>
+                            <figcaption class="text-xs text-faded text-center">
+                              Our log report containing the design and planning, implementation, testing stages of our project. 
+                              Also includes a short analysis of OpenRA’s GitHub repository, research on version control, and a 
+                              reflection our teamwork during this project
+                            </figcaption>
                           </figure>
                         </div>
                       </div>
@@ -201,13 +187,6 @@
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Team Leadership</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
                   <p class="font-semibold text-md truncate">Teamwork</p>
                 </div>
               </div>
@@ -215,84 +194,84 @@
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Team Management</p>
+                  <p class="font-semibold text-md truncate">Communication</p>
                 </div>
               </div>
 
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Project Coordination</p>
+                  <p class="font-semibold text-md truncate">Programming</p>
                 </div>
               </div>
 
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Project Management</p>
+                  <p class="font-semibold text-md truncate">Python</p>
                 </div>
               </div>
 
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Project Planning</p>
+                  <p class="font-semibold text-md truncate">Declarative Programming</p>
                 </div>
               </div>
 
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Design Thinking</p>
+                  <p class="font-semibold text-md truncate">Mathematical Programming</p>
                 </div>
               </div>
 
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Software Design</p>
+                  <p class="font-semibold text-md truncate">Set Theory</p>
                 </div>
               </div>
 
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Public Speaking</p>
+                  <p class="font-semibold text-md truncate">Data Modelling</p>
                 </div>
               </div>
 
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Presentation Skills</p>
+                  <p class="font-semibold text-md truncate">Graph Theory</p>
                 </div>
               </div>
 
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Canva</p>
+                  <p class="font-semibold text-md truncate">Functional Programming</p>
                 </div>
               </div>
 
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Creativity & Innovation</p>
+                  <p class="font-semibold text-md truncate">Manual Testing</p>
                 </div>
               </div>
 
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Problem Solving</p>
+                  <p class="font-semibold text-md truncate">Automated Software Testing</p>
                 </div>
               </div>
 
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Problem Analysis</p>
+                  <p class="font-semibold text-md truncate">GitHub</p>
                 </div>
               </div>
             </div>
@@ -302,14 +281,14 @@
 
       <div class="bg-[#121212] w-68 rounded-lg p-2 flex flex-col overflow-y-auto scrollbar-hide h-[calc(100vh-9.5rem)] relative">
         <div class="absolute inset-0 overflow-hidden rounded-lg">
-          <img src="../imgs/p7-1.png" class="w-full h-full object-cover opacity-20">
+          <img src="../imgs/p8-1.png" class="w-full h-full object-cover opacity-20">
           <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/80 to-transparent"></div>
         </div>
 
         <div class="relative z-10 mx-2 my-4"> 
-          <p class="text-xl font-bold">Project 7</p>
-          <p class="text-2xl font-bold mt-48">BMW Group Physical Asset Tracking System</p>
-          <p class="text-lg font-semibold text-faded -mt-1">Imogen Dicen + 5</p>
+          <p class="text-xl font-bold">Project 8</p>
+          <p class="text-2xl font-bold mt-48">Mastermind Command-Line Game</p>
+          <p class="text-lg font-semibold text-faded -mt-1">Imogen Dicen + 1</p>
         </div>
 
         <div class="relative z-10"> 
@@ -318,22 +297,21 @@
             <p class="font-bold text-md">Project Details</p>
 
             <p class="text-md font-semibold mt-5">Duration</p>
-            <p class="text-sm text-faded">Feb - Apr 2025</p>
+            <p class="text-sm text-faded">Mar - May 2025</p>
 
             <p class="text-md font-semibold mt-5">Built for</p>
-            <p class="text-sm text-faded">Software Design</p>
+            <p class="text-sm text-faded">Computer Mathematics & Declarative Programming</p>
 
             <p class="text-md font-semibold mt-5">Collaboration</p>
-            <p class="text-sm text-faded">Group (of 6): BMW Group - Group 19</p>
+            <p class="text-sm text-faded">Group (of 2)</p>
 
-            <p class="text-md font-semibold mt-5">Role in Project</p>
-            <p class="text-sm text-faded">Team Leader</p>
-
-            <p class="text-md font-semibold mt-5">Award Given</p>
-            <p class="text-sm text-faded">Top Presentation for BMW Group Teams</p>
+            <a href="https://github.com/mars-rei/mastermind">
+              <p class="text-md font-semibold mt-5">GitHub</p>
+              <p class="text-sm text-faded">Link to Mastermind</p>
+            </a>
 
             <p class="text-md font-semibold mt-5">Level of Completion</p>
-            <p class="text-sm text-faded">Complete</p>
+            <p class="text-sm text-faded">Completed with a known logic error and a need of refactoring for paradigm consistency</p>
           </div>
 
           <!-- Technologies Used -->
@@ -344,26 +322,14 @@
               <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
                 <span class="fa fa-code"></span>
               </div>
-              <p class="text-md font-semibold ml-2">UML Class Diagrams</p>
+              <p class="text-md font-semibold ml-2">Python</p>
             </div>
 
             <div class="flex flex-row items-center mt-5">
               <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
                 <span class="fa fa-code"></span>
               </div>
-              <p class="text-md font-semibold ml-2">Canva</p>
-            </div>
-          </div>
-
-          <!-- Technologies Learnt -->
-          <div class="rounded-lg mx-2 bg-[#282828] flex mt-4 p-3 flex-col">
-            <p class="font-bold text-md">Technologies Learnt</p>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">UML Sequence Diagrams</p>
+              <p class="text-md font-semibold ml-2">draw.io</p>
             </div>
           </div>
         </div>
@@ -374,10 +340,10 @@
     <div class="flex-shrink-0 flex items-center py-4">
       <div class="flex w-1/3 items-center justify-start space-x-4 pl-4">
         <div class="rounded-md h-14 w-14 bg-[#535353] text-[#181818] flex justify-center items-center">
-          <i class="fa fa-truck-ramp-box fa-xl"></i>
+          <i class="fa fa-dice fa-xl"></i>
         </div>
         <div>
-            <p class="font-normal text-sm">BMW Group Physical Asset Tracking System</p>
+            <p class="font-normal text-sm">Mastermind Command-Line Game</p>
             <p class="text-xs text-faded">Project</p>
         </div>
       </div>
@@ -420,18 +386,18 @@
 
     <div class="flex justify-center items-center mt-8"> 
       <div class="w-56 mx-8 aspect-square flex justify-center items-center">
-        <img src="../imgs/p7-1.png">
+        <img src="../imgs/p8-1.png">
       </div>
     </div>
 
     <div class="mt-6">
-      <p class="text-xl font-bold">BMW Group Physical Asset Tracking System</p>
+      <p class="text-xl font-bold">Mastermind Command-Line Game</p>
     </div>
 
     <div class="mt-3 space-y-3 text-sm text-faded">
-      <p class="text-sm">
-        To design software utilising existing CCTV camera streams, an API and a Digital Twin 
-        / Vehicle Management System to track logistics vehicles and distinguish them from each other.
+      <p>
+        To create a small-scale prototype for the Mastermind game where it will take the 
+        form of an interactive command line program.
       </p>
     </div>
 
@@ -445,59 +411,51 @@
           </div>
           <div class="min-w-0 flex-1 mr-2">
             <p class="font-normal text-md">Duration</p>
-            <p class="text-xs text-faded">Feb - Apr 2025</p>
+            <p class="text-xs text-faded">Mar - May 2025</p>
           </div>
         </div>
 
-        <div class="flex flex-row gap-2 justify-center items-center">
-          <div class="bg-[#282828] aspect-square rounded-md w-12 flex justify-center items-center">
+        <div class="flex flex-row gap-2 justify-center items-center"> 
+          <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
             <span class="fa fa-user fa-xl"></span>
           </div>
           <div class="min-w-0 flex-1 mr-2">
             <p class="font-normal text-md">Built for</p>
-            <p class="text-xs text-faded">Software Design</p>
+            <p class="text-xs text-faded">Computer Mathematics & Declarative Programming</p>
           </div>
         </div>
 
         <div class="flex flex-row gap-2 justify-center items-center">
-          <div class="bg-[#282828] aspect-square rounded-md w-12 flex justify-center items-center">
+          <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
             <span class="fa fa-user-group fa-xl"></span>
           </div>
           <div class="min-w-0 flex-1 mr-2">
             <p class="font-normal text-md">Type of project collaboration</p>
-            <p class="text-xs text-faded">Group (of 6): BMW Group - Group 19</p>
-          </div>
-        </div>
-
-        <div class="flex flex-row gap-2 mt-3 justify-center items-center">
-          <div class="bg-[#282828] aspect-square rounded-md w-12 flex justify-center items-center">
-            <span class="fa fa-award fa-xl"></span>
-          </div>
-          <div class="min-w-0 flex-1 mr-2">
-            <p class="font-normal text-md">Award Given</p>
-            <p class="text-xs text-faded">Top Presentation for BMW Group Teams</p>
+            <p class="text-xs text-faded">Group (of 2)</p>
           </div>
         </div>
 
         <div class="flex flex-row gap-2 justify-center items-center">
-          <div class="bg-[#282828] aspect-square rounded-md w-12 flex justify-center items-center">
-            <span class="fa fa-people-arrows fa-xl"></span>
-          </div>
-          <div class="min-w-0 flex-1 mr-2">
-            <p class="font-normal text-md">Role in Project</p>
-            <p class="text-xs text-faded">Team leader</p>
-          </div>
-        </div>
-
-        <div class="flex flex-row gap-2 justify-center items-center">
-          <div class="bg-[#282828] aspect-square rounded-md w-12 flex justify-center items-center">
+          <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
             <span class="fa fa-list fa-xl"></span>
           </div>
           <div class="min-w-0 flex-1 mr-2">
             <p class="font-normal text-md">Level of Completion</p>
-            <p class="text-xs text-faded">Complete</p>
+            <p class="text-xs text-faded">Completed with a known logic error and a need of refactoring for paradigm consistency</p>
           </div>
         </div>
+
+        <a href="https://github.com/mars-rei/mastermind">
+          <div class="flex flex-row gap-2 justify-center items-center">
+            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+              <span class="fa-brands fa-github fa-xl"></span>
+            </div>
+            <div class="min-w-0 flex-1 mr-2">
+              <p class="font-normal text-md">GitHub</p>
+              <p class="text-xs text-faded">Mastermind Command-Line Game</p>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
 
@@ -508,33 +466,18 @@
         <div class="grid col-span-1 gap-y-2">
           <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
             <div class="w-8 h-8 flex items-center justify-center">
-              <span class="fa fa-diagram-project"></span>
+              <span class="fa fa-code"></span>
             </div>
-            <p class="text-sm font-semibold">Class UML</p>
+            <p class="text-sm font-semibold">Python</p>
           </div>
         </div>
 
         <div class="grid col-span-1 gap-y-2">
           <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
             <div class="w-8 h-8 flex items-center justify-center">
-              <span class="fa fa-file-powerpoint"></span>
-            </div>
-            <p class="text-sm font-semibold">Canva</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-6">
-      <p class="text-md font-bold">Technologies learnt</p>
-
-      <div class="grid grid-cols-2 gap-2 items-start mt-3">
-        <div class="grid col-span-1 gap-y-2">
-          <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-            <div class="w-8 h-8 flex items-center justify-center">
               <span class="fa fa-diagram-project"></span>
             </div>
-            <p class="text-sm font-semibold">Sequence UML</p>
+            <p class="text-sm font-semibold">draw.io</p>
           </div>
         </div>
       </div>
@@ -546,61 +489,61 @@
       <div class="grid grid-cols-2 gap-2 items-start mt-3">
         <div class="grid col-span-1 gap-y-2">
           <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Team Leadership</p>
-          </div>
-
-          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
             <p class="text-sm font-semibold">Teamwork</p>
           </div>
 
           <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Team Management</p>
+            <p class="text-sm font-semibold">Communication</p>
           </div>
 
           <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Project Coordination</p>
+            <p class="text-sm font-semibold">Programming</p>
           </div>
 
           <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Project Management</p>
+            <p class="text-sm font-semibold">Python</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex flex-col items-center justify-center">
+            <p class="text-sm font-semibold">Declarative</p>
+            <p class="text-sm font-semibold">Programming</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex flex-col items-center justify-center">
+            <p class="text-sm font-semibold">Mathematical</p>
+            <p class="text-sm font-semibold">Programming</p>
           </div>
 
           <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Project Planning</p>
-          </div>
-
-          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Design Thinking</p>
+            <p class="text-sm font-semibold">Set Theory</p>
           </div>
         </div>
 
         <div class="grid col-span-1 gap-y-2">
           <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Software Design</p>
+            <p class="text-sm font-semibold">Data Modelling</p>
           </div>
 
           <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Public Speaking</p>
+            <p class="text-sm font-semibold">Graph Theory</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex flex-col items-center justify-center">
+            <p class="text-sm font-semibold">Functional</p>
+            <p class="text-sm font-semibold">Programming</p>
           </div>
 
           <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Presentation Skills</p>
+            <p class="text-sm font-semibold">Manual Testing</p>
+          </div>
+
+          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex flex-col items-center justify-center">
+            <p class="text-sm font-semibold">Automated Software</p>
+            <p class="text-sm font-semibold">Testing</p>
           </div>
 
           <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Canva</p>
-          </div>
-
-          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Creativity & Innovation</p>
-          </div>
-
-          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Problem Solving</p>
-          </div>
-
-          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Problem Analysis</p>
+            <p class="text-sm font-semibold">GitHub</p>
           </div>
         </div>
       </div>
@@ -609,59 +552,40 @@
     <div class="mt-6 space-y-3">
       <p class="text-lg font-bold">Project Showcase</p>
 
-      <p class="text-md font-bold">Our Solution Proposal</p>
-      <div class="block md:hidden mt-4">
+      <p class="text-md font-bold">Our Log Report</p>
+      <div class="block md:hidden mt-3">
         <a 
-          href="../files/p7-1.pdf" 
+          href="../files/p8-1.pdf" 
           target="_blank"
           class="bg-white py-2 px-4 rounded-full text-[#121212] text-sm font-bold inline items-center"
         >
           <span class="fa fa-file fa-lg"></span>
-          Solution Proposal
+          Log Report
         </a>
       </div>
 
-      <figure class="space-y-1 hidden md:block">
+      <figure class="hidden md:block">
         <iframe 
-          src="../files/p7-1.pdf" 
+          src="../files/p8-1.pdf" 
           class="w-full aspect-square"
         >
           <p class="text-sm">Your browser does not support PDFs. 
-            <a href="../files/p7-1.pdf" class="text-sm">Download the PDF.</a>.
+            <a href="../files/p8-1.pdf" class="text-sm">Download the PDF.</a>.
           </p>
         </iframe>
         <figcaption class="text-xs text-faded">
-          The document containing our solution to BMW Group’s problem.
+          Our log report containing the design and planning, implementation, testing stages of our project. 
+          Also includes a short analysis of OpenRA’s GitHub repository, research on version control, and a 
+          reflection our teamwork during this project
         </figcaption>
       </figure>
 
-      <p class="text-md font-bold">Our Presentation</p>
-      <div class="block md:hidden mt-4">
-        <a 
-          href="../files/p7-2.pdf" 
-          target="_blank"
-          class="bg-white py-2 px-4 rounded-full text-[#121212] text-sm font-bold inline items-center"
-        >
-          <span class="fa fa-file fa-lg"></span>
-          Presentation
-        </a>
-      </div>
+      <p class="text-md font-bold">Code</p>
+      <p class="text-sm text-faded">
+        For our project's code, please look above in the link section for our project’s repository.
+      </p>
+    </div>
 
-      <figure class="space-y-1 hidden md:block">
-        <iframe 
-          src="../files/p7-2.pdf" 
-          class="w-full aspect-square"
-        >
-          <p class="text-sm">Your browser does not support PDFs. 
-            <a href="../files/p7-2.pdf" class="text-sm">Download the PDF.</a>.
-          </p>
-        </iframe>
-        <figcaption class="text-xs text-faded">
-          A presentation containing our solution and research.
-        </figcaption>
-      </figure>
-    </div>
-    </div>
   </div>
 
   <!-- mobile nav -->
