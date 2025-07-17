@@ -6,223 +6,624 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="scrollbar-hide">
+<body class="scrollbar-hide sm:overflow-hidden">
 
-  <div class="mx-5 pb-24 text-white">
+  <div class="hidden sm:flex flex-col min-h-screen flex-1 overflow-hidden bg-black">
 
-    <div class="flex justify-center items-center mt-8"> 
-      <div class="w-56 mx-8 aspect-square flex justify-center items-center">
-        <img src="../imgs/p1-1.png">
-      </div>
-    </div>
-
-    <div class="mt-6">
-      <p class="text-xl font-bold">IM SwissGambit</p>
-    </div>
-
-    <div class="mt-3 space-y-3 text-sm text-faded">
-      <p>
-        To create a platform that would aid my school’s Chess Club to host tournaments and train the members within it. 
-      </p>
-
-      <p>
-        My project idea was to create a website that would allow the members of the school’s Chess Club to log in, play against each other in tournaments based off the Swiss Pairing system, and play against a Chess AI. 
-      </p>
-
-      <p>
-        The Swiss Pairing system (”IM Swiss-”) would allow users to create tournaments, view tournament pairings, generate tournament pairings, and download tournament data into a CSV file. 
-      </p>
-
-      <p>
-        The Chess AI (”Gambit”) would be used as a training method for members in the club to learn from as it learns their weaknesses in their chess games.
-      </p>
-    </div>
-
-    <div class="mt-6">
-      <p class="text-lg font-bold">Project Details</p>
-
-      <div class="mt-3 space-y-4">
-        <div class="flex flex-row gap-2 justify-center items-center">
-          <div class="bg-[#282828] aspect-square rounded-md w-12 flex justify-center items-center">
-            <span class="fa fa-timeline fa-xl"></span>
-          </div>
-          <div class="min-w-0 flex-1 mr-2">
-            <p class="font-normal text-md">Duration</p>
-            <p class="text-xs text-faded">Nov 2022 - Apr 23</p>
-          </div>
+    <!-- top -->
+    <div class="flex-shrink-0 flex items-center p-2">
+        <div class="flex w-1/4 items-center justify-start ml-5 space-x-4">
+        <span class="fa fa-briefcase text-3xl text-white"></span>
         </div>
-
-        <div class="flex flex-row gap-2 justify-center items-center">
-          <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
-            <span class="fa fa-user fa-xl"></span>
-          </div>
-          <div class="min-w-0 flex-1 mr-2">
-            <p class="font-normal text-md">Built for</p>
-            <p class="text-xs text-faded">A-Level Computer Science NEA</p>
-          </div>
-        </div>
-
-        <div class="flex flex-row gap-2 justify-center items-center">
-          <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
-            <span class="fa fa-user-group fa-xl"></span>
-          </div>
-          <div class="min-w-0 flex-1 mr-2">
-            <p class="font-normal text-md">Type of project collaboration</p>
-            <p class="text-xs text-faded">Individual</p>
-          </div>
-        </div>
-
-        <div class="flex flex-row gap-2 justify-center items-center">
-          <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
-            <span class="fa fa-list fa-xl"></span>
-          </div>
-          <div class="min-w-0 flex-1 mr-2">
-            <p class="font-normal text-md">Level of Completion</p>
-            <p class="text-xs text-faded">Incomplete</p>
-          </div>
-        </div>
-
-        <a href="https://github.com/mars-rei/IM-SwissGambit">
-          <div class="flex flex-row gap-2 justify-center items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
-              <span class="fa-brands fa-github fa-xl"></span>
+        
+        <div class="flex items-center justify-center w-2/4 space-x-2">
+        <a href="index.html">
+            <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
+                <span class="fa fa-home text-xl text-faded"></span>
             </div>
-            <div class="min-w-0 flex-1 mr-2">
-              <p class="font-normal text-md">GitHub</p>
-              <p class="text-xs text-faded">Link to IM SwissGambit</p>
+        </a>
+        
+        <div class="rounded-full bg-[#282828] px-4 h-12 flex items-center text-faded justify-start space-x-4 w-3/5">
+            <span class="fa fa-handshake text-xl text-faded"></span>
+            <p class="font-normal">Welcome to my portfolio!</p>
+        </div>
+        </div>
+        
+        <div class="flex items-center justify-end w-1/4 mr-2">
+        <a href="contact.html">
+            <div class="rounded-full bg-white px-4 h-8 flex items-center text-faded mr-4">
+                <p class="font-bold text-[#121212]">Contact me</p>
             </div>
-          </div>
+        </a>
+    
+        <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
+            <img src="../imgs/headshot.jpeg" class="rounded-full h-8 w-8" alt="Profile">
+        </div>
+        </div>
+    </div>
+      
+    <!-- middle -->
+    <div class="flex flex-1 overflow-hidden mx-2 space-x-2">
+      <!-- nav bar -->
+      <div class="bg-[#121212] w-18 rounded-lg p-2 flex flex-col space-y-4 items-center">
+        <span class="fa fa-bookmark text-xl text-faded pt-5"></span>
+
+        <a href="about.html">
+            <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center mt-4">
+                <span class="fa fa-user text-xl text-faded"></span>
+            </div>
+        </a>
+        
+        <a href="projects.html">
+            <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center">
+                <span class="fa fa-folder text-xl text-faded"></span>
+            </div>
+        </a>
+
+        <a href="certifications.html">
+            <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center">
+                <span class="fa fa-certificate text-xl text-faded"></span>
+            </div>
         </a>
       </div>
-    </div>
+        
+      <!-- main scrollable content -->
+      <div class="flex-1 bg-[#121212] rounded-lg overflow-y-auto h-[calc(100vh-9.5rem)]" id="mainContent">
 
-    <div class="mt-6">
-      <p class="text-md font-bold">Technologies used</p>
+        <div class="mx-5 pb-24 text-white">
 
-      <div class="grid grid-cols-2 gap-2 items-start mt-3">
-        <div class="grid col-span-1 gap-y-2">
-          <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-            <div class="w-8 h-8 flex items-center justify-center">
-              <span class="fa fa-code"></span>
+          <div class="flex justify-start items-end mt-16"> 
+            <div class="w-56 aspect-square flex justify-center items-center rounded-md">
+              <img src="../imgs/p1-1.png" class="rounded-md">
             </div>
-            <p class="text-sm font-semibold">Python</p>
+            <div class="ml-8">
+              <div>
+                <p class="text-6xl font-bold">IM SwissGambit</p>
+              </div>
+              <div class="mt-4">
+                  <p class="text-sm text-faded">To create a platform that would aid my school’s Chess Club to host tournaments and train the members within it. </p>
+                </div>
+              <div class="mt-2 flex flex-row items-center space-x-2">
+                <img src="../imgs/headshot.jpeg" class="w-6 rounded-full">
+                <p class="text-sm text-white">Imogen Dicen</p>
+              </div>
+            </div>
           </div>
 
-          <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-            <div class="w-8 h-8 flex items-center justify-center">
-              <span class="fa fa-code"></span>
+          <div class="mt-4 space-y-1 text-sm text-faded">
+            <p>
+              My project idea was to create a website that would allow the members of the school’s Chess Club to log in, play against each other in tournaments based off the Swiss Pairing system, and play against a Chess AI. 
+            </p>
+
+            <p>
+              The Swiss Pairing system (”IM Swiss-”) would allow users to create tournaments, view tournament pairings, generate tournament pairings, and download tournament data into a CSV file. 
+            </p>
+
+            <p>
+              The Chess AI (”Gambit”) would be used as a training method for members in the club to learn from as it learns their weaknesses in their chess games.
+            </p>
+          </div>
+
+
+
+          <div class="mt-6" x-data="{ openTrack: null }">
+            <p class="ml-16 text-sm text-faded">Stage of Project</p>
+            <hr class="mt-2 border-[#535353]">
+
+            <div class="mt-2">
+              <div>
+                <div 
+                  @click="openTrack === 'code' ? openTrack = null : openTrack = 'code'"
+                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
+                >
+                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
+                  <div class="min-w-0 flex-1 pr-2">
+                    <p class="font-semibold text-md truncate">Code</p>
+                  </div>
+                  <div class="min-w-0 flex-1 pr-2">
+                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
+                  </div>
+                </div>
+
+                <div 
+                  x-show="openTrack === 'code'" 
+                  x-collapse 
+                  class="bg-[#282828] rounded-md p-4"
+                >
+                  <p class="text-md font-bold mb-4">Code</p>
+                  <p class="text-sm text-faded">
+                    Please refer to the GitHub link in the ‘Project Details’ section (on the right) for the code that could be retrieved for this project.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div 
+                  @click="openTrack === 'planning' ? openTrack = null : openTrack = 'planning'"
+                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
+                >
+                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
+                  <div class="min-w-0 flex-1 pr-2">
+                    <p class="font-semibold text-md truncate">Planning</p>
+                  </div>
+                  <div class="min-w-0 flex-1 pr-2">
+                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
+                  </div>
+                </div>
+
+                <div 
+                  x-show="openTrack === 'planning'" 
+                  x-collapse 
+                  class="bg-[#282828] rounded-md p-4"
+                >
+                  <p class="text-md font-bold mb-4">Planning</p>
+                  <p class="text-sm text-faded">
+                    (Was unable to retrieve the report I did the planning in but found code snippets based on me trying to 
+                    experiment with creating a chess board using Object Oriented Programming in Python, and a draw.io file.)
+                  </p>
+
+                  <div class="flex justify-center items-center">
+                    <div class="w-160 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
+                      <div class="flex flex-nowrap">
+                        <div class="flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
+                          <figure class="space-y-1">
+                            <img src="../imgs/p1-2.png" class="rounded-md h-160">
+                            <figcaption class="text-xs text-faded text-center">A class diagram planning what attributes each class should have.</figcaption>
+                            <p class="text-xs text-faded mt-5 text-center">Slide 1/2</p>
+                          </figure>
+                        </div>
+
+                        <div class="flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2"> 
+                          <figure class="space-y-1">
+                            <img src="../imgs/p1-3.png" class="rounded-md w-140">
+                            <figcaption class="text-xs text-faded text-center">Output of non-graphical board in testing.</figcaption>
+                            <p class="text-xs text-faded mt-5 text-center">Slide 2/2</p>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div>
+                <div 
+                  @click="openTrack === 'testVids' ? openTrack = null : openTrack = 'testVids'"
+                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
+                >
+                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
+                  <div class="min-w-0 flex-1 pr-2">
+                    <p class="font-semibold text-md truncate">Testing Videos</p>
+                  </div>
+                  <div class="min-w-0 flex-1 pr-2">
+                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
+                  </div>
+                </div>
+
+                <div 
+                  x-show="openTrack === 'testVids'" 
+                  x-collapse 
+                  class="bg-[#282828] rounded-md p-4"
+                >
+                  <p class="text-md font-bold mb-4">Testing Videos</p>
+                  <div class="flex justify-center items-center">
+                    <div class="w-200 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
+                      <div class="flex flex-nowrap">
+                        <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
+                          <figure class="space-y-1">
+                            <iframe 
+                              class="w-180 h-90"
+                              src="https://www.youtube.com/embed/LASGbPAbdbg?si=tXozBpew-1bOXWI2" 
+                              frameborder="0" 
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                              referrerpolicy="strict-origin-when-cross-origin" 
+                              allowfullscreen>
+                            </iframe>
+                            <figcaption class="text-xs text-faded text-center">Video on testing whether notation output in the terminal works or not.</figcaption>
+                            <p class="text-xs text-faded mt-5 text-center">Slide 1/2</p>
+                          </figure>
+                        </div>
+
+                        <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2"> 
+                          <figure class="space-y-1">
+                            <iframe 
+                              class="w-180 h-90"
+                              src="https://www.youtube.com/embed/LUSH0WPr_Rk?si=Aj9nW6bXaVHhyqic" 
+                              frameborder="0" 
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                              referrerpolicy="strict-origin-when-cross-origin" 
+                              allowfullscreen>
+                            </iframe>
+                            <figcaption class="text-xs text-faded text-center">Video on testing whether piece movement and special moves work as expected or not.</figcaption>
+                            <p class="text-xs text-faded mt-5 text-center">Slide 2/2</p>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p class="text-sm font-semibold">HTML</p>
+          </div>
+
+          <div class="mt-6">
+            <p class="text-xl font-bold">Skills</p>
+            <p class="text-sm text-faded">Demonstrated in this project</p>
+
+            <div class="text-sm mt-6">
+              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
+                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
+                <div class="min-w-0 flex-1 pr-2">
+                  <p class="font-semibold text-md truncate">Software Development</p>
+                </div>
+              </div>
+
+              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
+                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
+                <div class="min-w-0 flex-1 pr-2">
+                  <p class="font-semibold text-md truncate">Project Planning</p>
+                </div>
+              </div>
+
+              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
+                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
+                <div class="min-w-0 flex-1 pr-2">
+                  <p class="font-semibold text-md truncate">Project Management</p>
+                </div>
+              </div>
+
+              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
+                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
+                <div class="min-w-0 flex-1 pr-2">
+                  <p class="font-semibold text-md truncate">Chess</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="grid col-span-1 gap-y-2">
-          <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-            <div class="w-8 h-8 flex items-center justify-center">
-              <span class="fa fa-code"></span>
+      <div class="bg-[#121212] w-68 rounded-lg p-2 flex flex-col overflow-y-auto scrollbar-hide h-[calc(100vh-9.5rem)] relative">
+        <div class="absolute inset-0 overflow-hidden rounded-lg">
+          <img src="../imgs/p1-1.png" class="w-full h-full object-cover opacity-20">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 mx-2 my-4"> 
+          <p class="text-xl font-bold">Project 1</p>
+          <p class="text-2xl font-bold mt-48">IM SwissGambit</p>
+          <p class="text-lg font-semibold text-faded -mt-1">Imogen Dicen</p>
+        </div>
+
+        <div class="relative z-10"> 
+          <!-- Project Details -->
+          <div class="rounded-lg mx-2 bg-[#282828] flex mt-4 p-3 flex-col">
+            <p class="font-bold text-md">Project Details</p>
+
+            <p class="text-md font-semibold mt-5">Duration</p>
+            <p class="text-sm text-faded">Nov 2022 - Apr 23</p>
+
+            <p class="text-md font-semibold mt-5">Built for</p>
+            <p class="text-sm text-faded">A-Level Computer Science NEA</p>
+
+            <p class="text-md font-semibold mt-5">Collaboration</p>
+            <p class="text-sm text-faded">Individual</p>
+
+            <p class="text-md font-semibold mt-5">Level of Completion</p>
+            <p class="text-sm text-faded">Incomplete</p>
+
+            <a href="https://github.com/mars-rei/IM-SwissGambit">
+              <p class="text-md font-semibold mt-5">GitHub</p>
+              <p class="text-sm text-faded">Link to IM SwissGambit</p>
+            </a>
+          </div>
+
+          <!-- Technologies Used -->
+          <div class="rounded-lg mx-2 bg-[#282828] flex mt-4 p-3 flex-col">
+            <p class="font-bold text-md">Technologies Used</p>
+
+            <div class="flex flex-row items-center mt-5">
+              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
+                <span class="fa fa-code"></span>
+              </div>
+              <p class="text-md font-semibold ml-2">Python</p>
             </div>
-            <p class="text-sm font-semibold">CSS</p>
+
+            <div class="flex flex-row items-center mt-5">
+              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
+                <span class="fa fa-code"></span>
+              </div>
+              <p class="text-md font-semibold ml-2">HTML</p>
+            </div>
+
+            <div class="flex flex-row items-center mt-5">
+              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
+                <span class="fa fa-code"></span>
+              </div>
+              <p class="text-md font-semibold ml-2">CSS</p>
+            </div>
+          </div>
+
+          <!-- Technologies Learnt -->
+          <div class="rounded-lg mx-2 bg-[#282828] flex mt-4 p-3 flex-col">
+            <p class="font-bold text-md">Technologies Learnt</p>
+
+            <div class="flex flex-row items-center mt-5">
+              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
+                <span class="fa fa-code"></span>
+              </div>
+              <p class="text-md font-semibold ml-2">Pygame</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="mt-6">
-      <p class="text-md font-bold">Technologies learnt</p>
-
-      <div class="grid grid-cols-2 gap-2 items-start mt-3">
-        <div class="grid col-span-1 gap-y-2">
-          <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-            <div class="w-8 h-8 flex items-center justify-center">
-              <span class="fa fa-code"></span>
-            </div>
-            <p class="text-sm font-semibold">Pygame</p>
-          </div>
+      
+    <!-- bottom -->
+    <div class="flex-shrink-0 flex items-center py-4">
+      <div class="flex w-1/3 items-center justify-start space-x-4 pl-4">
+        <div class="rounded-md h-14 w-14 bg-[#535353] text-[#181818] flex justify-center items-center">
+          <i class="fa fa-chess fa-xl"></i>
+        </div>
+        <div>
+            <p class="font-normal text-sm">IM SwissGambit</p>
+            <p class="text-xs text-faded">Project</p>
         </div>
       </div>
-    </div>
+        
+      <!-- controls -->
+      <div class="flex flex-col items-center justify-center w-1/3">
+      <!-- main controls -->
+      <div class="flex items-center justify-center space-x-6">
+          <span class="fa fa-shuffle fa-xl text-[#1DB954]"></span>
+          <span class="fa fa-backward-step fa-xl text-faded"></span>
+          <span class="fa fa-circle-play fa-2x text-white"></span>
+          <span class="fa fa-forward-step fa-xl text-faded"></span>
+          <span class="fa fa-repeat fa-xl text-[#1DB954]"></span>
+      </div>
 
-    <div class="mt-6">
-      <p class="text-md font-bold">Skills demonstrated</p>
-
-      <div class="grid grid-cols-2 gap-2 items-start mt-3">
-        <div class="grid col-span-1 gap-y-2">
-          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Software Development</p>
+      <!-- progress bar -->
+      <div class="flex items-center w-full space-x-2 mt-2">
+          <p class="text-xs text-faded w-10 text-right">0:20</p>
+          
+          <div class="flex-1 h-1">
+              <div class="w-full h-full bg-gray-600 rounded-full overflow-hidden">
+                  <div class="h-full bg-white rounded-full relative w-2/3"></div>
+              </div>
           </div>
-
-          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Project Planning</p>
-          </div>
-        </div>
-
-        <div class="grid col-span-1 gap-y-2">
-          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Project Management</p>
-          </div>
-
-          <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-            <p class="text-sm font-semibold">Chess</p>
-          </div>
-        </div>
+          
+          <p class="text-xs text-faded w-10">0:30</p>
+      </div>
+      </div>
+      
+      <!-- more controls -->
+      <div class="flex items-center justify-end w-1/3 mr-4">
+      <!-- not sure on what to put here yet -->
       </div>
     </div>
-
-    <div class="mt-6 space-y-3">
-      <p class="font-bold text-lg">Project Showcase</p>
-
-      <p class="text-md font-bold">Code</p>
-      <p class="text-sm text-faded">
-        Please refer to the ‘Link’ section above containing the code that could be retrieved for this project.
-      </p>
-
-      <p class="text-md font-bold">Planning</p>
-      <p class="text-sm text-faded">
-        (Was unable to retrieve the report I did the planning in but found code snippets based on me trying to 
-        experiment with creating a chess board using Object Oriented Programming in Python, and a draw.io file.)
-      </p>
-
-      <figure class="space-y-1">
-        <img src="../imgs/p1-2.png" class="rounded-md">
-        <figcaption class="text-xs text-faded">A class diagram planning what attributes each class should have.</figcaption>
-      </figure>
-
-      <figure class="space-y-1">
-        <img src="../imgs/p1-3.png" class="rounded-md">
-        <figcaption class="text-xs text-faded">Output of non-graphical board in testing.</figcaption>
-      </figure>
-
-      <p class="text-md font-bold">Testing Videos</p>
-      <figure class="space-y-1">
-        <iframe 
-          class="w-full"
-          src="https://www.youtube.com/embed/LASGbPAbdbg?si=tXozBpew-1bOXWI2" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" 
-          allowfullscreen>
-        </iframe>
-        <figcaption class="text-xs text-faded">Video on testing whether notation output in the terminal works or not.</figcaption>
-      </figure>
-
-      <figure class="space-y-1">
-        <iframe 
-          class="w-full"
-          src="https://www.youtube.com/embed/LUSH0WPr_Rk?si=Aj9nW6bXaVHhyqic" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" 
-          allowfullscreen>
-        </iframe>
-        <figcaption class="text-xs text-faded">Video on testing whether piece movement and special moves work as expected or not.</figcaption>
-      </figure>
-
-    </div>
-
   </div>
+
+
+  <!-- duplicate code so that the mobile version works -->
+  <div class="text-white md:hidden scrollbar-hide">
+    <div class="mx-5 pb-24 text-white">
+
+      <div class="flex justify-center items-center mt-8"> 
+        <div class="w-56 mx-8 aspect-square flex justify-center items-center">
+          <img src="../imgs/p1-1.png">
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <p class="text-xl font-bold">IM SwissGambit</p>
+      </div>
+
+      <div class="mt-3 space-y-3 text-sm text-faded">
+        <p>
+          To create a platform that would aid my school’s Chess Club to host tournaments and train the members within it. 
+        </p>
+
+        <p>
+          My project idea was to create a website that would allow the members of the school’s Chess Club to log in, play against each other in tournaments based off the Swiss Pairing system, and play against a Chess AI. 
+        </p>
+
+        <p>
+          The Swiss Pairing system (”IM Swiss-”) would allow users to create tournaments, view tournament pairings, generate tournament pairings, and download tournament data into a CSV file. 
+        </p>
+
+        <p>
+          The Chess AI (”Gambit”) would be used as a training method for members in the club to learn from as it learns their weaknesses in their chess games.
+        </p>
+      </div>
+
+      <div class="mt-6">
+        <p class="text-lg font-bold">Project Details</p>
+
+        <div class="mt-3 space-y-4">
+          <div class="flex flex-row gap-2 justify-center items-center">
+            <div class="bg-[#282828] aspect-square rounded-md w-12 flex justify-center items-center">
+              <span class="fa fa-timeline fa-xl"></span>
+            </div>
+            <div class="min-w-0 flex-1 mr-2">
+              <p class="font-normal text-md">Duration</p>
+              <p class="text-xs text-faded">Nov 2022 - Apr 23</p>
+            </div>
+          </div>
+
+          <div class="flex flex-row gap-2 justify-center items-center">
+            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+              <span class="fa fa-user fa-xl"></span>
+            </div>
+            <div class="min-w-0 flex-1 mr-2">
+              <p class="font-normal text-md">Built for</p>
+              <p class="text-xs text-faded">A-Level Computer Science NEA</p>
+            </div>
+          </div>
+
+          <div class="flex flex-row gap-2 justify-center items-center">
+            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+              <span class="fa fa-user-group fa-xl"></span>
+            </div>
+            <div class="min-w-0 flex-1 mr-2">
+              <p class="font-normal text-md">Type of project collaboration</p>
+              <p class="text-xs text-faded">Individual</p>
+            </div>
+          </div>
+
+          <div class="flex flex-row gap-2 justify-center items-center">
+            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+              <span class="fa fa-list fa-xl"></span>
+            </div>
+            <div class="min-w-0 flex-1 mr-2">
+              <p class="font-normal text-md">Level of Completion</p>
+              <p class="text-xs text-faded">Incomplete</p>
+            </div>
+          </div>
+
+          <a href="https://github.com/mars-rei/IM-SwissGambit">
+            <div class="flex flex-row gap-2 justify-center items-center">
+              <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+                <span class="fa-brands fa-github fa-xl"></span>
+              </div>
+              <div class="min-w-0 flex-1 mr-2">
+                <p class="font-normal text-md">GitHub</p>
+                <p class="text-xs text-faded">Link to IM SwissGambit</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <p class="text-md font-bold">Technologies used</p>
+
+        <div class="grid grid-cols-2 gap-2 items-start mt-3">
+          <div class="grid col-span-1 gap-y-2">
+            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <span class="fa fa-code"></span>
+              </div>
+              <p class="text-sm font-semibold">Python</p>
+            </div>
+
+            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <span class="fa fa-code"></span>
+              </div>
+              <p class="text-sm font-semibold">HTML</p>
+            </div>
+          </div>
+
+          <div class="grid col-span-1 gap-y-2">
+            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <span class="fa fa-code"></span>
+              </div>
+              <p class="text-sm font-semibold">CSS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <p class="text-md font-bold">Technologies learnt</p>
+
+        <div class="grid grid-cols-2 gap-2 items-start mt-3">
+          <div class="grid col-span-1 gap-y-2">
+            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <span class="fa fa-code"></span>
+              </div>
+              <p class="text-sm font-semibold">Pygame</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <p class="text-md font-bold">Skills demonstrated</p>
+
+        <div class="grid grid-cols-2 gap-2 items-start mt-3">
+          <div class="grid col-span-1 gap-y-2">
+            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
+              <p class="text-sm font-semibold">Software Development</p>
+            </div>
+
+            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
+              <p class="text-sm font-semibold">Project Planning</p>
+            </div>
+          </div>
+
+          <div class="grid col-span-1 gap-y-2">
+            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
+              <p class="text-sm font-semibold">Project Management</p>
+            </div>
+
+            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
+              <p class="text-sm font-semibold">Chess</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 space-y-3">
+        <p class="font-bold text-lg">Project Showcase</p>
+
+        <p class="text-md font-bold">Code</p>
+        <p class="text-sm text-faded">
+          Please refer to the ‘Link’ section above containing the code that could be retrieved for this project.
+        </p>
+
+        <p class="text-md font-bold">Planning</p>
+        <p class="text-sm text-faded">
+          (Was unable to retrieve the report I did the planning in but found code snippets based on me trying to 
+          experiment with creating a chess board using Object Oriented Programming in Python, and a draw.io file.)
+        </p>
+
+        <figure class="space-y-1">
+          <img src="../imgs/p1-2.png" class="rounded-md">
+          <figcaption class="text-xs text-faded">A class diagram planning what attributes each class should have.</figcaption>
+        </figure>
+
+        <figure class="space-y-1">
+          <img src="../imgs/p1-3.png" class="rounded-md">
+          <figcaption class="text-xs text-faded">Output of non-graphical board in testing.</figcaption>
+        </figure>
+
+        <p class="text-md font-bold">Testing Videos</p>
+        <figure class="space-y-1">
+          <iframe 
+            class="w-full"
+            src="https://www.youtube.com/embed/LASGbPAbdbg?si=tXozBpew-1bOXWI2" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+          <figcaption class="text-xs text-faded">Video on testing whether notation output in the terminal works or not.</figcaption>
+        </figure>
+
+        <figure class="space-y-1">
+          <iframe 
+            class="w-full"
+            src="https://www.youtube.com/embed/LUSH0WPr_Rk?si=Aj9nW6bXaVHhyqic" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+          <figcaption class="text-xs text-faded">Video on testing whether piece movement and special moves work as expected or not.</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </div>
+
 
   <!-- mobile nav -->
   <div id="mobileNavContainer"></div>
