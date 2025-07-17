@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>CompClub Hub</title>
+  <title>Spotify Themed Portfolio</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
@@ -79,27 +79,20 @@
           <!-- Photo & Project Aim -->
           <div class="flex justify-start items-end mt-16"> 
             <div class="w-56 aspect-square flex justify-center items-center rounded-md">
-              <img src="../imgs/p4-1.png" class="rounded-md">
+              <img src="" class="rounded-md">
             </div>
             <div class="ml-8">
               <div>
-                <p class="text-6xl font-bold">CompClub Hub</p>
+                <p class="text-6xl font-bold">Spotify Themed Portfolio</p>
               </div>
               <div class="mt-4">
-                <p class="text-sm text-faded">To create a CRUD web application that retrieves, stores and edits data within a database.</p>
+                <p class="text-sm text-faded">Retrieving…</p>
               </div>
               <div class="mt-2 flex flex-row items-center space-x-2">
                 <img src="../imgs/headshot.jpeg" class="w-6 rounded-full">
-                <p class="text-sm text-white">Imogen Dicen + 2 Others</p>
+                <p class="text-sm text-white">Imogen Dicen</p>
               </div>
             </div>
-          </div>
-
-          <!-- More Info About Project -->
-          <div class="mt-4 space-y-1 text-sm text-faded">
-            <p>
-              A web application for creating, and managing clubs and club competitions, with the aid of a relational database, using the XAMPP stack. 
-            </p>
           </div>
 
           <!-- Project Content -->
@@ -110,12 +103,12 @@
             <div class="mt-2">
               <div>
                 <div 
-                  @click="openTrack === 'features' ? openTrack = null : openTrack = 'features'"
+                  @click="openTrack === 'empty' ? openTrack = null : openTrack = 'empty'"
                   class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
                 >
                   <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                   <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Listing Features</p>
+                    <p class="font-semibold text-md truncate">Retrieving…</p>
                   </div>
                   <div class="min-w-0 flex-1 pr-2">
                     <p class="font-semibold text-sm text-faded">Project Showcase</p>
@@ -123,135 +116,13 @@
                 </div>
 
                 <div 
-                  x-show="openTrack === 'features'" 
+                  x-show="openTrack === 'empty'" 
                   x-collapse 
                   class="bg-[#282828] rounded-md p-4"
                 >
-                  <p class="text-md font-bold mb-4">Features</p>
-
-                  <div class="space-y-3 text-sm text-faded">
-                    <ul class="list-disc ml-6">
-                      <li>
-                        Allows the viewing of club leader boards
-                      </li>
-                      <li>
-                        Allows the viewing of club category leader boards
-                      </li>
-                      <li>
-                        Allows users to create and manage club competitions
-                      </li>
-                      <li>
-                        Allows exportation of tournament data
-                      </li>
-                      <li>
-                        Allows the creation of normal user and admin user accounts
-                      </li>
-                      <li>
-                        Allows club admin login and data access
-                      </li>
-                      <li>
-                        Allows normal user login 
-                      </li>
-                      <li>
-                        Allows users to search for clubs
-                      </li>
-                    </ul>    
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div 
-                  @click="openTrack === 'report' ? openTrack = null : openTrack = 'report'"
-                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
-                >
-                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Planning</p>
-                  </div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
-                  </div>
-                </div>
-
-                <div 
-                  x-show="openTrack === 'report'" 
-                  x-collapse 
-                  class="bg-[#282828] rounded-md p-4"
-                >
-                  <p class="text-md font-bold mb-4">Planning</p>
-                  <div class="flex justify-center items-center">
-                    <div class="w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
-                      <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-180 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <iframe 
-                              src="../files/p4-1.pdf" 
-                              class="w-full h-160"
-                            >
-                              <p class="text-sm">Your browser does not support PDFs. 
-                                <a href="../files/p4-1.pdf" class="text-sm">Download the PDF.</a>.
-                              </p>
-                            </iframe>
-                            <figcaption class="text-xs text-faded text-center">
-                              Our plan for CompClub Hub including research, relational database design, planning and design.
-                            </figcaption>
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div 
-                  @click="openTrack === 'design' ? openTrack = null : openTrack = 'design'"
-                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
-                >
-                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Design</p>
-                  </div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
-                  </div>
-                </div>
-
-                <div 
-                  x-show="openTrack === 'design'" 
-                  x-collapse 
-                  class="bg-[#282828] rounded-md p-4"
-                >
-                  <p class="text-md font-bold mb-4">Design</p>
+                  <p class="text-md font-bold mb-4">Retrieving…</p>
                   <p class="text-sm text-faded">
-                    Please refer to the Figma link in the ‘Project Details’ section (on the right) for the figma file of this project.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div 
-                  @click="openTrack === 'code' ? openTrack = null : openTrack = 'code'"
-                  class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2 cursor-pointer"
-                >
-                  <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Code</p>
-                  </div>
-                  <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-sm text-faded">Project Showcase</p>
-                  </div>
-                </div>
-
-                <div 
-                  x-show="openTrack === 'code'" 
-                  x-collapse 
-                  class="bg-[#282828] rounded-md p-4"
-                >
-                  <p class="text-md font-bold mb-4">Code</p>
-                  <p class="text-sm text-faded">
-                    Please refer to the GitHub link in the ‘Project Details’ section (on the right) for the code of this project.
+                    Retrieving…
                   </p>
                 </div>
               </div>
@@ -267,70 +138,7 @@
               <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
                 <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                 <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Project Management</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Gantt Project</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Project Planning</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Database Design</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Web App Design</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Web App Development</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Relational Databases</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">CRUD</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Teamwork</p>
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 items-center hover:bg-[#282828] rounded-md p-2">
-                <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
-                <div class="min-w-0 flex-1 pr-2">
-                  <p class="font-semibold text-md truncate">Team Leadership</p>
+                  <p class="font-semibold text-md truncate">Retrieving…</p>
                 </div>
               </div>
             </div>
@@ -340,14 +148,16 @@
 
       <div class="bg-[#121212] w-68 rounded-lg p-2 flex flex-col overflow-y-auto scrollbar-hide h-[calc(100vh-9.5rem)] relative">
         <div class="absolute inset-0 overflow-hidden rounded-lg">
-          <img src="../imgs/p4-1.png" class="w-full h-full object-cover opacity-20">
+          <!--
+            <img src="" class="w-full h-full object-cover opacity-20">
+          -->
           <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/80 to-transparent"></div>
         </div>
 
         <div class="relative z-10 mx-2 my-4"> 
-          <p class="text-xl font-bold">Project 4</p>
-          <p class="text-2xl font-bold mt-48">CompClub Hub</p>
-          <p class="text-lg font-semibold text-faded -mt-1">Imogen Dicen + 2</p>
+          <p class="text-xl font-bold">Project 5</p>
+          <p class="text-2xl font-bold mt-48">Spotify Themed Portfolio</p>
+          <p class="text-lg font-semibold text-faded -mt-1">Imogen Dicen</p>
         </div>
 
         <div class="relative z-10"> 
@@ -356,31 +166,30 @@
             <p class="font-bold text-md">Project Details</p>
 
             <p class="text-md font-semibold mt-5">Duration</p>
-            <p class="text-sm text-faded">Nov 2024 - Jan 2025</p>
+            <p class="text-sm text-faded">Feb 2025 - Now</p>
 
             <p class="text-md font-semibold mt-5">Built for</p>
-            <p class="text-sm text-faded">Database & Web Application Development</p>
+            <p class="text-sm text-faded">Personal development</p>
 
             <p class="text-md font-semibold mt-5">Collaboration</p>
-            <p class="text-sm text-faded">Group (of 3)</p>
-
-            <p class="text-md font-semibold mt-5">Collaboration</p>
-            <p class="text-sm text-faded">Group (of 3)</p>
-
-            <p class="text-md font-semibold mt-5">Role in Project</p>
-            <p class="text-sm text-faded">Team leader</p>
+            <p class="text-sm text-faded">Individual</p>
 
             <p class="text-md font-semibold mt-5">Level of Completion</p>
-            <p class="text-sm text-faded">Incomplete</p>
+            <p class="text-sm text-faded">Ongoing</p>
 
-            <a href="https://github.com/mars-rei/CompClub-Hub">
+            <a href="https://www.figma.com/design/csJsEbtvtSWebS0s2hTV2a/spotify-portfolio?node-id=0-1&t=iLMonoWduc00Ei2x-1">
               <p class="text-md font-semibold mt-5">Figma</p>
-              <p class="text-sm text-faded">Link to CompClub Hub</p>
+              <p class="text-sm text-faded">Link to Spotify Themed Portfolio</p>
             </a>
 
-            <a href="https://www.figma.com/design/uRY8EryFMXT6xFYnbf9l1o/compclub-hub-v2?node-id=0-1&t=t7sZyQJiMJBXK1hS-1">
+            <a href="https://github.com/mars-rei/spotifyThemedPortfolio">
               <p class="text-md font-semibold mt-5">GitHub</p>
-              <p class="text-sm text-faded">Link to CompClub Hub</p>
+              <p class="text-sm text-faded">Link to Spotify Themed Portfolio</p>
+            </a>
+
+            <a href="https://mars-rei.github.io/spotifyThemedPortfolio/src/">
+              <p class="text-md font-semibold mt-5">Website Link</p>
+              <p class="text-sm text-faded">Link to Spotify Themed Portfolio</p>
             </a>
           </div>
 
@@ -390,30 +199,9 @@
 
             <div class="flex flex-row items-center mt-5">
               <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
+                <span class="fa fa-question"></span>
               </div>
-              <p class="text-md font-semibold ml-2">SQL</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">HTMl</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">CSS</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">JavaScript</p>
+              <p class="text-md font-semibold ml-2">Retrieving…</p>
             </div>
           </div>
 
@@ -423,23 +211,9 @@
 
             <div class="flex flex-row items-center mt-5">
               <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
+                <span class="fa fa-question"></span>
               </div>
-              <p class="text-md font-semibold ml-2">PHP</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">PhpMyAdmin</p>
-            </div>
-
-            <div class="flex flex-row items-center mt-5">
-              <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-md font-semibold ml-2">Bootstrap</p>
+              <p class="text-md font-semibold ml-2">Retrieving…</p>
             </div>
           </div>
         </div>
@@ -450,37 +224,37 @@
     <div class="flex-shrink-0 flex items-center py-4">
       <div class="flex w-1/3 items-center justify-start space-x-4 pl-4">
         <div class="rounded-md h-14 w-14 bg-[#535353] text-[#181818] flex justify-center items-center">
-          <i class="fa fa-trophy fa-xl"></i>
+          <i class="fa fa-briefcase fa-xl"></i>
         </div>
         <div>
-            <p class="font-normal text-sm">CompClub Hub</p>
+            <p class="font-normal text-sm">Spotify Themed Portfolio</p>
             <p class="text-xs text-faded">Project</p>
         </div>
       </div>
         
       <!-- controls -->
       <div class="flex flex-col items-center justify-center w-1/3">
-      <!-- main controls -->
-      <div class="flex items-center justify-center space-x-6">
+        <!-- main controls -->
+        <div class="flex items-center justify-center space-x-6">
           <span class="fa fa-shuffle fa-xl text-[#1DB954]"></span>
           <span class="fa fa-backward-step fa-xl text-faded"></span>
           <span class="fa fa-circle-play fa-2x text-white"></span>
           <span class="fa fa-forward-step fa-xl text-faded"></span>
           <span class="fa fa-repeat fa-xl text-[#1DB954]"></span>
-      </div>
+        </div>
 
-      <!-- progress bar -->
-      <div class="flex items-center w-full space-x-2 mt-2">
+        <!-- progress bar -->
+        <div class="flex items-center w-full space-x-2 mt-2">
           <p class="text-xs text-faded w-10 text-right">0:20</p>
-          
+            
           <div class="flex-1 h-1">
               <div class="w-full h-full bg-gray-600 rounded-full overflow-hidden">
                   <div class="h-full bg-white rounded-full relative w-2/3"></div>
               </div>
           </div>
-          
+            
           <p class="text-xs text-faded w-10">0:30</p>
-      </div>
+        </div>
       </div>
       
       <!-- more controls -->
@@ -490,59 +264,73 @@
     </div>
   </div>
 
-
   <!-- duplicate code so that the mobile version works -->
   <div class="text-white md:hidden scrollbar-hide">
     <div class="mx-5 pb-24 text-white">
+
       <div class="flex justify-center items-center mt-8"> 
         <div class="w-56 mx-8 aspect-square flex justify-center items-center">
-          <img src="../imgs/p4-1.png">
+          <img src="../imgs/p3-1.png">
         </div>
       </div>
 
       <div class="mt-6">
-        <p class="text-xl font-bold">CompClub Hub</p>
+        <p class="text-xl font-bold">Flight Booking System in Java</p>
       </div>
 
       <div class="mt-3 space-y-3 text-sm text-faded">
         <p>
-          To create a CRUD web application that retrieves, stores and edits data within a database.
+          To extend and complete the skeleton code of a flight booking system in Java using the object oriented programming paradigm.
         </p>
       </div>
 
       <div class="mt-3 space-y-3 text-sm text-faded">
         <p>
-          A web application for creating, and managing clubs and club competitions, with the aid of a relational database, using the XAMPP stack. 
-        </p>
-
-        <p>
-          Our project includes the following features:
+          Our project includes the following features off the project assessment checklist:
         </p>
 
         <ul class="list-disc ml-6">
           <li>
-            Allows the viewing of club leader boards
+            Adds new customers (passengers to the system)
           </li>
           <li>
-            Allows the viewing of club category leader boards
+            List all customers stored in the system
           </li>
           <li>
-            Allows users to create and manage club competitions
+            Issue bookings for customers
           </li>
           <li>
-            Allows exportation of tournament data
+            Cancel bookings
           </li>
           <li>
-            Allows the creation of normal user and admin user accounts
+            Saves status of the system to backend storage (i.e. text file storage)
           </li>
           <li>
-            Allows club admin login and data access
+            Has a number of seats (capacity) property and a price property in the flight object
           </li>
           <li>
-            Allows normal user login 
+            Has an email property in the customer object
           </li>
           <li>
-            Allows users to search for clubs
+            Stores data to file storage after execution of commands that change state of the system and informs the user of failure to store the data, rolling back any changes made to the system prior to the error
+          </li>
+          <li>
+            Can remove (hide) existing flights from the system
+          </li>
+          <li>
+            Can remove (hide) existing customers from the system
+          </li>
+          <li>
+            Imposes a limit on the maximum number of passengers that can be added to a flight using the capacity property of the flight object
+          </li>
+          <li>
+            Has Javadoc documentation for newer methods
+          </li>
+          <li>
+            Lists only flights that are in the future and have not departed
+          </li>
+          <li>
+            Extension of the GUI application to issue bookings, update bookings, cancel bookings, and to delete flights and customers
           </li>
         </ul>    
       </div>
@@ -552,7 +340,7 @@
 
         <div class="mt-3 space-y-4">
           <div class="flex flex-row gap-2 items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 flex justify-center items-center">
+            <div class="bg-[#282828] aspect-square rounded-lg w-12 flex justify-center items-center">
               <span class="fa fa-timeline fa-xl"></span>
             </div>
             <div class="min-w-0 flex-1 mr-2">
@@ -562,113 +350,46 @@
           </div>
 
           <div class="flex flex-row gap-2 items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+            <div class="bg-[#282828] aspect-square rounded-lg w-12 h-12 flex justify-center items-center">
               <span class="fa fa-user fa-xl"></span>
             </div>
             <div class="min-w-0 flex-1 mr-2">
               <p class="font-normal text-md">Built for</p>
-              <p class="text-xs text-faded">Database & Web Application Development</p>
+              <p class="text-xs text-faded">Object Oriented Programming</p>
             </div>
           </div>
 
           <div class="flex flex-row gap-2 items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+            <div class="bg-[#282828] aspect-square rounded-lg w-12 h-12 flex justify-center items-center">
               <span class="fa fa-user-group fa-xl"></span>
             </div>
             <div class="min-w-0 flex-1 mr-2">
               <p class="font-normal text-md">Type of project collaboration</p>
-              <p class="text-xs text-faded">Group (of 3)</p>
+              <p class="text-xs text-faded">Group (of 2)</p>
             </div>
           </div>
 
           <div class="flex flex-row gap-2 items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
-              <span class="fa fa-people-arrows fa-xl"></span>
-            </div>
-            <div class="min-w-0 flex-1 mr-2">
-              <p class="font-normal text-md">Role in Project</p>
-              <p class="text-xs text-faded">Team leader</p>
-            </div>
-          </div>
-
-          <div class="flex flex-row gap-2 items-center">
-            <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+            <div class="bg-[#282828] aspect-square rounded-lg w-12 h-12 flex justify-center items-center">
               <span class="fa fa-list fa-xl"></span>
             </div>
             <div class="min-w-0 flex-1 mr-2">
               <p class="font-normal text-md">Level of Completion</p>
-              <p class="text-xs text-faded">Incomplete</p>
+              <p class="text-xs text-faded">Almost Complete</p>
             </div>
           </div>
 
-          <a href="https://github.com/mars-rei/CompClub-Hub">
+          <a href="https://github.com/mars-rei/flight-system">
             <div class="flex flex-row gap-2 items-center">
-              <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
+              <div class="bg-[#282828] aspect-square rounded-lg w-12 h-12 flex justify-center items-center">
                 <span class="fa-brands fa-github fa-xl"></span>
               </div>
               <div class="min-w-0 flex-1 mr-2">
                 <p class="font-normal text-md">GitHub</p>
-                <p class="text-xs text-faded">CompClub Hub</p>
+                <p class="text-xs text-faded">Flight System</p>
               </div>
             </div>
           </a>
-
-          <a href="https://www.figma.com/design/uRY8EryFMXT6xFYnbf9l1o/compclub-hub-v2?node-id=0-1&t=t7sZyQJiMJBXK1hS-1">
-            <div class="flex flex-row gap-2 mt-3 items-center">
-              <div class="bg-[#282828] aspect-square rounded-md w-12 h-12 flex justify-center items-center">
-                <span class="fa-brands fa-figma fa-xl"></span>
-              </div>
-              <div class="min-w-0 flex-1 mr-2">
-                <p class="font-normal text-md">Figma</p>
-                <p class="text-xs text-faded">CompClub Hub</p>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="mt-6">
-        <p class="text-md font-bold">Technologies used</p>
-
-        <div class="grid grid-cols-2 gap-2 items-start mt-3">
-          <div class="grid col-span-1 gap-y-2">
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-database"></span>
-              </div>
-              <p class="text-sm font-semibold">SQL</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-sm font-semibold">HTML</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-diagram-project"></span>
-              </div>
-              <p class="text-sm font-semibold">draw.io</p>
-            </div>
-          </div>
-
-          <div class="grid col-span-1 gap-y-2">
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-sm font-semibold">CSS</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-sm font-semibold">JavaScript</p>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -681,73 +402,29 @@
               <div class="w-8 h-8 flex items-center justify-center">
                 <span class="fa fa-code"></span>
               </div>
-              <p class="text-sm font-semibold">PHP</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-database"></span>
-              </div>
-              <p class="text-sm font-semibold">PhpMyAdmin</p>
-            </div>
-          </div>
-
-          <div class="grid col-span-1 gap-y-2">
-            <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <span class="fa fa-code"></span>
-              </div>
-              <p class="text-sm font-semibold">Bootstrap</p>
+              <p class="text-sm font-semibold">Java</p>
             </div>
           </div>
         </div>
       </div>
 
       <div class="mt-6">
-        <p class="text-lg font-bold">Skills demonstrated</p>
+        <p class="text-md font-bold">Skills demonstrated</p>
 
         <div class="grid grid-cols-2 gap-2 items-start mt-3">
           <div class="grid col-span-1 gap-y-2">
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Project Management</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Gantt Project</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Project Planning</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Database Design</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Web App Design</p>
-            </div>
-          </div>
-
-          <div class="grid col-span-1 gap-y-2">
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Web App Development</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Relational Databases</p>
-            </div>
-
-            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">CRUD</p>
-            </div>
-
             <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
               <p class="text-sm font-semibold">Teamwork</p>
             </div>
 
             <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
-              <p class="text-sm font-semibold">Team Leadership</p>
+              <p class="text-sm font-semibold">Project Management</p>
+            </div>
+          </div>
+
+          <div class="grid col-span-1 gap-y-2">
+            <div class="flex-shrink-0 w-full h-12 py-2 bg-[#282828] rounded-md flex items-center justify-center gap-3">
+              <p class="text-sm font-semibold">OOP</p>
             </div>
           </div>
         </div>
@@ -756,31 +433,8 @@
       <div class="mt-6 space-y-3">
         <p class="text-lg font-bold">Project Showcase</p>
 
-        <p class="text-md font-bold">Planning</p>
-        <div class="block md:hidden mt-4">
-          <a 
-            href="../files/p4-1.pdf" 
-            target="_blank"
-            class="bg-white py-2 px-4 rounded-full text-[#121212] text-sm font-bold inline items-center"
-          >
-            <span class="fa fa-file fa-lg"></span>
-            CompClub Hub Plan
-          </a>
-        </div>
-
-        <figure class="space-y-1 hidden md:block">
-          <iframe 
-            src="../files/p4-1.pdf" 
-            class="w-full aspect-square"
-          >
-            <p class="text-sm">Your browser does not support PDFs. 
-              <a href="../files/p4-1.pdf" class="text-sm">Download the PDF.</a>.
-            </p>
-          </iframe>
-          <figcaption class="text-sm">
-            Our plan for CompClub Hub including research, relational database design, planning and design.
-          </figcaption>
-        </figure>
+        <p class="text-md font-bold">Code</p>
+        <p class="text-sm text-faded">Please see the GitHub link in the Links section above.</p>
       </div>
     </div>
   </div>
