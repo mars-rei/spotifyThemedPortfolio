@@ -7,6 +7,7 @@
   <link href="./output.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="slideshow.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -165,27 +166,34 @@
                   </p>
 
                   <div class="flex justify-center items-center">
-                    <div class="w-160 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
-                      <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <img src="../imgs/p1-2.png" class="rounded-md h-160">
-                            <figcaption class="text-xs text-faded text-center">A class diagram planning what attributes each class should have.</figcaption>
-                            <p class="text-xs text-faded mt-5 text-center">Slide 1/2</p>
-                          </figure>
-                        </div>
-
-                        <div class="flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2"> 
-                          <figure class="space-y-1">
-                            <img src="../imgs/p1-3.png" class="rounded-md w-140">
-                            <figcaption class="text-xs text-faded text-center">Output of non-graphical board in testing.</figcaption>
-                            <p class="text-xs text-faded mt-5 text-center">Slide 2/2</p>
-                          </figure>
+                    <div x-data="slideshow" class="w-160 h-full bg-[#282828] rounded-md">
+                      <div x-ref="slider" class="h-full overflow-x-auto scrollbar-hide">
+                        <div class="flex flex-nowrap">
+                          <div class="slide flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
+                            <figure class="space-y-1">
+                              <img src="../imgs/p1-2.png" class="rounded-md h-160">
+                              <figcaption class="text-xs text-faded text-center">A class diagram planning what attributes each class should have.</figcaption>
+                              <p class="text-xs text-faded mt-5 text-center">Slide 1/2</p>
+                              <div @click="next()" class="flex justify-center mt-3 cursor-pointer hover:text-white">
+                                <i class="fa-solid fa-arrow-right fa-sm"></i>
+                              </div>
+                            </figure>
+                          </div>
+                          
+                          <div class="slide flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
+                            <figure class="space-y-1">
+                              <img src="../imgs/p1-3.png" class="rounded-md w-140">
+                              <figcaption class="text-xs text-faded text-center">Output of non-graphical board in testing.</figcaption>
+                              <p class="text-xs text-faded mt-5 text-center">Slide 2/2</p>
+                              <div @click="prev()" class="flex justify-center mt-3 cursor-pointer hover:text-white">
+                                <i class="fa-solid fa-arrow-left fa-sm"></i>
+                              </div>
+                            </figure>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
 
@@ -209,37 +217,48 @@
                   class="bg-[#282828] rounded-md p-4"
                 >
                   <p class="text-md font-bold mb-4">Testing Videos</p>
-                  <div class="flex justify-center items-center">
-                    <div class="w-200 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
-                      <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
-                          <figure class="space-y-1">
-                            <iframe 
-                              class="w-180 h-90"
-                              src="https://www.youtube.com/embed/LASGbPAbdbg?si=tXozBpew-1bOXWI2" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                              referrerpolicy="strict-origin-when-cross-origin" 
-                              allowfullscreen>
-                            </iframe>
-                            <figcaption class="text-xs text-faded text-center">Video on testing whether notation output in the terminal works or not.</figcaption>
-                            <p class="text-xs text-faded mt-5 text-center">Slide 1/2</p>
-                          </figure>
-                        </div>
 
-                        <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2"> 
-                          <figure class="space-y-1">
-                            <iframe 
-                              class="w-180 h-90"
-                              src="https://www.youtube.com/embed/LUSH0WPr_Rk?si=Aj9nW6bXaVHhyqic" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                              referrerpolicy="strict-origin-when-cross-origin" 
-                              allowfullscreen>
-                            </iframe>
-                            <figcaption class="text-xs text-faded text-center">Video on testing whether piece movement and special moves work as expected or not.</figcaption>
-                            <p class="text-xs text-faded mt-5 text-center">Slide 2/2</p>
-                          </figure>
+                  <div class="flex justify-center items-center">
+                    <div x-data="slideshow" class="w-200 h-full bg-[#282828] rounded-md">
+                      <div x-ref="slider" class="h-full overflow-x-auto scrollbar-hide">
+                        <div class="flex flex-nowrap">
+                          <div class="slide flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
+                            <figure class="space-y-1">
+                              <iframe 
+                                class="w-180 h-90"
+                                src="https://www.youtube.com/embed/LASGbPAbdbg?si=tXozBpew-1bOXWI2" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen
+                              >
+                              </iframe>
+                              <figcaption class="text-xs text-faded text-center">Video on testing whether notation output in the terminal works or not.</figcaption>
+                              <p class="text-xs text-faded mt-5 text-center">Slide 1/2</p>
+                              <div @click="next()" class="flex justify-center mt-3 cursor-pointer hover:text-white">
+                                <i class="fa-solid fa-arrow-right fa-sm"></i>
+                              </div>
+                            </figure>
+                          </div>
+                          
+                          <div class="slide flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
+                            <figure class="space-y-1">
+                              <iframe 
+                                class="w-180 h-90"
+                                src="https://www.youtube.com/embed/LUSH0WPr_Rk?si=Aj9nW6bXaVHhyqic" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen
+                              >
+                              </iframe>
+                              <figcaption class="text-xs text-faded text-center">Video on testing whether piece movement and special moves work as expected or not.</figcaption>
+                              <p class="text-xs text-faded mt-5 text-center">Slide 2/2</p>
+                              <div @click="prev()" class="flex justify-center mt-3 cursor-pointer hover:text-white">
+                                <i class="fa-solid fa-arrow-left fa-sm"></i>
+                              </div>
+                            </figure>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -286,8 +305,8 @@
         </div>
       </div>
 
-      <div class="bg-[#121212] w-68 rounded-lg p-2 flex flex-col overflow-y-auto scrollbar-hide h-[calc(100vh-9.5rem)] relative">
-        <div class="absolute inset-0 overflow-hidden rounded-lg">
+      <div class="bg-[#121212] w-68 p-2 flex flex-col overflow-y-auto scrollbar-hide h-[calc(100vh-9.5rem)] relative">
+        <div class="absolute inset-0 overflow-hidden">
           <img src="../imgs/p1-1.png" class="w-full h-full object-cover opacity-20">
           <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/80 to-transparent"></div>
         </div>
@@ -329,21 +348,21 @@
               <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
                 <span class="fa fa-code"></span>
               </div>
-              <p class="text-md font-semibold ml-2">Python</p>
+              <p class="text-sm font-semibold ml-2">Python</p>
             </div>
 
             <div class="flex flex-row items-center mt-5">
               <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
                 <span class="fa fa-code"></span>
               </div>
-              <p class="text-md font-semibold ml-2">HTML</p>
+              <p class="text-sm font-semibold ml-2">HTML</p>
             </div>
 
             <div class="flex flex-row items-center mt-5">
               <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
                 <span class="fa fa-code"></span>
               </div>
-              <p class="text-md font-semibold ml-2">CSS</p>
+              <p class="text-sm font-semibold ml-2">CSS</p>
             </div>
           </div>
 
@@ -355,7 +374,7 @@
               <div class="w-14 h-14 flex items-center justify-center bg-[#121212] rounded-md">
                 <span class="fa fa-code"></span>
               </div>
-              <p class="text-md font-semibold ml-2">Pygame</p>
+              <p class="text-sm font-semibold ml-2">Pygame</p>
             </div>
           </div>
         </div>
@@ -630,6 +649,62 @@
       $("#mobileNavContainer").load("mobileNav.html");
   });
   </script>
+
+  <!-- desktop slider -->
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('slideshow', () => ({
+        currentSlide: 0,
+        totalSlides: 0,
+        
+        init() {
+          this.totalSlides = this.$refs.slider.querySelectorAll('.slide').length;
+          this.setupIntersectionObserver();
+        },
+        
+        setupIntersectionObserver() {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                this.currentSlide = Array.from(this.$refs.slider.querySelectorAll('.slide'))
+                  .indexOf(entry.target);
+              }
+            });
+          }, {
+            root: this.$refs.slider,
+            threshold: 0.7
+          });
+          
+          this.$refs.slider.querySelectorAll('.slide').forEach(slide => {
+            observer.observe(slide);
+          });
+        },
+        
+        next() {
+          if (this.currentSlide < this.totalSlides - 1) {
+            this.currentSlide++;
+            this.scrollToCurrentSlide();
+          }
+        },
+        
+        prev() {
+          if (this.currentSlide > 0) {
+            this.currentSlide--;
+            this.scrollToCurrentSlide();
+          }
+        },
+        
+        scrollToCurrentSlide() {
+          this.$refs.slider.querySelectorAll('.slide')[this.currentSlide].scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'start'
+          });
+        }
+      }));
+    });
+  </script>
+
   
 </body>
 </html>
