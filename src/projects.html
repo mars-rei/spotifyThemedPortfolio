@@ -77,18 +77,18 @@
                 <div class="mx-5 pb-24 text-white" x-data="{
                     activeStatus: new URLSearchParams(window.location.search).get('filter') || null,
                     projects: [
-                    { title: 'Random Lyric Generator', status: 'ongoing', author: 'mars.rei', href: 'project-12-random-lyric-generator.html' },
-                    { title: 'Summer of \'25 Blog', status: 'ongoing', author: 'mars.rei', href: 'project-9-summer-of-25.html' },
+                    { title: 'Random Lyric Generator', icon: 'fa fa-dice', status: 'ongoing', author: 'mars.rei', href: 'project-12-random-lyric-generator.html' },
+                    { title: 'Summer of \'25 Blog', icon: 'fa fa-pen-to-square', status: 'ongoing', author: 'mars.rei', href: 'project-9-summer-of-25.html' },
                     { title: 'Mastermind Command-Line Game', status: 'complete', img: '../imgs/p8-1.png', author: 'mars.rei + 1', href: 'project-8-mastermind.html' },
                     { title: 'BMW Group Physical Asset Tracking System', status: 'complete', img: '../imgs/p7-1.png', author: 'mars.rei + 5', href: 'project-7-bmw-tracking-system.html' },
-                    { title: 'Spotify Themed Portfolio', status: 'ongoing', author: 'mars.rei', href: 'project-5-spotify-portfolio.html' },
+                    { title: 'Spotify Themed Portfolio', icon: 'fa fa-briefcase', status: 'ongoing', author: 'mars.rei', href: 'project-5-spotify-portfolio.html' },
                     { title: 'CompClub Hub', status: 'complete', img: '../imgs/p4-1.png', author: 'mars.rei + 2', href: 'project-4-compclub-hub.html' },
                     { title: 'Flight Booking System in Java', status: 'complete', img: '../imgs/p3-1.png', author: 'mars.rei + 1', href: 'project-3-fbs.html' },
                     { title: 'BookBot', status: 'complete', img: '../imgs/p2-1.jpg', author: 'mars.rei + 4', href: 'project-2-bookbot.html' },
                     { title: 'IM SwissGambit', status: 'complete', img: '../imgs/p1-1.png', author: 'mars.rei', href: 'project-1-im-swissgambit.html' },
-                    { title: 'CompClub Hub 2.0', status: 'ongoing', author: 'mars.rei', href: 'project-6-compclub-hub-2.html' },
-                    { title: 'Fire on Marz', status: 'ongoing', author: 'mars.rei', href: 'project-10-fire-on-marz.html' },
-                    { title: 'Digital Scrapbook', status: 'ongoing', author: 'mars.rei + ?', href: 'project-11-digital-scrapbook.html' }
+                    { title: 'CompClub Hub 2.0', icon: 'fa fa-trophy', status: 'ongoing', author: 'mars.rei', href: 'project-6-compclub-hub-2.html' },
+                    { title: 'Fire on Marz', icon: 'fa fa-palette', status: 'ongoing', author: 'mars.rei', href: 'project-10-fire-on-marz.html' },
+                    { title: 'Digital Scrapbook', icon: 'fa fa-memory', status: 'ongoing', author: 'mars.rei + ?', href: 'project-11-digital-scrapbook.html' }
                     ],
                     toggleStatus(status) {
                         this.activeStatus = this.activeStatus === status ? null : status;
@@ -142,6 +142,9 @@
                         <div class="min-w-0">
                             <div class="w-full aspect-square bg-[#535353] md:rounded-md">
                                 <img x-bind:src="project.img" class="md:rounded-md">
+                                <div x-show="!project.img" class="flex items-center justify-center h-full fa-4x">
+                                    <i x-bind:class="project.icon" class="text-[#181818]"></i>
+                                </div>
                             </div>
                             <p class="text-xs md:text-sm md:font-semibold truncate mt-1" x-text="project.title"></p>
                             <p class="text-xs md:text-sm text-faded" x-text="project.author"></p>
@@ -201,30 +204,30 @@
 
     <!-- duplicate code so that the mobile version works -->
     <div class="mx-5 pb-24 text-white md:hidden" x-data="{
-    activeStatus: null,
-    projects: [
-      { title: 'Random Lyric Generator', status: 'ongoing', author: 'mars.rei', href: 'project-12-random-lyric-generator.html' },
-      { title: 'Summer of \'25 Blog', status: 'ongoing', author: 'mars.rei', href: 'project-9-summer-of-25.html' },
-      { title: 'Mastermind Command-Line Game', status: 'complete', img: '../imgs/p8-1.png', author: 'mars.rei + 1', href: 'project-8-mastermind.html' },
-      { title: 'BMW Group Physical Asset Tracking System', status: 'complete', img: '../imgs/p7-1.png', author: 'mars.rei + 5', href: 'project-7-bmw-tracking-system.html' },
-      { title: 'Spotify Themed Portfolio', status: 'ongoing', author: 'mars.rei', href: 'project-5-spotify-portfolio.html' },
-      { title: 'CompClub Hub', status: 'complete', img: '../imgs/p4-1.png', author: 'mars.rei + 2', href: 'project-4-compclub-hub.html' },
-      { title: 'Flight Booking System in Java', status: 'complete', img: '../imgs/p3-1.png', author: 'mars.rei + 1', href: 'project-3-fbs.html' },
-      { title: 'BookBot', status: 'complete', img: '../imgs/p2-1.jpg', author: 'mars.rei + 4', href: 'project-2-bookbot.html' },
-      { title: 'IM SwissGambit', status: 'complete', img: '../imgs/p1-1.png', author: 'mars.rei', href: 'project-1-im-swissgambit.html' },
-      { title: 'CompClub Hub 2.0', status: 'ongoing', author: 'mars.rei', href: 'project-6-compclub-hub-2.html' },
-      { title: 'Fire on Marz', status: 'ongoing', author: 'mars.rei', href: 'project-10-fire-on-marz.html' },
-      { title: 'Digital Scrapbook', status: 'ongoing', author: 'mars.rei + ?', href: 'project-11-digital-scrapbook.html' }
-      ],
-    toggleStatus(status) {
-        this.activeStatus = this.activeStatus === status ? null : status;
-    },
-    filteredProjects() {
-    return this.activeStatus 
-        ? this.projects.filter(p => p.status === this.activeStatus)
-        : this.projects;
-    }
-  }">
+        activeStatus: new URLSearchParams(window.location.search).get('filter') || null,
+        projects: [
+        { title: 'Random Lyric Generator', icon: 'fa fa-dice', status: 'ongoing', author: 'mars.rei', href: 'project-12-random-lyric-generator.html' },
+        { title: 'Summer of \'25 Blog', icon: 'fa fa-pen-to-square', status: 'ongoing', author: 'mars.rei', href: 'project-9-summer-of-25.html' },
+        { title: 'Mastermind Command-Line Game', status: 'complete', img: '../imgs/p8-1.png', author: 'mars.rei + 1', href: 'project-8-mastermind.html' },
+        { title: 'BMW Group Physical Asset Tracking System', status: 'complete', img: '../imgs/p7-1.png', author: 'mars.rei + 5', href: 'project-7-bmw-tracking-system.html' },
+        { title: 'Spotify Themed Portfolio', icon: 'fa fa-briefcase', status: 'ongoing', author: 'mars.rei', href: 'project-5-spotify-portfolio.html' },
+        { title: 'CompClub Hub', status: 'complete', img: '../imgs/p4-1.png', author: 'mars.rei + 2', href: 'project-4-compclub-hub.html' },
+        { title: 'Flight Booking System in Java', status: 'complete', img: '../imgs/p3-1.png', author: 'mars.rei + 1', href: 'project-3-fbs.html' },
+        { title: 'BookBot', status: 'complete', img: '../imgs/p2-1.jpg', author: 'mars.rei + 4', href: 'project-2-bookbot.html' },
+        { title: 'IM SwissGambit', status: 'complete', img: '../imgs/p1-1.png', author: 'mars.rei', href: 'project-1-im-swissgambit.html' },
+        { title: 'CompClub Hub 2.0', icon: 'fa fa-trophy', status: 'ongoing', author: 'mars.rei', href: 'project-6-compclub-hub-2.html' },
+        { title: 'Fire on Marz', icon: 'fa fa-palette', status: 'ongoing', author: 'mars.rei', href: 'project-10-fire-on-marz.html' },
+        { title: 'Digital Scrapbook', icon: 'fa fa-memory', status: 'ongoing', author: 'mars.rei + ?', href: 'project-11-digital-scrapbook.html' }
+        ],
+        toggleStatus(status) {
+            this.activeStatus = this.activeStatus === status ? null : status;
+        },
+        filteredProjects() {
+        return this.activeStatus 
+            ? this.projects.filter(p => p.status === this.activeStatus)
+            : this.projects;
+        }
+    }">
 
     <div class="mt-6 flex flex-row items-center"> 
     <div class="sm:hidden">
@@ -267,7 +270,10 @@
         <a :href="project.href" class="contents" x-bind:title="project.title">
           <div class="min-w-0">
             <div class="w-full aspect-square bg-[#535353] md:rounded-md">
-              <img x-bind:src="project.img" class="md:rounded-md">
+                <img x-bind:src="project.img" class="md:rounded-md">
+                <div x-show="!project.img" class="flex items-center justify-center h-full fa-3x">
+                    <i x-bind:class="project.icon" class="text-[#181818]"></i>
+                </div>
             </div>
             <p class="text-xs md:text-sm md:font-semibold truncate mt-1" x-text="project.title"></p>
             <p class="text-xs md:text-sm text-faded" x-text="project.author"></p>
