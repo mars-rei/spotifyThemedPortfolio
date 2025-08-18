@@ -10,525 +10,545 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="scrollbar-hide sm:overflow-hidden">
+<body class="scrollbar-hide md:overflow-hidden">
 
-  <div class="hidden sm:flex flex-col min-h-screen flex-1 overflow-hidden bg-black">
+  <div class="hidden md:flex flex-col min-h-screen flex-1 overflow-hidden bg-black">
 
     <!-- top -->
     <div class="flex-shrink-0 flex items-center p-2">
-        <div class="flex w-1/4 items-center justify-start ml-5 space-x-4">
+      <div class="flex items-center justify-start ml-5 space-x-4 lg:w-1/4 md:w-18">
         <span class="fa fa-briefcase text-3xl text-white"></span>
-        </div>
+      </div>
         
-        <div class="flex items-center justify-center w-2/4 space-x-2">
+      <div class="flex items-center gap-x-2 w-2/4 justify-center">
         <a href="index.html">
-            <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
-                <span class="fa fa-home text-xl text-faded"></span>
-            </div>
+          <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
+            <span class="fa fa-home text-xl text-faded"></span>
+          </div>
         </a>
         
-        <div class="rounded-full bg-[#282828] px-4 h-12 flex items-center text-faded justify-start space-x-4 w-3/5">
-            <span class="fa fa-handshake text-xl text-faded"></span>
-            <p class="font-normal">Welcome to my portfolio!</p>
+        <div class="rounded-full bg-[#282828] px-4 h-12 flex items-center text-faded justify-start space-x-4 lg:w-3/5 md:w-4/5">
+          <span class="fa fa-handshake text-xl text-faded"></span>
+          <p class="font-normal">Welcome to my portfolio!</p>
         </div>
-        </div>
+      </div>
         
-        <div class="flex items-center justify-end w-1/4 mr-2">
+      <div class="flex items-center justify-end mr-2 lg:w-1/4 md:w-2/4">
         <a href="contact.html">
-            <div class="rounded-full bg-white px-4 h-8 flex items-center text-faded mr-4">
-                <p class="font-bold text-[#121212]">Contact me</p>
-            </div>
+          <div class="rounded-full bg-white px-4 h-8 flex items-center text-faded mr-4">
+            <p class="font-bold text-[#121212]">Contact me</p>
+          </div>
         </a>
     
         <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
-            <img src="../imgs/headshot.jpeg" class="rounded-full h-8 w-8" alt="Profile">
+          <img src="../imgs/headshot.jpeg" class="rounded-full h-8 w-8" alt="Profile">
         </div>
-        </div>
+      </div>
     </div>
       
     <!-- middle -->
     <div class="flex flex-1 overflow-hidden mx-2 space-x-2">
-        <!-- nav bar -->
-        <div class="bg-[#121212] w-18 rounded-lg p-2 flex flex-col space-y-4 items-center">
+      <!-- nav bar -->
+      <div class="bg-[#121212] w-18 rounded-lg p-2 flex flex-col space-y-4 items-center">
         <span class="fa fa-bookmark text-xl text-faded pt-5"></span>
 
         <a href="about.html">
-            <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center mt-4">
-                <span class="fa fa-user text-xl text-faded"></span>
-            </div>
+          <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center mt-4">
+            <span class="fa fa-user text-xl text-faded"></span>
+          </div>
         </a>
-        
+      
         <a href="projects.html">
-            <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center">
-                <span class="fa fa-folder text-xl text-faded"></span>
-            </div>
+          <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center">
+            <span class="fa fa-folder text-xl text-faded"></span>
+          </div>
         </a>
 
         <a href="certifications.html">
-            <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center">
-                <span class="fa fa-certificate text-xl text-faded"></span>
-            </div>
+          <div class="bg-[#535353] w-12 h-12 rounded-md justify-center flex items-center">
+            <span class="fa fa-certificate text-xl text-faded"></span>
+          </div>
         </a>
-        </div>
+      </div>
         
-        <!-- main scrollable content -->
-        <div class="flex-1 bg-[#121212] rounded-lg overflow-y-auto h-[calc(100vh-9.5rem)] scollbar-custom" id="mainContent">
+      <!-- main scrollable content -->
+      <div class="flex-1 bg-[#121212] rounded-lg overflow-y-auto h-[calc(100vh-9.5rem)] overflow-x-hidden" id="mainContent">
 
-          <div class="relative text-white min-h-full">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#8094af] to-[#121212] opacity-20 h-90"></div>
+        <div class="relative text-white min-h-full">
+          <div class="absolute inset-0 bg-gradient-to-b from-[#8094af] to-[#121212] opacity-20 h-90"></div>
 
-            <div class="relative z-10">
-              <div class="flex justify-start items-end pt-16 mx-5"> 
-                <div class="w-56 flex justify-center items-center">
-                  <img src="../imgs/headshot.jpeg" class="w-56 rounded-full">
+          <div class="relative z-10">
+            <div class="flex justify-start items-end pt-16 mx-5"> 
+              <div class="w-56 flex justify-center items-center">
+                <img src="../imgs/headshot.jpeg" class="w-56 rounded-full">
+              </div>
+              <div class="ml-8">
+                <div>
+                  <p class="md:text-5xl lg:text-6xl font-bold">Imogen Dicen</p>
                 </div>
-                <div class="ml-8">
-                  <div>
-                    <p class="text-6xl font-bold">Imogen Dicen</p>
+                <div class="mt-4 flex flex-row items-center space-x-2">
+                  <p class="text-sm">
+                    <span class="font-semibold">2nd Year</span>
+                    <span class="text-faded">Computer Science Student • </span>
+                    <span class="font-semibold">6</span>
+                    <span class="text-faded"> Ongoing Projects</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mx-5 pb-24 text-white">
+
+              <div class="my-8">
+                <p class="text-2xl font-bold">About Me</p>
+                <p class="mt-2 mb-4 text-sm">
+                  Hi, my name is Imogen, but you can call me Mars! I'm interested in web development, full-stack development, and data engineering.
+                </p>
+              </div>
+
+              <div class="my-8">
+                <p class="text-2xl font-bold">Archived Projects</p>
+                <div class="flex flex-row justify-between"> 
+                  <p class="mb-4 text-sm text-faded">As of June 2025</p> 
+                  <a href="projects.html?filter=complete">
+                    <p class="mb-4 text-sm text-faded font-semibold">Show All</p>
+                  </a>
+                </div>
+
+                <div class="flex flex-row lg:gap-x-3 lg:justify-normal md:gap-x-3">
+                  <!-- first element -->
+                  <a href="project-8-mastermind.html">
+                    <div class="flex-shrink-0 lg:w-40 rounded-lg md:w-50">
+                      <div class="w-full">
+                        <img src="../imgs/p8-1.png" class="rounded-md">
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">Mastermind Command-Line Game</p>
+                    </div>
+                  </a>
+                  
+                  <!-- second element -->
+                  <a href="project-7-bmw-tracking-system.html">
+                    <div class="flex-shrink-0 lg:w-40 rounded-lg md:w-50">
+                      <div class="w-full">
+                        <img src="../imgs/p7-1.png" class="rounded-md">
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">BMW Group Physical Asset Tracking System</p>
+                    </div>
+                  </a>
+
+                  <!-- third element -->
+                  <a href="project-4-compclub-hub.html">
+                    <div class="flex-shrink-0 lg:w-40 rounded-lg md:w-50">
+                      <div class="w-full">
+                        <img src="../imgs/p4-1.png" class="rounded-md">
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">CompClub Hub</p>
+                    </div>
+                  </a>
+
+                  <!-- fourth element - disappears at tablet mode -->
+                  <a href="project-3-fbs.html">
+                    <div class="flex-shrink-0 lg:w-40 rounded-lg hidden lg:block">
+                      <div class="w-full">
+                        <img src="../imgs/p3-1.png" class="rounded-md">
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">Flight Booking System in Java</p>
+                    </div>
+                  </a>
+
+                  <!-- fifth element - disappears at tablet mode -->
+                  <a href="project-2-bookbot.html">
+                    <div class="flex-shrink-0 lg:w-40 rounded-lg hidden lg:block">
+                      <div class="w-full h-40">
+                        <img src="../imgs/p2-1.jpg" class="rounded-md">
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">BookBot</p>
+                    </div>
+                  </a>
+
+                  <!-- sixth element - disappears at tablet mode -->
+                  <a href="project-1-im-swissgambit.html">
+                    <div class="flex-shrink-0 lg:w-40 rounded-lg hidden lg:block">
+                      <div class="w-full h-40">
+                        <img src="../imgs/p1-1.png" class="rounded-md">
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">IM SwissGambit</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="my-8">
+                <p class="text-2xl font-bold">Ongoing Projects</p>
+                <div class="flex flex-row justify-between"> 
+                  <p class="mb-4 text-sm text-faded">As of June 2025</p> 
+                  <a href="projects.html?filter=ongoing">
+                    <p class="mb-4 text-sm text-faded font-semibold">Show All</p>
+                  </a>
+                </div>
+
+                <div class="flex flex-row mt-2 lg:gap-x-3 lg:justify-normal md:gap-x-3">
+                  <!-- first element -->
+                  <a href="project-12-random-lyric-generator.html">
+                    <div class="flex-shrink-0 lg:w-40 md:rounded-lg md:w-50">
+                      <div class="w-full lg:h-40 bg-[#535353] flex items-center justify-center rounded-md md:h-50">
+                        <span class="fa fa-dice fa-4x text-[#121212]"></span>
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">Random Lyric Generator</p>
+                    </div>
+                  </a>
+
+                  <!-- second element -->
+                  <a href="project-9-summer-of-25.html">
+                    <div class="flex-shrink-0 lg:w-40 md:rounded-lg md:w-50">
+                      <div class="w-full lg:h-40 bg-[#535353] flex items-center justify-center rounded-md md:h-50">
+                        <span class="fa fa-pen-to-square fa-4x text-[#121212]"></span>
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">Summer of '25 Blog</p>
+                    </div>
+                  </a>
+
+                  <!-- third element -->
+                  <a href="project-5-spotify-portfolio.html">
+                    <div class="flex-shrink-0 lg:w-40 md:rounded-lg md:w-50">
+                      <div class="w-full lg:h-40 bg-[#535353] flex items-center justify-center rounded-md md:h-50">
+                        <span class="fa fa-briefcase fa-4x text-[#121212]"></span>
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">Spotify Themed Portfolio</p>
+                    </div>
+                  </a>
+
+                  <!-- fourth element - disappears at tablet mode -->
+                  <a href="project-6-compclub-hub-2.html">
+                    <div class="flex-shrink-0 lg:w-40 rounded-lg hidden lg:block">
+                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
+                        <span class="fa fa-trophy fa-4x text-[#121212]"></span>
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">CompClub Hub 2.0</p>
+                    </div>
+                  </a>
+
+                  <!-- fifth element - disappears at tablet mode -->
+                  <a href="project-10-fire-on-marz.html">
+                    <div class="flex-shrink-0 lg:w-40 rounded-lg hidden lg:block">
+                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
+                        <span class="fa fa-palette fa-4x text-[#121212]"></span>
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">Fire on Marz</p>
+                    </div>
+                  </a>
+
+                  <!-- sixth element - disappears at tablet mode -->
+                  <a href="project-11-digital-scrapbook.html">
+                    <div class="flex-shrink-0 lg:w-40 rounded-lg hidden lg:block">
+                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
+                        <span class="fa fa-memory fa-4x text-[#121212]"></span>
+                      </div>
+                      <p class="mt-3 text-sm font-semibold">Digital Scrapbook</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="my-8">
+                <p class="text-2xl font-bold pb-4">Skills</p>
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-2 items-start">
+                  <div class="grid col-span-1 gap-y-2">
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-code"></span>
+                      </div>
+                      <p class="text-sm font-semibold">Python</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-code"></span>
+                      </div>
+                      <p class="text-sm font-semibold">CSS</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-code"></span>
+                      </div>
+                      <p class="text-sm font-semibold">PHP</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa-brands fa-github"></span>
+                      </div>
+                      <p class="text-sm font-semibold">GitHub</p>
+                    </div>
                   </div>
-                  <div class="mt-4 flex flex-row items-center space-x-2">
-                    <p class="text-sm">
-                      <span class="font-semibold">2nd Year</span>
-                      <span class="text-faded">Computer Science Student • </span>
-                      <span class="font-semibold">6</span>
-                      <span class="text-faded"> Ongoing Projects</span>
-                    </p>
+
+                  <div class="grid col-span-1 gap-y-2">
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-folder"></span>
+                      </div>
+                      <p class="text-sm font-semibold">Frontend Development</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-list"></span>
+                      </div>
+                      <p class="text-sm font-semibold">Project Management</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-user-plus"></span>
+                      </div>
+                      <p class="text-sm font-semibold">Team Leadership</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa-brands fa-figma"></span>
+                      </div>
+                      <p class="text-sm font-semibold">Figma</p>
+                    </div>
+                  </div>
+
+                  <div class="grid col-span-1 gap-y-2">
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-code"></span>
+                      </div>
+                      <p class="text-sm font-semibold">HTML</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-database"></span>
+                      </div>
+                      <p class="text-sm font-semibold">SQL</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-code"></span>
+                      </div>
+                      <p class="text-sm font-semibold">JavaScript</p>
+                    </div>
+                  </div>
+
+                  <div class="grid col-span-1 gap-y-2">
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-folder"></span>
+                      </div>
+                      <p class="text-sm font-semibold">Full-Stack Development</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-puzzle-piece"></span>
+                      </div>
+                      <p class="text-sm font-semibold">Problem Solving</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                      <div class="w-8 h-8 flex items-center justify-center">
+                        <span class="fa fa-user-plus"></span>
+                      </div>
+                      <p class="text-sm font-semibold">Team Collaboration</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="mx-5 pb-24 text-white">
-
-                <div class="my-8">
-                  <p class="text-2xl font-bold">About Me</p>
-                  <p class="mt-2 mb-4 text-sm">
-                    Hi, my name is Imogen, but you can call me Mars! I'm interested in web development, full-stack development, and data engineering.
-                  </p>
+              <div class="my-8">
+                <p class="text-2xl font-bold">Certifications</p>
+                <div class="flex flex-row justify-between"> 
+                  <p class="mb-4 text-sm text-faded">As of June 2025</p> 
+                  <a href="certifications.html">
+                    <p class="mb-4 text-sm text-faded font-semibold">Show All</p>
+                  </a>
                 </div>
 
-                <div class="my-8">
-                  <p class="text-2xl font-bold">Archived Projects</p>
-                  <div class="flex flex-row justify-between"> 
-                    <p class="mb-4 text-sm text-faded">As of June 2025</p> 
-                    <a href="projects.html?filter=complete">
-                      <p class="mb-4 text-sm text-faded font-semibold">Show All</p>
-                    </a>
+                <div class="flex flex-row mt-2 lg:gap-x-3 lg:justify-normal md:gap-x-3">
+                  <div class="flex-shrink-0 lg:w-40 md:rounded-lg md:w-50">
+                      <div class="w-full lg:h-40 bg-[#535353] flex items-center justify-center rounded-md md:h-50">
+                      <span class="fa fa-ear-listen fa-4x text-[#121212]"></span>
+                    </div>
+                    <p class="mt-3 text-sm font-semibold">Active Listening</p>
                   </div>
-                  <div class="flex flex-row gap-x-6">
-                    <a href="project-8-mastermind.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40">
-                          <img src="../imgs/p8-1.png" class="rounded-md">
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">Mastermind Command-Line Game</p>
-                      </div>
-                    </a>
-                    
-                    <a href="project-7-bmw-tracking-system.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40">
-                          <img src="../imgs/p7-1.png" class="rounded-md">
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">BMW Group Physical Asset Tracking System</p>
-                      </div>
-                    </a>
 
-                    <a href="project-4-compclub-hub.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40">
-                          <img src="../imgs/p4-1.png" class="rounded-md">
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">CompClub Hub</p>
-                      </div>
-                    </a>
+                  <div class="flex-shrink-0 lg:w-40 md:rounded-lg md:w-50">
+                      <div class="w-full lg:h-40 bg-[#535353] flex items-center justify-center rounded-md md:h-50">
+                      <span class="fa fa-network-wired fa-4x text-[#121212]"></span>
+                    </div>
+                    <p class="mt-3 text-sm font-semibold">CCNA: Introduction to Networks</p>
+                  </div>
 
-                    <a href="project-3-fbs.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40">
-                          <img src="../imgs/p3-1.png" class="rounded-md">
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">Flight Booking System in Java</p>
-                      </div>
-                    </a>
+                  <div class="flex-shrink-0 lg:w-40 md:rounded-lg md:w-50">
+                      <div class="w-full lg:h-40 bg-[#535353] flex items-center justify-center rounded-md md:h-50">
+                      <span class="fa fa-code fa-4x text-[#121212]"></span>
+                    </div>
+                    <p class="mt-3 text-sm font-semibold">Python Essentials 1</p>
+                  </div>
 
-                    <a href="project-2-bookbot.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40">
-                          <img src="../imgs/p2-1.jpg" class="rounded-md">
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">BookBot</p>
-                      </div>
-                    </a>
+                  <!-- not shown on tablet -->
+                  <div class="flex-shrink-0 lg:w-40 rounded-lg hidden lg:block">
+                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
+                      <span class="fa fa-music fa-4x text-[#121212]"></span>
+                    </div>
+                    <p class="mt-3 text-sm font-semibold">Grade 5 Violin</p>
+                  </div>
 
-                    <a href="project-1-im-swissgambit.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40">
-                          <img src="../imgs/p1-1.png" class="rounded-md">
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">IM SwissGambit</p>
-                      </div>
-                    </a>
+                  <div class="flex-shrink-0 lg:w-40 rounded-lg hidden lg:block">
+                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
+                      <span class="fa fa-map fa-4x text-[#121212]"></span>
+                    </div>
+                    <p class="mt-3 text-sm font-semibold">Enterprise Design Thinking Practitioner</p>
+                  </div>
+
+                  <div class="flex-shrink-0 lg:w-40 rounded-lg hidden lg:block">
+                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
+                      <span class="fa fa-computer fa-4x text-[#121212]"></span>
+                    </div>
+                    <p class="mt-3 text-sm font-semibold">Computer Hardware Basics</p>
+                  </div>
+
+                  <div class="flex-shrink-0 lg:w-40 rounded-lg hidden lg:block">
+                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
+                      <span class="fa fa-shield-halved fa-4x text-[#121212]"></span>
+                    </div>
+                    <p class="mt-3 text-sm font-semibold">CyberFirst Advanced (SCQF Level 6)</p>
+                  </div>
+
+                  <div class="flex-shrink-0 lg:w-40 rounded-lg hidden lg:block">
+                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
+                      <span class="fa fa-music fa-4x text-[#121212]"></span>
+                    </div>
+                    <p class="mt-3 text-sm font-semibold">Grade 8 Piano</p>
                   </div>
                 </div>
+              </div>
 
-                <div class="my-8">
-                  <p class="text-2xl font-bold">Ongoing Projects</p>
-                  <div class="flex flex-row justify-between"> 
-                    <p class="mb-4 text-sm text-faded">As of June 2025</p> 
-                    <a href="projects.html?filter=ongoing">
-                      <p class="mb-4 text-sm text-faded font-semibold">Show All</p>
-                    </a>
-                  </div>
-                  <div class="flex flex-row gap-x-6">
-                    <a href="project-12-random-lyric-generator.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                          <span class="fa fa-dice fa-4x text-[#121212]"></span>
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">Random Lyric Generator</p>
-                      </div>
-                    </a>
+              <div class="my-8">
+                <p class="text-2xl font-bold">Education</p>
+                <p class="mb-4 text-sm text-faded">As of June 2025</p>
 
-                    <a href="project-9-summer-of-25.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                          <span class="fa fa-pen-to-square fa-4x text-[#121212]"></span>
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">Summer of '25 Blog</p>
+                <div class="flex flex-row mt-2 lg:gap-x-3 lg:justify-normal md:gap-x-3">
+                  <a href="education-2-bcu.html">
+                    <div class="flex-shrink-0 lg:w-40 rounded-lg md:w-50">
+                      <div class="w-full">
+                        <img src="../imgs/e2-1.jpg" class="rounded-full">
                       </div>
-                    </a>
+                      <p class="mt-3 text-sm font-semibold">Birmingham City University</p>
+                    </div>
+                  </a>
 
-                    <a href="project-5-spotify-portfolio.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                          <span class="fa fa-briefcase fa-4x text-[#121212]"></span>
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">Spotify Themed Portfolio</p>
+                  <a href="education-4-datacamp.html">
+                    <div class="flex-shrink-0 lg:w-40 md:rounded-lg md:w-50">
+                      <div class="w-full lg:h-40 bg-[#535353] flex items-center justify-center rounded-full md:h-50">
+                        <span class="fa fa-chart-line fa-4x text-[#121212]"></span>
                       </div>
-                    </a>
+                      <p class="mt-3 text-sm font-semibold">DataCamp</p>
+                    </div>
+                  </a>
 
-                    <a href="project-6-compclub-hub-2.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                          <span class="fa fa-trophy fa-4x text-[#121212]"></span>
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">CompClub Hub 2.0</p>
+                  <a href="education-5-freecodecamp.html">
+                    <div class="flex-shrink-0 lg:w-40 md:rounded-lg md:w-50">
+                      <div class="w-full lg:h-40 bg-[#535353] flex items-center justify-center rounded-full md:h-50">
+                        <span class="fa fa-code fa-4x text-[#121212]"></span>
                       </div>
-                    </a>
+                      <p class="mt-3 text-sm font-semibold">freeCodeCamp</p>
+                    </div>
+                  </a>
 
-                    <a href="project-10-fire-on-marz.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                          <span class="fa fa-palette fa-4x text-[#121212]"></span>
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">Fire on Marz</p>
+                  <!-- not shown on tablet -->
+                  <a href="education-3-cisco.html">
+                    <div class="flex-shrink-0 w-40 rounded-lg hidden lg:block">
+                      <div class="w-full h-40 bg-[#535353] rounded-full flex justify-center items-center">
+                        <span class="fa fa-globe fa-4x text-[#121212]"></span>
                       </div>
-                    </a>
+                      <p class="mt-3 text-sm font-semibold">Cisco Networking Academy</p>
+                    </div>
+                  </a>
 
-                    <a href="project-11-digital-scrapbook.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                          <span class="fa fa-memory fa-4x text-[#121212]"></span>
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">Digital Scrapbook</p>
+                  <a href="education-1-kevihs.html">
+                    <div class="flex-shrink-0 w-40 rounded-lg hidden lg:block">
+                      <div class="w-full">
+                        <img src="../imgs/e1-1.jpg" class="rounded-full">
                       </div>
-                    </a>
-                  </div>
+                      <p class="mt-3 text-sm font-semibold">King Edward VI Handsworth</p>
+                    </div>
+                  </a>
                 </div>
+              </div>
 
-                <div class="my-8">
-                  <p class="text-2xl font-bold pb-4">Skills</p>
-                  <div class="grid grid-cols-4 gap-2 items-start">
-                    <div class="grid col-span-1 gap-y-2">
+              <div class="my-8" id="contactMe">
+                <p class="text-2xl font-bold">Links</p>
+                <div class="mt-3 grid lg:grid-cols-4 md:grid-cols-2 gap-2 items-start">
+                  <div class="grid col-span-1 gap-y-2">
+                    <a href="mailto:imidcen@gmail.com?subject=Inquiry">
                       <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
                         <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-code"></span>
+                          <span class="fa fa-envelope fa-lg"></span>
                         </div>
-                        <p class="text-sm font-semibold">Python</p>
+                        <p class="text-sm font-semibold">Gmail</p>
                       </div>
+                    </a>
+                  </div>
 
+                  <div class="grid col-span-1 gap-y-2">
+                    <a href="https://reminiscent-flannel-fe7.notion.site/my-projects-0cd061a938b0467d98cb56019a970f6d?source=copy_link">
                       <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
                         <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-code"></span>
+                          <span class="fa fa-briefcase fa-lg text-white text-xs"></span>
                         </div>
-                        <p class="text-sm font-semibold">CSS</p>
+                        <p class="text-sm font-semibold">Old Portfolio</p>
                       </div>
+                    </a>
+                  </div>
 
+                  <div class="grid col-span-1 gap-y-2">
+                    <a href="https://www.linkedin.com/in/imogen-dicen/">
                       <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
                         <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-code"></span>
+                          <span class="fa-brands fa-linkedin fa-lg"></span>
                         </div>
-                        <p class="text-sm font-semibold">PHP</p>
+                        <p class="text-sm font-semibold">LinkedIn</p>
                       </div>
+                    </a>
+                  </div>
 
+                  <div class="grid col-span-1 gap-y-2">
+                    <a href="https://github.com/mars-rei">
                       <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
                         <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa-brands fa-github"></span>
+                          <span class="fa-brands fa-github fa-lg"></span>
                         </div>
                         <p class="text-sm font-semibold">GitHub</p>
                       </div>
-                    </div>
-
-                    <div class="grid col-span-1 gap-y-2">
-                      <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                        <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-folder"></span>
-                        </div>
-                        <p class="text-sm font-semibold">Frontend Development</p>
-                      </div>
-
-                      <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                        <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-list"></span>
-                        </div>
-                        <p class="text-sm font-semibold">Project Management</p>
-                      </div>
-
-                      <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                        <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-user-plus"></span>
-                        </div>
-                        <p class="text-sm font-semibold">Team Leadership</p>
-                      </div>
-
-                      <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                        <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa-brands fa-figma"></span>
-                        </div>
-                        <p class="text-sm font-semibold">Figma</p>
-                      </div>
-                    </div>
-
-                    <div class="grid col-span-1 gap-y-2">
-                      <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                        <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-code"></span>
-                        </div>
-                        <p class="text-sm font-semibold">HTML</p>
-                      </div>
-
-                      <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                        <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-database"></span>
-                        </div>
-                        <p class="text-sm font-semibold">SQL</p>
-                      </div>
-
-                      <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                        <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-code"></span>
-                        </div>
-                        <p class="text-sm font-semibold">JavaScript</p>
-                      </div>
-                    </div>
-
-                    <div class="grid col-span-1 gap-y-2">
-                      <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                        <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-folder"></span>
-                        </div>
-                        <p class="text-sm font-semibold">Full-Stack Development</p>
-                      </div>
-
-                      <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                        <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-puzzle-piece"></span>
-                        </div>
-                        <p class="text-sm font-semibold">Problem Solving</p>
-                      </div>
-
-                      <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                        <div class="w-8 h-8 flex items-center justify-center">
-                          <span class="fa fa-user-plus"></span>
-                        </div>
-                        <p class="text-sm font-semibold">Team Collaboration</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="my-8">
-                  <p class="text-2xl font-bold">Certifications</p>
-                  <div class="flex flex-row justify-between"> 
-                    <p class="mb-4 text-sm text-faded">As of June 2025</p> 
-                    <a href="certifications.html">
-                      <p class="mb-4 text-sm text-faded font-semibold">Show All</p>
                     </a>
                   </div>
 
-                  <div class="flex flex-row gap-x-6">
-                    <div class="flex-shrink-0 w-40 rounded-lg">
-                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                        <span class="fa fa-ear-listen fa-4x text-[#121212]"></span>
-                      </div>
-                      <p class="mt-3 text-sm font-semibold">Active Listening</p>
-                    </div>
-
-                    <div class="flex-shrink-0 w-40 rounded-lg">
-                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                        <span class="fa fa-network-wired fa-4x text-[#121212]"></span>
-                      </div>
-                      <p class="mt-3 text-sm font-semibold">CCNA: Introduction to Networks</p>
-                    </div>
-
-                    <div class="flex-shrink-0 w-40 rounded-lg">
-                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                        <span class="fa fa-code fa-4x text-[#121212]"></span>
-                      </div>
-                      <p class="mt-3 text-sm font-semibold">Python Essentials 1</p>
-                    </div>
-
-                    <div class="flex-shrink-0 w-40 rounded-lg">
-                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                        <span class="fa fa-music fa-4x text-[#121212]"></span>
-                      </div>
-                      <p class="mt-3 text-sm font-semibold">Grade 5 Violin</p>
-                    </div>
-
-                    <div class="flex-shrink-0 w-40 rounded-lg">
-                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                        <span class="fa fa-map fa-4x text-[#121212]"></span>
-                      </div>
-                      <p class="mt-3 text-sm font-semibold">Enterprise Design Thinking Practitioner</p>
-                    </div>
-
-                    <div class="flex-shrink-0 w-40 rounded-lg">
-                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                        <span class="fa fa-computer fa-4x text-[#121212]"></span>
-                      </div>
-                      <p class="mt-3 text-sm font-semibold">Computer Hardware Basics</p>
-                    </div>
-
-                    <div class="flex-shrink-0 w-40 rounded-lg">
-                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                        <span class="fa fa-shield-halved fa-4x text-[#121212]"></span>
-                      </div>
-                      <p class="mt-3 text-sm font-semibold">CyberFirst Advanced (SCQF Level 6)</p>
-                    </div>
-
-                    <div class="flex-shrink-0 w-40 rounded-lg">
-                      <div class="w-full h-40 bg-[#535353] rounded-md flex justify-center items-center">
-                        <span class="fa fa-music fa-4x text-[#121212]"></span>
-                      </div>
-                      <p class="mt-3 text-sm font-semibold">Grade 8 Piano</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="my-8">
-                  <p class="text-2xl font-bold">Education</p>
-                  <p class="mb-4 text-sm text-faded">As of June 2025</p>
-                  <div class="flex flex-row gap-x-6">
-                    <a href="education-2-bcu.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full">
-                          <img src="../imgs/e2-1.jpg" class="rounded-full">
+                  <div class="grid col-span-1 gap-y-2">
+                    <a href="https://www.datacamp.com/portfolio/marsrei">
+                      <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                          <span class="fa fa-magnifying-glass-chart fa-lg"></span>
                         </div>
-                        <p class="mt-3 text-sm font-semibold">Birmingham City University</p>
+                        <p class="text-sm font-semibold">DataCamp</p>
                       </div>
                     </a>
-
-                    <a href="education-4-datacamp.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40 bg-[#535353] rounded-full flex justify-center items-center">
-                          <span class="fa fa-chart-line fa-4x text-[#121212]"></span>
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">DataCamp</p>
-                      </div>
-                    </a>
-
-                    <a href="education-5-freecodecamp.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40 bg-[#535353] rounded-full flex justify-center items-center">
-                          <span class="fa fa-code fa-4x text-[#121212]"></span>
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">freeCodeCamp</p>
-                      </div>
-                    </a>
-
-                    <a href="education-3-cisco.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full h-40 bg-[#535353] rounded-full flex justify-center items-center">
-                          <span class="fa fa-globe fa-4x text-[#121212]"></span>
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">Cisco Networking Academy</p>
-                      </div>
-                    </a>
-
-                    <a href="education-1-kevihs.html">
-                      <div class="flex-shrink-0 w-40 rounded-lg">
-                        <div class="w-full">
-                          <img src="../imgs/e1-1.jpg" class="rounded-full">
-                        </div>
-                        <p class="mt-3 text-sm font-semibold">King Edward VI Handsworth</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="my-8" id="contactMe">
-                  <p class="text-2xl font-bold">Links</p>
-                  <div class="mt-3 grid grid-cols-4 gap-2 items-start">
-                    <div class="grid col-span-1 gap-y-2">
-                      <a href="mailto:imidcen@gmail.com?subject=Inquiry">
-                        <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                          <div class="w-8 h-8 flex items-center justify-center">
-                            <span class="fa fa-envelope fa-lg"></span>
-                          </div>
-                          <p class="text-sm font-semibold">Gmail</p>
-                        </div>
-                      </a>
-
-                      <a href="https://reminiscent-flannel-fe7.notion.site/my-projects-0cd061a938b0467d98cb56019a970f6d?source=copy_link">
-                        <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                          <div class="w-8 h-8 flex items-center justify-center">
-                            <span class="fa fa-briefcase fa-lg text-white text-xs"></span>
-                          </div>
-                          <p class="text-sm font-semibold">Old Portfolio</p>
-                        </div>
-                      </a>
-                    </div>
-
-                    <div class="grid col-span-1 gap-y-2">
-                      <a href="https://www.linkedin.com/in/imogen-dicen/">
-                        <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                          <div class="w-8 h-8 flex items-center justify-center">
-                            <span class="fa-brands fa-linkedin fa-lg"></span>
-                          </div>
-                          <p class="text-sm font-semibold">LinkedIn</p>
-                        </div>
-                      </a>
-                    </div>
-
-                    <div class="grid col-span-1 gap-y-2">
-                      <a href="https://github.com/mars-rei">
-                        <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                          <div class="w-8 h-8 flex items-center justify-center">
-                            <span class="fa-brands fa-github fa-lg"></span>
-                          </div>
-                          <p class="text-sm font-semibold">GitHub</p>
-                        </div>
-                      </a>
-                    </div>
-
-                    <div class="grid col-span-1 gap-y-2">
-                      <a href="https://www.datacamp.com/portfolio/marsrei">
-                        <div class="flex-shrink-0 w-full py-2 bg-[#282828] rounded-md flex items-center gap-3 pl-2 pr-4">
-                          <div class="w-8 h-8 flex items-center justify-center">
-                            <span class="fa fa-magnifying-glass-chart fa-lg"></span>
-                          </div>
-                          <p class="text-sm font-semibold">DataCamp</p>
-                        </div>
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-          
+      <!-- side bar -->
+      <div class="bg-[#121212] w-12 rounded-lg lg:flex -mr-4 hidden lg:visible"></div>
     </div>
       
     <!-- bottom -->
