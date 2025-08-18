@@ -10,30 +10,30 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="scrollbar-hide sm:overflow-hidden">
+<body class="scrollbar-hide md:overflow-hidden">
 
-  <div class="hidden sm:flex flex-col min-h-screen flex-1 overflow-hidden bg-black">
+  <div class="hidden md:flex flex-col min-h-screen flex-1 overflow-hidden bg-black">
 
     <!-- top -->
     <div class="flex-shrink-0 flex items-center p-2">
-        <div class="flex w-1/4 items-center justify-start ml-5 space-x-4">
+      <div class="flex items-center justify-start ml-5 space-x-4 lg:w-1/4 md:w-18">
         <span class="fa fa-briefcase text-3xl text-white"></span>
         </div>
         
-        <div class="flex items-center justify-center w-2/4 space-x-2">
+      <div class="flex items-center gap-x-2 w-2/4 justify-center">
         <a href="index.html">
             <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
                 <span class="fa fa-home text-xl text-faded"></span>
             </div>
         </a>
         
-        <div class="rounded-full bg-[#282828] px-4 h-12 flex items-center text-faded justify-start space-x-4 w-3/5">
+        <div class="rounded-full bg-[#282828] px-4 h-12 flex items-center text-faded justify-start space-x-4 lg:w-3/5 md:w-4/5">
             <span class="fa fa-handshake text-xl text-faded"></span>
             <p class="font-normal">Welcome to my portfolio!</p>
         </div>
         </div>
         
-        <div class="flex items-center justify-end w-1/4 mr-2">
+      <div class="flex items-center justify-end mr-2 lg:w-1/4 md:w-2/4">
         <a href="contact.html">
             <div class="rounded-full bg-white px-4 h-8 flex items-center text-faded mr-4">
                 <p class="font-bold text-[#121212]">Contact me</p>
@@ -78,15 +78,18 @@
 
           <!-- Photo & Project Aim -->
           <div class="flex justify-start items-end mt-16"> 
-            <div class="w-56 aspect-square flex justify-center items-center rounded-md">
+            <div class="flex-shrink-0 md:w-36 lg:w-56 aspect-square flex justify-center items-center rounded-md">
               <img src="../imgs/p2-1.jpg" class="rounded-md">
             </div>
-            <div class="ml-8">
+            <div class="md:ml-4 lg:ml-8">
               <div>
-                <p class="text-6xl font-bold">BookBot</p>
+                <p class="md:text-3xl lg:text-6xl font-bold">BookBot</p>
               </div>
-              <div class="mt-4">
-                <p class="text-sm text-faded">To create a project using both hardware and software, to meet multiple UN sustainability goals.</p>
+              <div 
+                class="mt-4"
+                title="To create a project using both hardware and software, to meet multiple UN sustainability goals."
+              >
+                <p class="text-sm text-faded md:line-clamp-1 lg:line-clamp-none">To create a project using both hardware and software, to meet multiple UN sustainability goals.</p>
               </div>
               <div class="mt-2 flex flex-row items-center space-x-2">
                 <img src="../imgs/headshot.jpeg" class="w-6 rounded-full">
@@ -198,7 +201,7 @@
                 >
                   <div class="bg-[#535353] aspect-square rounded-md w-12 flex justify-center items-center"></div>
                   <div class="min-w-0 flex-1 pr-2">
-                    <p class="font-semibold text-md truncate">Concept Videos</p>
+                    <p class="font-semibold text-md">Concept Videos</p>
                   </div>
                   <div class="min-w-0 flex-1 pr-2">
                     <p class="font-semibold text-sm text-faded">Project Showcase</p>
@@ -213,13 +216,13 @@
                   <p class="text-md font-bold mb-4">BookBot Concept Videos</p>
 
                   <div class="flex justify-center items-center">
-                    <div x-data="slideshow" class="w-200 h-full bg-[#282828] rounded-md">
+                    <div x-data="slideshow" class="w-full h-full bg-[#282828] rounded-md">
                       <div x-ref="slider" class="h-full overflow-x-auto scrollbar-hide">
-                        <div class="flex flex-nowrap">
-                          <div class="slide flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
+                        <div class="flex flex-nowrap md:gap-x-8 lg:gap-x-0">
+                          <div class="slide flex-shrink-0 w-full flex justify-center items-center mt-5 mb-2">
                             <figure class="space-y-1">
                               <iframe 
-                                class="w-180 h-90"
+                                class="md:w-75 md:h-45 lg:w-135 lg:h-70 xl:w-180 xl:h-120"
                                 src="https://www.youtube.com/embed/bU_gu3VN288?si=wyFNlEkR08cQAOw3" 
                                 frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -235,10 +238,10 @@
                             </figure>
                           </div>
                           
-                          <div class="slide flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
+                          <div class="slide flex-shrink-0 w-full flex justify-center items-center mt-5 mb-2">
                             <figure class="space-y-1">
                               <iframe 
-                                class="w-180 h-90"
+                                class="md:w-75 md:h-45 lg:w-135 lg:h-70 xl:w-180 xl:h-120"
                                 src="https://www.youtube.com/embed/bgNiuFnM5MU?si=HdYare2SLh_Y1rwl" 
                                 frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -282,12 +285,12 @@
                   <p class="text-md font-bold mb-4">3D Model Concept Photos</p>
 
                   <div class="flex justify-center items-center">
-                    <div x-data="slideshow" class="w-160 h-full bg-[#282828] rounded-md">
+                    <div x-data="slideshow" class="md:w-full lg:w-160 h-full bg-[#282828] rounded-md">
                       <div x-ref="slider" class="h-full overflow-x-auto scrollbar-hide">
-                        <div class="flex flex-nowrap">
-                          <div class="slide flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
+                        <div class="flex flex-nowrap md:gap-x-8 lg:gap-x-0">
+                          <div class="slide flex-shrink-0 md:w-full lg:w-160 flex justify-center items-center mt-5 mb-2">
                             <figure class="space-y-1">
-                              <img src="../imgs/p2-2.png" class="w-140">
+                              <img src="../imgs/p2-2.png" class="md:w-full lg:w-140">
                               <figcaption class="text-xs text-faded text-center">Back view of BookBot.</figcaption>
                               <p class="text-xs text-faded mt-5 text-center">Slide 1/4</p>
                               <div @click="next()" class="flex justify-center mt-3 cursor-pointer hover:text-white">
@@ -296,9 +299,9 @@
                             </figure>
                           </div>
 
-                          <div class="slide flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
+                          <div class="slide flex-shrink-0 md:w-full lg:w-160 flex justify-center items-center mt-5 mb-2">
                             <figure class="space-y-1">
-                              <img src="../imgs/p2-3.png" class="w-140">
+                              <img src="../imgs/p2-3.png" class="md:w-full lg:w-140">
                               <figcaption class="text-xs text-faded text-center">Top view of BookBot.</figcaption>
                               <p class="text-xs text-faded mt-5 text-center">Slide 2/4</p>
                               <div class="flex justify-center mt-3 gap-x-5">
@@ -312,9 +315,9 @@
                             </figure>
                           </div>
 
-                          <div class="slide flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
+                          <div class="slide flex-shrink-0 md:w-full lg:w-160 flex justify-center items-center mt-5 mb-2">
                             <figure class="space-y-1">
-                              <img src="../imgs/p2-4.png" class="w-140">
+                              <img src="../imgs/p2-4.png" class="md:w-full lg:w-140">
                               <figcaption class="text-xs text-faded text-center">Side view of BookBot.</figcaption>
                               <p class="text-xs text-faded mt-5 text-center">Slide 3/4</p>
                               <div class="flex justify-center mt-3 gap-x-5">
@@ -328,9 +331,9 @@
                             </figure>
                           </div>
                           
-                          <div class="slide flex-shrink-0 w-160 flex justify-center items-center mt-5 mb-2">
+                          <div class="slide flex-shrink-0 md:w-full lg:w-160 flex justify-center items-center mt-5 mb-2">
                             <figure class="space-y-1">
-                              <img src="../imgs/p2-5.png" class="w-140">
+                              <img src="../imgs/p2-5.png" class="md:w-full lg:w-140">
                               <figcaption class="text-xs text-faded text-center">Front view of BookBot.</figcaption>
                               <p class="text-xs text-faded mt-5 text-center">Slide 4/4</p>
                               <div @click="prev()" class="flex justify-center mt-3 cursor-pointer hover:text-white">
@@ -366,13 +369,13 @@
                 >
                   <p class="text-md font-bold mb-4">Project Proposal Presentation</p>
                   <div class="flex justify-center items-center">
-                    <div class="w-200 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
+                    <div class="md:w-full lg:w-200 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
                       <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
+                        <div class="flex-shrink-0 md:w-full lg:w-200 flex justify-center items-center mt-5 mb-2">
                           <figure class="space-y-1">
                             <iframe 
                               src="../files/p2-1.pdf" 
-                              class="w-180 h-120"
+                              class="md:w-75 md:h-45 lg:w-135 lg:h-70 xl:w-180 xl:h-120"
                             >
                               <p class="text-sm">Your browser does not support PDFs. 
                                 <a href="../files/p2-1.pdf" class="text-sm">Download the PDF.</a>.
@@ -434,13 +437,13 @@
                 >
                   <p class="text-md font-bold mb-4">Opportunistic Plan Report</p>
                   <div class="flex justify-center items-center">
-                    <div class="w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
+                    <div class="md:w-full lg:w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
                       <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-180 flex justify-center items-center mt-5 mb-2">
+                        <div class="flex-shrink-0 md:w-full lg:w-180 flex justify-center items-center mt-5 mb-2">
                           <figure class="space-y-1">
                             <iframe 
                               src="../files/p2-2.pdf" 
-                              class="w-full h-160"
+                              class="w-full md:h-100 lg:h-160"
                             >
                               <p class="text-sm">Your browser does not support PDFs. 
                                 <a href="../files/p2-2.pdf" class="text-sm">Download the PDF.</a>.
@@ -479,11 +482,11 @@
                 >
                   <p class="text-md font-bold mb-4">Project Poster</p>
                   <div class="flex justify-center items-center">
-                    <div class="w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
+                    <div class="md:w-full lg:w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
                       <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-180 flex justify-center items-center mt-5 mb-2">
+                        <div class="flex-shrink-0 md:w-full lg:w-180 flex justify-center items-center mt-5 mb-2">
                           <figure class="space-y-1">
-                            <img src="../imgs/p2-6.png" class="w-100">
+                            <img src="../imgs/p2-6.png" class="md:w-full lg:w-100">
                             <figcaption class="text-xs text-faded text-center">
                               Our poster that was displayed at our presentation booth at Innovation Fest.
                             </figcaption>
@@ -517,12 +520,12 @@
                   <p class="text-md font-bold mb-4">Presentation Day</p>
 
                   <div class="flex justify-center items-center">
-                    <div x-data="slideshow" class="w-180 h-full bg-[#282828] rounded-md">
+                    <div x-data="slideshow" class="md:w-full lg:w-180 h-full bg-[#282828] rounded-md">
                       <div x-ref="slider" class="h-full overflow-x-auto scrollbar-hide">
-                        <div class="flex flex-nowrap">
-                          <div class="slide flex-shrink-0 w-180 flex justify-center items-center mt-5 mb-2">
+                        <div class="flex flex-nowrap md:gap-x-8 lg:gap-x-0">
+                          <div class="slide flex-shrink-0 md:w-full lg:w-180 flex justify-center items-center mt-5 mb-2">
                             <figure class="space-y-1">
-                              <img src="../imgs/p2-7.jpg" class="w-140">
+                              <img src="../imgs/p2-7.jpg" class="md:w-full lg:w-140">
                               <figcaption class="text-xs text-faded text-center">
                                 Preparing the table.
                               </figcaption>
@@ -533,9 +536,9 @@
                             </figure>
                           </div>
                           
-                          <div class="slide flex-shrink-0 w-180 flex justify-center items-center mt-5 mb-2">
+                          <div class="slide flex-shrink-0 md:w-full lg:w-180 flex justify-center items-center mt-5 mb-2">
                             <figure class="space-y-1">
-                              <img src="../imgs/p2-8.jpg" class="w-80">
+                              <img src="../imgs/p2-8.jpg" class="md:w-full lg:w-80">
                               <figcaption class="text-xs text-faded text-center">
                                 BookBot.
                               </figcaption>
@@ -573,11 +576,11 @@
                 >
                   <p class="text-md font-bold mb-4">Awards Evening</p>
                   <div class="flex justify-center items-center">
-                    <div class="w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
+                    <div class="md:w-full lg:w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
                       <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-180 flex justify-center items-center mt-5 mb-2">
+                        <div class="flex-shrink-0 md:w-full lg:w-180 flex justify-center items-center mt-5 mb-2">
                           <figure class="space-y-1">
-                            <img src="../imgs/p2-9.png" class="w-140">
+                            <img src="../imgs/p2-9.png" class="md:w-full lg:w-140">
                             <figcaption class="text-xs text-faded text-center">
                               Won 3rd place in the Most Innovative category!
                             </figcaption>

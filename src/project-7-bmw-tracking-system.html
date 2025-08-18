@@ -10,30 +10,30 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="scrollbar-hide sm:overflow-hidden">
+<body class="scrollbar-hide md:overflow-hidden">
 
-  <div class="hidden sm:flex flex-col min-h-screen flex-1 overflow-hidden bg-black">
+  <div class="hidden md:flex flex-col min-h-screen flex-1 overflow-hidden bg-black">
 
     <!-- top -->
     <div class="flex-shrink-0 flex items-center p-2">
-        <div class="flex w-1/4 items-center justify-start ml-5 space-x-4">
+      <div class="flex items-center justify-start ml-5 space-x-4 lg:w-1/4 md:w-18">
         <span class="fa fa-briefcase text-3xl text-white"></span>
         </div>
         
-        <div class="flex items-center justify-center w-2/4 space-x-2">
+      <div class="flex items-center gap-x-2 w-2/4 justify-center">
         <a href="index.html">
             <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
                 <span class="fa fa-home text-xl text-faded"></span>
             </div>
         </a>
         
-        <div class="rounded-full bg-[#282828] px-4 h-12 flex items-center text-faded justify-start space-x-4 w-3/5">
+        <div class="rounded-full bg-[#282828] px-4 h-12 flex items-center text-faded justify-start space-x-4 lg:w-3/5 md:w-4/5">
             <span class="fa fa-handshake text-xl text-faded"></span>
             <p class="font-normal">Welcome to my portfolio!</p>
         </div>
         </div>
         
-        <div class="flex items-center justify-end w-1/4 mr-2">
+      <div class="flex items-center justify-end mr-2 lg:w-1/4 md:w-2/4">
         <a href="contact.html">
             <div class="rounded-full bg-white px-4 h-8 flex items-center text-faded mr-4">
                 <p class="font-bold text-[#121212]">Contact me</p>
@@ -78,15 +78,18 @@
 
           <!-- Photo & Project Aim -->
           <div class="flex justify-start items-end mt-16"> 
-            <div class="w-56 aspect-square flex justify-center items-center rounded-md">
+            <div class="flex-shrink-0 md:w-36 lg:w-56 aspect-square flex justify-center items-center rounded-md">
               <img src="../imgs/p7-1.png" class="rounded-md">
             </div>
-            <div class="ml-8">
+            <div class="md:ml-4 lg:ml-8">
               <div>
-                <p class="text-6xl font-bold">BMW Group Physical Asset Tracking System</p>
+                <p class="md:text-2xl lg:text-6xl font-bold">BMW Group Physical Asset Tracking System</p>
               </div>
-              <div class="mt-4">
-                <p class="text-sm text-faded">
+              <div 
+                class="mt-4"
+                title="To design software utilising existing CCTV camera streams, an API and a Digital Twin / Vehicle Management System to track logistics vehicles and distinguish them from each other."
+              >
+                <p class="text-sm text-faded md:line-clamp-1 lg:line-clamp-none">
                   To design software utilising existing CCTV camera streams, an API and a Digital Twin 
                   / Vehicle Management System to track logistics vehicles and distinguish them from each other.
                 </p>
@@ -125,13 +128,13 @@
                 >
                   <p class="text-md font-bold mb-4">Our Solution Proposal</p>
                   <div class="flex justify-center items-center">
-                    <div class="w-200 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
+                    <div class="md:w-full lg:w-180 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
                       <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
+                        <div class="flex-shrink-0 md:w-full lg:w-180 flex justify-center items-center mt-5 mb-2">
                           <figure class="space-y-1">
                             <iframe 
                               src="../files/p7-1.pdf" 
-                              class="w-180 h-160"
+                              class="w-full md:h-100 lg:h-160"
                             >
                               <p class="text-sm">Your browser does not support PDFs. 
                                 <a href="../files/p7-1.pdf" class="text-sm">Download the PDF.</a>.
@@ -169,13 +172,13 @@
                 >
                   <p class="text-md font-bold mb-4">Project Proposal Presentation</p>
                   <div class="flex justify-center items-center">
-                    <div class="w-200 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
+                    <div class="md:w-full lg:w-200 h-full bg-[#282828] rounded-md overflow-x-auto scrollbar-hide">
                       <div class="flex flex-nowrap">
-                        <div class="flex-shrink-0 w-200 flex justify-center items-center mt-5 mb-2">
+                        <div class="flex-shrink-0 md:w-full lg:w-200 flex justify-center items-center mt-5 mb-2">
                           <figure class="space-y-1">
                             <iframe 
                               src="../files/p7-2.pdf" 
-                              class="w-180 h-120"
+                              class="md:w-75 md:h-45 lg:w-135 lg:h-70 xl:w-180 xl:h-120"
                             >
                               <p class="text-sm">Your browser does not support PDFs. 
                                 <a href="../files/p7-2.pdf" class="text-sm">Download the PDF.</a>.

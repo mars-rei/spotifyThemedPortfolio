@@ -10,30 +10,30 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="scrollbar-hide sm:overflow-hidden">
+<body class="scrollbar-hide md:overflow-hidden">
 
-  <div class="hidden sm:flex flex-col min-h-screen flex-1 overflow-hidden bg-black">
+  <div class="hidden md:flex flex-col min-h-screen flex-1 overflow-hidden bg-black">
 
     <!-- top -->
     <div class="flex-shrink-0 flex items-center p-2">
-        <div class="flex w-1/4 items-center justify-start ml-5 space-x-4">
+      <div class="flex items-center justify-start ml-5 space-x-4 lg:w-1/4 md:w-18">
         <span class="fa fa-briefcase text-3xl text-white"></span>
         </div>
         
-        <div class="flex items-center justify-center w-2/4 space-x-2">
+      <div class="flex items-center gap-x-2 w-2/4 justify-center">
         <a href="index.html">
             <div class="rounded-full bg-[#282828] h-12 w-12 flex items-center justify-center">
                 <span class="fa fa-home text-xl text-faded"></span>
             </div>
         </a>
         
-        <div class="rounded-full bg-[#282828] px-4 h-12 flex items-center text-faded justify-start space-x-4 w-3/5">
+        <div class="rounded-full bg-[#282828] px-4 h-12 flex items-center text-faded justify-start space-x-4 lg:w-3/5 md:w-4/5">
             <span class="fa fa-handshake text-xl text-faded"></span>
             <p class="font-normal">Welcome to my portfolio!</p>
         </div>
         </div>
         
-        <div class="flex items-center justify-end w-1/4 mr-2">
+      <div class="flex items-center justify-end mr-2 lg:w-1/4 md:w-2/4">
         <a href="contact.html">
             <div class="rounded-full bg-white px-4 h-8 flex items-center text-faded mr-4">
                 <p class="font-bold text-[#121212]">Contact me</p>
@@ -78,16 +78,19 @@
 
           <!-- Photo & Project Aim -->
           <div class="flex justify-start items-end mt-16"> 
-            <div class="w-56 aspect-square flex justify-center items-center rounded-md bg-[#535353] text-[#181818]">
+            <div class="flex-shrink-0 md:w-36 lg:w-56 aspect-square flex justify-center items-center rounded-md bg-[#535353] text-[#181818]">
               <i class="fa fa-pen-to-square fa-6x"></i>
               <!-- <img src="" class="rounded-md"> -->
             </div>
-            <div class="ml-8">
+            <div class="md:ml-4 lg:ml-8">
               <div>
-                <p class="text-6xl font-bold">Summer of '25 Blog</p>
+                <p class="md:text-3xl lg:text-6xl font-bold">Summer of '25 Blog</p>
               </div>
-              <div class="mt-4">
-                <p class="text-sm text-faded">
+              <div 
+                class="mt-4"
+                title="To document the development of my skills and interests during summer after finishing my second year of university as a computer science student."
+              >
+                <p class="text-sm text-faded md:line-clamp-1 lg:line-clamp-none">
                   To document the development of my skills and interests during summer after finishing my second year of university as a computer science student.
                 </p>
               </div>
